@@ -22,9 +22,9 @@
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
-<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="yes" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
@@ -5471,8 +5471,8 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="VALUE" x="38.3032" y="52.4986" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
 <element name="LOGO1" library="SparkFun-Aesthetics" package="SFE_LOGO_NAME_.1" value="SFE_LOGO_NAME.1_INCH" x="76.708" y="56.388" smashed="yes"/>
-<element name="FD2" library="SparkFun-Aesthetics" package="FIDUCIAL-MICRO" value="FIDUCIALUFIDUCIAL" x="50.673" y="61.087" smashed="yes" rot="MR0"/>
-<element name="FD4" library="SparkFun-Aesthetics" package="FIDUCIAL-MICRO" value="FIDUCIALUFIDUCIAL" x="50.673" y="61.087" smashed="yes"/>
+<element name="FD2" library="SparkFun-Aesthetics" package="FIDUCIAL-MICRO" value="FIDUCIALUFIDUCIAL" x="50.673" y="58.547" smashed="yes" rot="MR0"/>
+<element name="FD4" library="SparkFun-Aesthetics" package="FIDUCIAL-MICRO" value="FIDUCIALUFIDUCIAL" x="50.673" y="58.547" smashed="yes"/>
 <element name="H1" library="SparkFun-Hardware" package="STAND-OFF-TIGHT" value="STAND-OFFTIGHT" x="2.54" y="63.5" smashed="yes">
 <attribute name="NAME" x="2.54" y="65.151" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
 <attribute name="VALUE" x="2.54" y="61.849" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
@@ -5536,7 +5536,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <via x="13.843" y="7.112" extent="1-16" drill="0.3048"/>
 <via x="17.3228" y="13.3858" extent="1-16" drill="0.3048"/>
 <via x="12.4968" y="14.1224" extent="1-16" drill="0.3048"/>
-<via x="13.192" y="17.526" extent="1-16" drill="0.3048"/>
+<via x="12.938" y="18.542" extent="1-16" drill="0.3048"/>
 <contactref element="VIN" pad="2"/>
 <contactref element="3V3" pad="2"/>
 <via x="26.289" y="7.747" extent="1-16" drill="0.3048"/>
@@ -5642,7 +5642,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="9.476" y1="55.372" x2="8.509" y2="55.372" width="0.254" layer="1"/>
 <via x="8.509" y="55.372" extent="1-16" drill="0.3048"/>
 <via x="26.4414" y="17.224" extent="1-16" drill="0.3048"/>
-<via x="31.2674" y="14.986" extent="1-16" drill="0.3048"/>
+<via x="31.0134" y="14.986" extent="1-16" drill="0.3048"/>
 <via x="44.2722" y="50.5714" extent="1-16" drill="0.3048"/>
 <via x="27.2542" y="51.3334" extent="1-16" drill="0.3048"/>
 <via x="37.9222" y="49.5554" extent="1-16" drill="0.3048"/>
@@ -5700,7 +5700,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <via x="33.6042" y="45.4914" extent="1-16" drill="0.3048"/>
 <via x="33.6042" y="47.5234" extent="1-16" drill="0.3048"/>
 <via x="33.6042" y="49.5554" extent="1-16" drill="0.3048"/>
-<via x="23.6982" y="35.8394" extent="1-16" drill="0.3048"/>
+<via x="23.7998" y="37.1602" extent="1-16" drill="0.3048"/>
 <via x="27.2542" y="37.3634" extent="1-16" drill="0.3048"/>
 <via x="27.2542" y="39.3954" extent="1-16" drill="0.3048"/>
 <via x="27.2542" y="41.4274" extent="1-16" drill="0.3048"/>
@@ -5735,15 +5735,15 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <via x="42.1132" y="34.2392" extent="1-16" drill="0.3048"/>
 <via x="40.9702" y="33.8074" extent="1-16" drill="0.3048"/>
 <via x="39.9542" y="33.0454" extent="1-16" drill="0.3048"/>
-<via x="39.1922" y="32.2834" extent="1-16" drill="0.3048"/>
+<via x="38.9382" y="32.2834" extent="1-16" drill="0.3048"/>
 <via x="37.6682" y="31.7754" extent="1-16" drill="0.3048"/>
 <via x="36.3982" y="31.7754" extent="1-16" drill="0.3048"/>
 <via x="32.3342" y="31.7754" extent="1-16" drill="0.3048"/>
 <via x="31.3182" y="32.2834" extent="1-16" drill="0.3048"/>
 <via x="30.861" y="33.1724" extent="1-16" drill="0.3048"/>
 <via x="42.3672" y="31.5214" extent="1-16" drill="0.3048"/>
-<via x="12.7762" y="50.0634" extent="1-16" drill="0.3048"/>
-<via x="12.7762" y="52.6034" extent="1-16" drill="0.3048"/>
+<via x="12.5222" y="50.0634" extent="1-16" drill="0.3048"/>
+<via x="12.5222" y="52.6034" extent="1-16" drill="0.3048"/>
 <via x="12.7762" y="57.1754" extent="1-16" drill="0.3048"/>
 <via x="10.2362" y="57.1754" extent="1-16" drill="0.3048"/>
 <via x="10.2362" y="59.2074" extent="1-16" drill="0.3048"/>
@@ -5755,10 +5755,10 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <via x="4.318" y="47.498" extent="1-16" drill="0.3048"/>
 <via x="4.318" y="44.958" extent="1-16" drill="0.3048"/>
 <via x="4.318" y="42.926" extent="1-16" drill="0.3048"/>
-<via x="8.7122" y="47.7774" extent="1-16" drill="0.3048"/>
-<via x="11.5062" y="47.7774" extent="1-16" drill="0.3048"/>
-<via x="10.4902" y="36.8554" extent="1-16" drill="0.3048"/>
-<via x="10.4902" y="28.9814" extent="1-16" drill="0.3048"/>
+<via x="9.9822" y="47.7774" extent="1-16" drill="0.3048"/>
+<via x="12.5222" y="47.7774" extent="1-16" drill="0.3048"/>
+<via x="11.2522" y="36.3474" extent="1-16" drill="0.3048"/>
+<via x="10.9982" y="28.2194" extent="1-16" drill="0.3048"/>
 <via x="55.7022" y="38.6334" extent="1-16" drill="0.3048"/>
 <via x="53.9242" y="38.6334" extent="1-16" drill="0.3048"/>
 <via x="51.8922" y="38.6334" extent="1-16" drill="0.3048"/>
@@ -5787,7 +5787,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <via x="53.9242" y="48.7934" extent="1-16" drill="0.3048"/>
 <via x="49.8602" y="41.1734" extent="1-16" drill="0.3048"/>
 <via x="49.8602" y="43.9674" extent="1-16" drill="0.3048"/>
-<via x="47.8282" y="41.1734" extent="1-16" drill="0.3048"/>
+<via x="48.3362" y="41.1734" extent="1-16" drill="0.3048"/>
 <via x="55.4482" y="24.6634" extent="1-16" drill="0.3048"/>
 <via x="53.6702" y="24.6634" extent="1-16" drill="0.3048"/>
 <via x="51.6382" y="24.6634" extent="1-16" drill="0.3048"/>
@@ -5796,23 +5796,22 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <via x="53.6702" y="21.8694" extent="1-16" drill="0.3048"/>
 <via x="51.6382" y="21.8694" extent="1-16" drill="0.3048"/>
 <via x="49.6062" y="21.8694" extent="1-16" drill="0.3048"/>
-<via x="55.4482" y="19.3294" extent="1-16" drill="0.3048"/>
-<via x="53.6702" y="19.3294" extent="1-16" drill="0.3048"/>
-<via x="51.6382" y="19.3294" extent="1-16" drill="0.3048"/>
-<via x="49.6062" y="19.3294" extent="1-16" drill="0.3048"/>
-<via x="45.974" y="27.432" extent="1-16" drill="0.3048"/>
+<via x="55.4482" y="19.8374" extent="1-16" drill="0.3048"/>
+<via x="53.6702" y="19.8374" extent="1-16" drill="0.3048"/>
+<via x="51.6382" y="19.8374" extent="1-16" drill="0.3048"/>
+<via x="49.6062" y="19.8374" extent="1-16" drill="0.3048"/>
+<via x="46.482" y="27.432" extent="1-16" drill="0.3048"/>
 <via x="42.926" y="27.432" extent="1-16" drill="0.3048"/>
 <via x="39.116" y="27.432" extent="1-16" drill="0.3048"/>
 <via x="35.306" y="27.432" extent="1-16" drill="0.3048"/>
 <via x="32.004" y="27.432" extent="1-16" drill="0.3048"/>
-<via x="45.974" y="28.956" extent="1-16" drill="0.3048"/>
-<via x="45.974" y="30.226" extent="1-16" drill="0.3048"/>
+<via x="46.482" y="28.956" extent="1-16" drill="0.3048"/>
+<via x="46.482" y="30.226" extent="1-16" drill="0.3048"/>
 <via x="42.926" y="30.226" extent="1-16" drill="0.3048"/>
 <via x="42.926" y="28.956" extent="1-16" drill="0.3048"/>
-<via x="41.148" y="28.194" extent="1-16" drill="0.3048"/>
-<via x="44.45" y="28.194" extent="1-16" drill="0.3048"/>
-<via x="37.338" y="28.194" extent="1-16" drill="0.3048"/>
-<via x="33.528" y="28.194" extent="1-16" drill="0.3048"/>
+<via x="41.148" y="28.8798" extent="1-16" drill="0.3048"/>
+<via x="44.704" y="27.432" extent="1-16" drill="0.3048"/>
+<via x="33.528" y="27.432" extent="1-16" drill="0.3048"/>
 <via x="32.0802" y="57.4294" extent="1-16" drill="0.3048"/>
 <via x="34.6202" y="57.4294" extent="1-16" drill="0.3048"/>
 <via x="37.9222" y="57.1754" extent="1-16" drill="0.3048"/>
@@ -5821,12 +5820,190 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <via x="40.7162" y="57.1754" extent="1-16" drill="0.3048"/>
 <via x="43.2562" y="57.1754" extent="1-16" drill="0.3048"/>
 <via x="46.8122" y="57.1754" extent="1-16" drill="0.3048"/>
-<via x="50.8762" y="57.1754" extent="1-16" drill="0.3048"/>
-<via x="50.8762" y="59.4614" extent="1-16" drill="0.3048"/>
-<via x="48.5902" y="60.7314" extent="1-16" drill="0.3048"/>
-<via x="54.1782" y="59.4614" extent="1-16" drill="0.3048"/>
-<via x="54.1782" y="57.6834" extent="1-16" drill="0.3048"/>
+<via x="49.8602" y="57.1754" extent="1-16" drill="0.3048"/>
+<via x="53.6702" y="57.1754" extent="1-16" drill="0.3048"/>
+<via x="55.7022" y="57.9374" extent="1-16" drill="0.3048"/>
 <via x="27.0002" y="35.5854" extent="1-16" drill="0.3048"/>
+<via x="2.286" y="42.926" extent="1-16" drill="0.3048"/>
+<via x="2.286" y="44.958" extent="1-16" drill="0.3048"/>
+<via x="2.286" y="47.498" extent="1-16" drill="0.3048"/>
+<via x="6.604" y="42.926" extent="1-16" drill="0.3048"/>
+<via x="6.604" y="40.64" extent="1-16" drill="0.3048"/>
+<via x="18.6182" y="54.1274" extent="1-16" drill="0.3048"/>
+<via x="20.9042" y="54.1274" extent="1-16" drill="0.3048"/>
+<via x="18.8722" y="52.0954" extent="1-16" drill="0.3048"/>
+<via x="17.6022" y="60.2234" extent="1-16" drill="0.3048"/>
+<via x="20.9042" y="60.2234" extent="1-16" drill="0.3048"/>
+<via x="43.3578" y="59.4614" extent="1-16" drill="0.3048"/>
+<via x="43.2562" y="62.0014" extent="1-16" drill="0.3048"/>
+<via x="45.2882" y="59.4614" extent="1-16" drill="0.3048"/>
+<via x="44.7802" y="62.0014" extent="1-16" drill="0.3048"/>
+<via x="26.7462" y="54.1274" extent="1-16" drill="0.3048"/>
+<via x="30.1752" y="53.9242" extent="1-16" drill="0.3048"/>
+<via x="23.9522" y="51.0794" extent="1-16" drill="0.3048"/>
+<via x="19.6342" y="34.3154" extent="1-16" drill="0.3048"/>
+<via x="19.6342" y="31.7754" extent="1-16" drill="0.3048"/>
+<via x="19.6342" y="29.4894" extent="1-16" drill="0.3048"/>
+<via x="19.6342" y="27.2034" extent="1-16" drill="0.3048"/>
+<via x="21.9202" y="24.6634" extent="1-16" drill="0.3048"/>
+<via x="21.9202" y="29.4894" extent="1-16" drill="0.3048"/>
+<via x="21.9202" y="27.2034" extent="1-16" drill="0.3048"/>
+<via x="24.4602" y="29.4894" extent="1-16" drill="0.3048"/>
+<via x="24.4602" y="27.2034" extent="1-16" drill="0.3048"/>
+<via x="26.7462" y="27.2034" extent="1-16" drill="0.3048"/>
+<via x="21.9202" y="31.7754" extent="1-16" drill="0.3048"/>
+<via x="23.1902" y="22.6314" extent="1-16" drill="0.3048"/>
+<via x="41.7322" y="19.8374" extent="1-16" drill="0.3048"/>
+<via x="39.9542" y="19.8374" extent="1-16" drill="0.3048"/>
+<via x="37.9222" y="19.8374" extent="1-16" drill="0.3048"/>
+<via x="35.8902" y="19.8374" extent="1-16" drill="0.3048"/>
+<via x="41.7322" y="17.0434" extent="1-16" drill="0.3048"/>
+<via x="39.9542" y="17.0434" extent="1-16" drill="0.3048"/>
+<via x="37.9222" y="17.0434" extent="1-16" drill="0.3048"/>
+<via x="35.8902" y="17.0434" extent="1-16" drill="0.3048"/>
+<via x="41.7322" y="14.5034" extent="1-16" drill="0.3048"/>
+<via x="39.9542" y="14.5034" extent="1-16" drill="0.3048"/>
+<via x="37.9222" y="14.5034" extent="1-16" drill="0.3048"/>
+<via x="35.8902" y="14.5034" extent="1-16" drill="0.3048"/>
+<via x="41.7322" y="11.9634" extent="1-16" drill="0.3048"/>
+<via x="39.9542" y="11.9634" extent="1-16" drill="0.3048"/>
+<via x="37.9222" y="11.9634" extent="1-16" drill="0.3048"/>
+<via x="35.8902" y="11.9634" extent="1-16" drill="0.3048"/>
+<via x="41.7322" y="9.6774" extent="1-16" drill="0.3048"/>
+<via x="39.9542" y="9.6774" extent="1-16" drill="0.3048"/>
+<via x="37.9222" y="9.6774" extent="1-16" drill="0.3048"/>
+<via x="35.8902" y="9.6774" extent="1-16" drill="0.3048"/>
+<via x="41.7322" y="7.1374" extent="1-16" drill="0.3048"/>
+<via x="39.9542" y="7.1374" extent="1-16" drill="0.3048"/>
+<via x="37.9222" y="7.1374" extent="1-16" drill="0.3048"/>
+<via x="35.8902" y="7.1374" extent="1-16" drill="0.3048"/>
+<via x="41.7322" y="4.8514" extent="1-16" drill="0.3048"/>
+<via x="39.9542" y="4.8514" extent="1-16" drill="0.3048"/>
+<via x="37.9222" y="4.8514" extent="1-16" drill="0.3048"/>
+<via x="35.8902" y="4.8514" extent="1-16" drill="0.3048"/>
+<via x="41.7322" y="2.3114" extent="1-16" drill="0.3048"/>
+<via x="39.9542" y="2.3114" extent="1-16" drill="0.3048"/>
+<via x="37.9222" y="2.3114" extent="1-16" drill="0.3048"/>
+<via x="35.8902" y="2.3114" extent="1-16" drill="0.3048"/>
+<via x="47.8282" y="19.8374" extent="1-16" drill="0.3048"/>
+<via x="45.7962" y="19.8374" extent="1-16" drill="0.3048"/>
+<via x="43.7642" y="19.8374" extent="1-16" drill="0.3048"/>
+<via x="47.8282" y="17.0434" extent="1-16" drill="0.3048"/>
+<via x="45.7962" y="17.0434" extent="1-16" drill="0.3048"/>
+<via x="43.7642" y="17.0434" extent="1-16" drill="0.3048"/>
+<via x="47.8282" y="14.5034" extent="1-16" drill="0.3048"/>
+<via x="45.7962" y="14.5034" extent="1-16" drill="0.3048"/>
+<via x="43.7642" y="14.5034" extent="1-16" drill="0.3048"/>
+<via x="45.7962" y="11.9634" extent="1-16" drill="0.3048"/>
+<via x="43.7642" y="11.9634" extent="1-16" drill="0.3048"/>
+<via x="45.7962" y="9.6774" extent="1-16" drill="0.3048"/>
+<via x="43.7642" y="9.6774" extent="1-16" drill="0.3048"/>
+<via x="47.8282" y="7.1374" extent="1-16" drill="0.3048"/>
+<via x="45.7962" y="7.1374" extent="1-16" drill="0.3048"/>
+<via x="43.7642" y="7.1374" extent="1-16" drill="0.3048"/>
+<via x="47.8282" y="4.8514" extent="1-16" drill="0.3048"/>
+<via x="45.7962" y="4.8514" extent="1-16" drill="0.3048"/>
+<via x="43.7642" y="4.8514" extent="1-16" drill="0.3048"/>
+<via x="47.8282" y="2.3114" extent="1-16" drill="0.3048"/>
+<via x="45.7962" y="2.3114" extent="1-16" drill="0.3048"/>
+<via x="43.7642" y="2.3114" extent="1-16" drill="0.3048"/>
+<via x="49.6062" y="7.1374" extent="1-16" drill="0.3048"/>
+<via x="55.9562" y="7.1374" extent="1-16" drill="0.3048"/>
+<via x="53.9242" y="7.1374" extent="1-16" drill="0.3048"/>
+<via x="51.8922" y="7.1374" extent="1-16" drill="0.3048"/>
+<via x="49.6062" y="17.0434" extent="1-16" drill="0.3048"/>
+<via x="55.9562" y="17.0434" extent="1-16" drill="0.3048"/>
+<via x="53.9242" y="17.0434" extent="1-16" drill="0.3048"/>
+<via x="51.8922" y="17.0434" extent="1-16" drill="0.3048"/>
+<via x="49.6062" y="4.8514" extent="1-16" drill="0.3048"/>
+<via x="51.8922" y="5.1054" extent="1-16" drill="0.3048"/>
+<via x="49.6062" y="2.3114" extent="1-16" drill="0.3048"/>
+<via x="53.9242" y="9.6774" extent="1-16" drill="0.3048"/>
+<via x="53.9242" y="11.9634" extent="1-16" drill="0.3048"/>
+<via x="53.9242" y="14.5034" extent="1-16" drill="0.3048"/>
+<via x="55.9562" y="14.5034" extent="1-16" drill="0.3048"/>
+<via x="55.9562" y="12.2174" extent="1-16" drill="0.3048"/>
+<via x="55.9562" y="9.9314" extent="1-16" drill="0.3048"/>
+<via x="51.943" y="14.605" extent="1-16" drill="0.3048"/>
+<via x="44.704" y="28.956" extent="1-16" drill="0.3048"/>
+<via x="12.7762" y="23.6474" extent="1-16" drill="0.3048"/>
+<via x="10.9982" y="23.6474" extent="1-16" drill="0.3048"/>
+<via x="8.9662" y="23.6474" extent="1-16" drill="0.3048"/>
+<via x="6.9342" y="23.6474" extent="1-16" drill="0.3048"/>
+<via x="12.7762" y="21.1074" extent="1-16" drill="0.3048"/>
+<via x="10.9982" y="21.1074" extent="1-16" drill="0.3048"/>
+<via x="8.9662" y="21.1074" extent="1-16" drill="0.3048"/>
+<via x="6.9342" y="21.1074" extent="1-16" drill="0.3048"/>
+<via x="14.8082" y="23.6474" extent="1-16" drill="0.3048"/>
+<via x="14.8082" y="21.1074" extent="1-16" drill="0.3048"/>
+<via x="17.0942" y="21.1074" extent="1-16" drill="0.3048"/>
+<via x="14.8082" y="18.5674" extent="1-16" drill="0.3048"/>
+<via x="17.0942" y="18.5674" extent="1-16" drill="0.3048"/>
+<via x="17.0942" y="16.2814" extent="1-16" drill="0.3048"/>
+<via x="14.8082" y="16.2814" extent="1-16" drill="0.3048"/>
+<via x="12.938" y="16.256" extent="1-16" drill="0.3048"/>
+<via x="8.9662" y="28.2194" extent="1-16" drill="0.3048"/>
+<via x="6.9342" y="28.2194" extent="1-16" drill="0.3048"/>
+<via x="8.9662" y="25.6794" extent="1-16" drill="0.3048"/>
+<via x="6.9342" y="25.6794" extent="1-16" drill="0.3048"/>
+<via x="6.9342" y="31.0134" extent="1-16" drill="0.3048"/>
+<via x="8.9662" y="31.0134" extent="1-16" drill="0.3048"/>
+<via x="8.9662" y="33.5534" extent="1-16" drill="0.3048"/>
+<via x="7.4422" y="33.5534" extent="1-16" drill="0.3048"/>
+<via x="8.9662" y="36.3474" extent="1-16" drill="0.3048"/>
+<via x="8.9662" y="38.8874" extent="1-16" drill="0.3048"/>
+<via x="7.4422" y="36.3474" extent="1-16" drill="0.3048"/>
+<via x="12.5222" y="39.9034" extent="1-16" drill="0.3048"/>
+<via x="12.446" y="34.036" extent="1-16" drill="0.3048"/>
+<via x="12.446" y="29.972" extent="1-16" drill="0.3048"/>
+<via x="12.446" y="26.67" extent="1-16" drill="0.3048"/>
+<via x="40.7162" y="59.4614" extent="1-16" drill="0.3048"/>
+<via x="43.5102" y="53.8734" extent="1-16" drill="0.3048"/>
+<via x="47.0662" y="53.8734" extent="1-16" drill="0.3048"/>
+<via x="51.8922" y="51.0794" extent="1-16" drill="0.3048"/>
+<via x="53.9242" y="51.0794" extent="1-16" drill="0.3048"/>
+<via x="53.9242" y="53.6194" extent="1-16" drill="0.3048"/>
+<via x="55.7022" y="53.6194" extent="1-16" drill="0.3048"/>
+<via x="55.7022" y="60.2234" extent="1-16" drill="0.3048"/>
+<via x="53.6702" y="60.2234" extent="1-16" drill="0.3048"/>
+<via x="51.5366" y="60.3504" extent="1-16" drill="0.3048"/>
+<via x="49.7586" y="60.3504" extent="1-16" drill="0.3048"/>
+<via x="51.6382" y="57.1754" extent="1-16" drill="0.3048"/>
+<via x="47.7266" y="60.3504" extent="1-16" drill="0.3048"/>
+<via x="47.7266" y="62.3824" extent="1-16" drill="0.3048"/>
+<via x="49.7586" y="62.3824" extent="1-16" drill="0.3048"/>
+<via x="44.2722" y="52.0954" extent="1-16" drill="0.3048"/>
+<via x="47.0662" y="52.0954" extent="1-16" drill="0.3048"/>
+<via x="47.0662" y="50.8254" extent="1-16" drill="0.3048"/>
+<via x="41.148" y="27.432" extent="1-16" drill="0.3048"/>
+<via x="37.338" y="27.432" extent="1-16" drill="0.3048"/>
+<via x="44.704" y="30.226" extent="1-16" drill="0.3048"/>
+<via x="35.306" y="25.146" extent="1-16" drill="0.3048"/>
+<via x="37.084" y="25.146" extent="1-16" drill="0.3048"/>
+<via x="43.7642" y="22.1234" extent="1-16" drill="0.3048"/>
+<via x="33.6042" y="2.3114" extent="1-16" drill="0.3048"/>
+<via x="31.8262" y="2.3114" extent="1-16" drill="0.3048"/>
+<via x="29.7942" y="2.3114" extent="1-16" drill="0.3048"/>
+<via x="27.7622" y="2.3114" extent="1-16" drill="0.3048"/>
+<via x="36.6522" y="59.7154" extent="1-16" drill="0.3048"/>
+<via x="34.1122" y="59.7154" extent="1-16" drill="0.3048"/>
+<via x="38.4302" y="61.7474" extent="1-16" drill="0.3048"/>
+<via x="34.6202" y="61.7474" extent="1-16" drill="0.3048"/>
+<via x="31.8262" y="61.7474" extent="1-16" drill="0.3048"/>
+<via x="27.2542" y="61.7474" extent="1-16" drill="0.3048"/>
+<via x="29.5402" y="61.7474" extent="1-16" drill="0.3048"/>
+<via x="29.5402" y="59.4614" extent="1-16" drill="0.3048"/>
+<via x="27.2542" y="59.4614" extent="1-16" drill="0.3048"/>
+<via x="31.8262" y="60.4774" extent="1-16" drill="0.3048"/>
+<via x="46.0502" y="35.5854" extent="1-16" drill="0.3048"/>
+<via x="27.0002" y="34.0614" extent="1-16" drill="0.3048"/>
+<via x="27.0002" y="32.5374" extent="1-16" drill="0.3048"/>
+<via x="25.4762" y="34.0614" extent="1-16" drill="0.3048"/>
+<via x="25.4762" y="35.5854" extent="1-16" drill="0.3048"/>
+<via x="23.7998" y="35.1282" extent="1-16" drill="0.3048"/>
+<via x="36.3982" y="33.5534" extent="1-16" drill="0.3048"/>
+<via x="37.6682" y="33.5534" extent="1-16" drill="0.3048"/>
+<via x="39.1922" y="34.0614" extent="1-16" drill="0.3048"/>
 <wire x1="7.239" y1="14.058" x2="7.238996875" y2="14.058003125" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="3.3V">
@@ -5844,9 +6021,9 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="32.501" y1="6.494" x2="34.019" y2="6.494" width="0.254" layer="1"/>
 <wire x1="34.019" y1="6.494" x2="34.036" y2="6.477" width="0.254" layer="1"/>
 <via x="34.036" y="6.477" extent="1-16" drill="0.3048"/>
-<wire x1="32.501" y1="24.494" x2="34.019" y2="24.494" width="0.254" layer="1"/>
-<wire x1="34.019" y1="24.494" x2="34.036" y2="24.511" width="0.254" layer="1"/>
-<via x="34.036" y="24.511" extent="1-16" drill="0.3048"/>
+<wire x1="32.501" y1="24.494" x2="34.1376" y2="24.494" width="0.254" layer="1"/>
+<wire x1="34.1376" y1="24.494" x2="34.1376" y2="25.5016" width="0.254" layer="1"/>
+<via x="34.1376" y="25.5016" extent="1-16" drill="0.3048"/>
 <wire x1="11.977" y1="4.064" x2="12.065" y2="3.976" width="0.508" layer="1"/>
 <wire x1="34.036" y1="6.477" x2="34.036" y2="5.334" width="0.508" layer="16"/>
 <wire x1="34.036" y1="5.334" x2="32.639" y2="3.937" width="0.508" layer="16"/>
@@ -5887,7 +6064,8 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <via x="22.7584" y="5.334" extent="1-16" drill="0.381"/>
 <wire x1="34.036" y1="6.477" x2="34.036" y2="18.542" width="0.508" layer="1"/>
 <wire x1="34.036" y1="18.542" x2="34.036" y2="22.352" width="0.508" layer="1"/>
-<wire x1="34.036" y1="22.352" x2="34.036" y2="24.511" width="0.508" layer="1"/>
+<wire x1="34.036" y1="25.4" x2="34.036" y2="22.4028" width="0.508" layer="1"/>
+<wire x1="34.036" y1="25.4" x2="34.1376" y2="25.5016" width="0.508" layer="1"/>
 <wire x1="38.093" y1="22.4028" x2="34.0868" y2="22.4028" width="0.1524" layer="1"/>
 <wire x1="34.0868" y1="22.4028" x2="34.036" y2="22.352" width="0.1524" layer="1"/>
 <wire x1="34.0614" y1="18.5166" x2="34.036" y2="18.542" width="0.1524" layer="1"/>
@@ -5896,18 +6074,15 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="17.1958" y1="5.334" x2="22.7076" y2="5.334" width="0.508" layer="1"/>
 <wire x1="12.065" y1="3.976" x2="10.375" y2="3.976" width="0.762" layer="1"/>
 <wire x1="10.375" y1="3.976" x2="10.16" y2="4.191" width="0.762" layer="1"/>
-<wire x1="24.765" y1="33.1978" x2="24.765" y2="51.562" width="0.508" layer="16"/>
+<wire x1="24.765" y1="33.528" x2="24.765" y2="51.562" width="0.508" layer="16"/>
 <wire x1="24.765" y1="51.562" x2="25.7175" y2="52.5145" width="0.508" layer="16"/>
 <wire x1="25.7175" y1="52.5145" x2="26.289" y2="53.086" width="0.508" layer="16"/>
-<wire x1="26.289" y1="53.086" x2="26.4414" y2="53.086" width="0.508" layer="16"/>
-<wire x1="26.67" y1="53.086" x2="30.734" y2="53.086" width="0.508" layer="16"/>
 <wire x1="26.4414" y1="64.0334" x2="26.67" y2="64.262" width="0.508" layer="16"/>
-<wire x1="34.036" y1="24.511" x2="33.4518" y2="24.511" width="0.508" layer="16"/>
-<wire x1="33.4518" y1="24.511" x2="24.765" y2="33.1978" width="0.508" layer="16"/>
-<wire x1="6.5278" y1="19.8113" x2="2.0955" y2="24.2436" width="0.254" layer="1"/>
+<wire x1="34.1376" y1="25.5016" x2="32.7914" y2="25.5016" width="0.508" layer="16"/>
+<wire x1="32.7914" y1="25.5016" x2="24.765" y2="33.528" width="0.508" layer="16"/>
+<wire x1="6.604" y1="19.7351" x2="2.0955" y2="24.2436" width="0.254" layer="1"/>
 <wire x1="2.0955" y1="24.904" x2="2.0955" y2="24.2436" width="0.254" layer="1"/>
-<wire x1="6.5278" y1="19.8113" x2="6.5278" y2="19.05" width="0.254" layer="1"/>
-<wire x1="6.5278" y1="19.05" x2="6.604" y2="19.05" width="0.254" layer="1"/>
+<wire x1="6.604" y1="19.7351" x2="6.604" y2="19.05" width="0.254" layer="1"/>
 <via x="6.604" y="19.05" extent="1-16" drill="0.3048"/>
 <wire x1="26.67" y1="64.262" x2="24.4856" y2="62.0776" width="0.508" layer="16"/>
 <wire x1="24.4856" y1="53.7464" x2="25.7175" y2="52.5145" width="0.508" layer="16"/>
@@ -5932,8 +6107,9 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="10.16" y1="4.191" x2="10.033" y2="4.191" width="0.254" layer="16"/>
 <wire x1="10.033" y1="4.191" x2="6.604" y2="7.62" width="0.254" layer="16"/>
 <wire x1="6.604" y1="7.62" x2="6.604" y2="19.05" width="0.254" layer="16"/>
+<wire x1="26.289" y1="53.086" x2="30.734" y2="53.086" width="0.508" layer="16"/>
 <wire x1="37.45319375" y1="53.0606" x2="37.4532" y2="53.0606" width="0" layer="19" extent="1-1"/>
-<wire x1="26.4414" y1="53.086" x2="26.67" y2="53.086" width="0" layer="19" extent="16-16"/>
+<wire x1="34.0614" y1="18.5166" x2="34.036" y2="22.4028" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="USB_N" class="2">
 <contactref element="J1" pad="A7"/>
@@ -6015,9 +6191,9 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="5.371" y1="53.049" x2="5.08" y2="53.34" width="0.254" layer="1"/>
 <wire x1="3.8862" y1="53.34" x2="5.08" y2="53.34" width="0.254" layer="1"/>
 <wire x1="5.883" y1="57.949" x2="5.5528" y2="57.949" width="0.254" layer="1"/>
-<wire x1="2.54" y1="20.066" x2="0.7366" y2="21.8694" width="0.508" layer="1"/>
-<wire x1="0.7366" y1="47.879" x2="3.048" y2="50.1904" width="0.508" layer="1"/>
-<wire x1="0.7366" y1="21.8694" x2="0.7366" y2="47.879" width="0.508" layer="1"/>
+<wire x1="2.54" y1="20.066" x2="0.6858" y2="21.9202" width="0.508" layer="1"/>
+<wire x1="0.6858" y1="47.8282" x2="3.048" y2="50.1904" width="0.508" layer="1"/>
+<wire x1="0.6858" y1="21.9202" x2="0.6858" y2="47.8282" width="0.508" layer="1"/>
 <wire x1="19.05" y1="64.262" x2="19.05" y2="62.8904" width="0.508" layer="1"/>
 <wire x1="19.05" y1="62.8904" x2="18.1356" y2="61.976" width="0.508" layer="1"/>
 <wire x1="3.048" y1="59.944" x2="3.048" y2="57.658" width="0.508" layer="1"/>
@@ -6322,12 +6498,12 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <contactref element="R11" pad="P7"/>
 <contactref element="J10" pad="4"/>
 <wire x1="22.0961" y1="41.808" x2="22.0887" y2="41.8154" width="0.254" layer="1"/>
-<wire x1="22.0887" y1="41.8154" x2="20.865" y2="41.8154" width="0.254" layer="1"/>
-<wire x1="20.865" y1="41.8154" x2="20.865" y2="41.7138" width="0.254" layer="1"/>
-<via x="20.865" y="41.7138" extent="1-16" drill="0.3048"/>
-<wire x1="20.9296" y1="44.0995" x2="20.9296" y2="41.7784" width="0.254" layer="16"/>
-<wire x1="20.865" y1="41.7138" x2="20.9296" y2="41.7784" width="0.254" layer="16"/>
-<wire x1="20.9296" y1="44.0995" x2="16.1544" y2="48.8747" width="0.254" layer="16"/>
+<wire x1="22.0887" y1="41.8154" x2="20.6618" y2="41.8154" width="0.254" layer="1"/>
+<wire x1="20.6618" y1="41.8154" x2="20.6618" y2="41.7392" width="0.254" layer="1"/>
+<via x="20.6618" y="41.7392" extent="1-16" drill="0.3048"/>
+<wire x1="20.6618" y1="41.7392" x2="20.8026" y2="41.88" width="0.254" layer="16"/>
+<wire x1="20.8026" y1="44.2265" x2="20.8026" y2="41.88" width="0.254" layer="16"/>
+<wire x1="20.8026" y1="44.2265" x2="16.1544" y2="48.8747" width="0.254" layer="16"/>
 <wire x1="16.1544" y1="48.8747" x2="16.1544" y2="59.0042" width="0.254" layer="16"/>
 <wire x1="16.1544" y1="59.0042" x2="13.9446" y2="61.214" width="0.254" layer="16"/>
 <wire x1="13.97" y1="64.262" x2="13.9446" y2="64.2366" width="0.254" layer="16"/>
@@ -6336,9 +6512,9 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <signal name="INT">
 <contactref element="R11" pad="P5"/>
 <contactref element="J10" pad="2"/>
-<wire x1="22.0961" y1="43.408" x2="20.0446" y2="43.408" width="0.254" layer="1"/>
-<wire x1="19.9887" y1="43.3521" x2="20.0446" y2="43.408" width="0.254" layer="1"/>
-<via x="19.9887" y="43.3521" extent="1-16" drill="0.3048"/>
+<wire x1="22.0961" y1="43.408" x2="19.9684" y2="43.408" width="0.254" layer="1"/>
+<wire x1="19.9125" y1="43.3521" x2="19.9684" y2="43.408" width="0.254" layer="1"/>
+<via x="19.9125" y="43.3521" extent="1-16" drill="0.3048"/>
 <contactref element="J6" pad="40"/>
 <wire x1="32.501" y1="15.994" x2="31.25" y2="15.994" width="0.254" layer="1"/>
 <wire x1="31.25" y1="15.994" x2="31.1738" y2="15.9178" width="0.254" layer="1"/>
@@ -6353,8 +6529,8 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="22.4542" y1="43.408" x2="22.0961" y2="43.408" width="0.254" layer="1"/>
 <wire x1="28.9306" y1="28.7274" x2="22.7838" y2="34.8742" width="0.254" layer="1"/>
 <wire x1="22.7838" y1="34.8742" x2="22.7838" y2="43.0784" width="0.254" layer="1"/>
-<wire x1="19.9887" y1="43.3521" x2="19.9887" y2="44.0346" width="0.254" layer="16"/>
-<wire x1="19.9887" y1="44.0346" x2="15.4432" y2="48.5801" width="0.254" layer="16"/>
+<wire x1="19.9125" y1="43.3521" x2="19.9125" y2="44.1108" width="0.254" layer="16"/>
+<wire x1="19.9125" y1="44.1108" x2="15.4432" y2="48.5801" width="0.254" layer="16"/>
 <wire x1="15.4432" y1="48.5801" x2="15.4432" y2="58.2168" width="0.254" layer="16"/>
 <wire x1="9.398" y1="64.262" x2="8.89" y2="64.262" width="0.254" layer="16"/>
 <wire x1="15.4432" y1="58.2168" x2="9.398" y2="64.262" width="0.254" layer="16"/>
@@ -6452,21 +6628,21 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="22.0961" y1="40.8302" x2="22.0961" y2="41.008" width="0.254" layer="1"/>
 <wire x1="22.4009" y1="40.5254" x2="22.4009" y2="34.7491" width="0.254" layer="1"/>
 <wire x1="21.3984" y1="41.0026" x2="21.3984" y2="41.2566" width="0.254" layer="16"/>
-<wire x1="21.3984" y1="41.2566" x2="21.3868" y2="41.2682" width="0.254" layer="16"/>
+<wire x1="21.3984" y1="41.2566" x2="21.1836" y2="41.4714" width="0.254" layer="16"/>
 <wire x1="16.51" y1="49.022" x2="16.51" y2="64.262" width="0.254" layer="16"/>
-<wire x1="21.3868" y1="41.2682" x2="21.3868" y2="44.1452" width="0.254" layer="16"/>
-<wire x1="21.3868" y1="44.1452" x2="16.51" y2="49.022" width="0.254" layer="16"/>
+<wire x1="21.1836" y1="41.4714" x2="21.1836" y2="44.3484" width="0.254" layer="16"/>
+<wire x1="21.1836" y1="44.3484" x2="16.51" y2="49.022" width="0.254" layer="16"/>
 </signal>
 <signal name="!SAFEBOOT!">
 <contactref element="R11" pad="P6"/>
 <contactref element="J10" pad="3"/>
-<wire x1="20.4078" y1="42.608" x2="20.4078" y2="42.6028" width="0.254" layer="1"/>
-<via x="20.4078" y="42.6028" extent="1-16" drill="0.3048"/>
-<wire x1="22.0961" y1="42.608" x2="20.4078" y2="42.608" width="0.254" layer="1"/>
+<wire x1="20.1538" y1="42.608" x2="20.1538" y2="42.6282" width="0.254" layer="1"/>
+<via x="20.1538" y="42.6282" extent="1-16" drill="0.3048"/>
+<wire x1="22.0961" y1="42.608" x2="20.1538" y2="42.608" width="0.254" layer="1"/>
 <wire x1="15.7988" y1="48.7274" x2="15.7988" y2="58.5724" width="0.254" layer="16"/>
-<wire x1="20.4078" y1="42.6028" x2="20.5094" y2="42.7044" width="0.254" layer="16"/>
-<wire x1="20.5094" y1="44.0168" x2="20.5094" y2="42.7044" width="0.254" layer="16"/>
-<wire x1="20.5094" y1="44.0168" x2="15.7988" y2="48.7274" width="0.254" layer="16"/>
+<wire x1="20.1538" y1="42.6282" x2="20.4332" y2="42.9076" width="0.254" layer="16"/>
+<wire x1="20.4332" y1="44.093" x2="20.4332" y2="42.9076" width="0.254" layer="16"/>
+<wire x1="20.4332" y1="44.093" x2="15.7988" y2="48.7274" width="0.254" layer="16"/>
 <wire x1="15.7988" y1="58.5724" x2="11.43" y2="62.9412" width="0.254" layer="16"/>
 <wire x1="11.43" y1="62.9412" x2="11.43" y2="64.262" width="0.254" layer="16"/>
 </signal>
@@ -6561,11 +6737,11 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <signal name="N$27">
 <contactref element="PPS" pad="2"/>
 <contactref element="R19" pad="1"/>
-<wire x1="4.064" y1="39.663" x2="4.9412" y2="39.663" width="0.254" layer="1"/>
-<wire x1="4.9412" y1="39.663" x2="5.1054" y2="39.8272" width="0.254" layer="1"/>
-<via x="5.1054" y="39.8272" extent="1-16" drill="0.3048"/>
-<wire x1="5.1054" y1="39.8272" x2="4.953" y2="39.9796" width="0.254" layer="16"/>
-<wire x1="4.953" y1="39.9796" x2="2.1082" y2="39.9796" width="0.254" layer="16"/>
+<wire x1="4.064" y1="39.663" x2="5.0936" y2="39.663" width="0.254" layer="1"/>
+<wire x1="5.0936" y1="39.663" x2="5.1054" y2="39.6748" width="0.254" layer="1"/>
+<via x="5.1054" y="39.6748" extent="1-16" drill="0.3048"/>
+<wire x1="5.1054" y1="39.6748" x2="4.8006" y2="39.9796" width="0.254" layer="16"/>
+<wire x1="4.8006" y1="39.9796" x2="2.1082" y2="39.9796" width="0.254" layer="16"/>
 <wire x1="2.1082" y1="39.9796" x2="2.0955" y2="39.9923" width="0.254" layer="16"/>
 </signal>
 <signal name="N$28">
@@ -6601,10 +6777,8 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="16.2814" y1="43.1292" x2="15.113" y2="41.9608" width="0.254" layer="1"/>
 <wire x1="15.113" y1="41.9608" x2="10.3378" y2="41.9608" width="0.254" layer="1"/>
 <wire x1="10.3378" y1="41.9608" x2="6.7564" y2="38.3794" width="0.254" layer="1"/>
-<wire x1="6.7564" y1="38.3794" x2="6.7564" y2="32.7406" width="0.254" layer="1"/>
-<wire x1="6.7564" y1="32.7406" x2="6.7818" y2="32.7152" width="0.254" layer="1"/>
-<wire x1="6.7818" y1="32.7152" x2="6.7818" y2="32.5882" width="0.254" layer="1"/>
-<wire x1="6.7818" y1="32.5882" x2="5.6134" y2="31.4198" width="0.254" layer="1"/>
+<wire x1="6.7564" y1="38.3794" x2="6.7564" y2="32.5628" width="0.254" layer="1"/>
+<wire x1="6.7564" y1="32.5628" x2="5.6134" y2="31.4198" width="0.254" layer="1"/>
 <wire x1="5.6134" y1="31.4198" x2="2.6917" y2="31.4198" width="0.254" layer="1"/>
 <wire x1="2.6917" y1="31.4198" x2="2.0955" y2="32.016" width="0.254" layer="1"/>
 <wire x1="14.224" y1="56.642" x2="14.0716" y2="56.4896" width="0.254" layer="16"/>
@@ -6772,8 +6946,10 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <signal name="N$32">
 <contactref element="R24" pad="2"/>
 <contactref element="D11" pad="C"/>
-<wire x1="14.1732" y1="46.2652" x2="12.4714" y2="44.5634" width="0.1524" layer="1"/>
-<wire x1="12.4714" y1="44.5634" x2="12.4714" y2="44.2398" width="0.1524" layer="1"/>
+<wire x1="12.4968" y1="44.6142" x2="12.4968" y2="44.2652" width="0.254" layer="1"/>
+<wire x1="12.4714" y1="44.2398" x2="12.4968" y2="44.2652" width="0.254" layer="1"/>
+<wire x1="14.1732" y1="46.2652" x2="14.1478" y2="46.2652" width="0.254" layer="1"/>
+<wire x1="14.1478" y1="46.2652" x2="12.4968" y2="44.6142" width="0.254" layer="1"/>
 </signal>
 <signal name="N$1">
 <contactref element="D2" pad="C"/>

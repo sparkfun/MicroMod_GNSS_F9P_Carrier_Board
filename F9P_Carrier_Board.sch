@@ -23443,11 +23443,11 @@ This is a footprint for an edge mount RF antenna. Works pretty well with SMA typ
 <part name="GND13" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="SUPPLY8" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="J8" library="SparkFun-Connectors" deviceset="CORTEX_JTAG_DEBUG_MINIMUM" device="_PTH" value="JTAG"/>
-<part name="SUPPLY5" library="SparkFun-PowerSymbols" deviceset="VIN" device=""/>
-<part name="SUPPLY12" library="SparkFun-PowerSymbols" deviceset="VIN" device=""/>
 <part name="SUPPLY9" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="SUPPLY10" library="SparkFun-PowerSymbols" deviceset="V_USB" device=""/>
 <part name="SUPPLY2" library="SparkFun-PowerSymbols" deviceset="V_USB" device=""/>
+<part name="SUPPLY3" library="SparkFun-PowerSymbols" deviceset="V_USB" device=""/>
+<part name="SUPPLY5" library="SparkFun-PowerSymbols" deviceset="V_USB" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -23955,12 +23955,6 @@ ZED-F9P</text>
 <attribute name="NAME" x="129.54" y="63.754" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="129.54" y="48.514" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="SUPPLY5" gate="G$1" x="363.22" y="261.62" smashed="yes">
-<attribute name="VALUE" x="363.22" y="264.414" size="1.778" layer="96" align="bottom-center"/>
-</instance>
-<instance part="SUPPLY12" gate="G$1" x="312.42" y="66.04" smashed="yes">
-<attribute name="VALUE" x="312.42" y="68.834" size="1.778" layer="96" align="bottom-center"/>
-</instance>
 <instance part="SUPPLY9" gate="G$1" x="307.34" y="66.04" smashed="yes">
 <attribute name="VALUE" x="307.34" y="68.834" size="1.778" layer="96" align="bottom-center"/>
 </instance>
@@ -23969,6 +23963,12 @@ ZED-F9P</text>
 </instance>
 <instance part="SUPPLY2" gate="G$1" x="325.12" y="259.08" smashed="yes">
 <attribute name="VALUE" x="325.12" y="261.874" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="SUPPLY3" gate="G$1" x="312.42" y="66.04" smashed="yes">
+<attribute name="VALUE" x="312.42" y="68.834" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="SUPPLY5" gate="G$1" x="363.22" y="261.62" smashed="yes">
+<attribute name="VALUE" x="363.22" y="264.414" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 </instances>
 <busses>
@@ -24316,6 +24316,18 @@ ZED-F9P</text>
 <wire x1="325.12" y1="256.54" x2="325.12" y2="259.08" width="0.1524" layer="91"/>
 <pinref part="SUPPLY2" gate="G$1" pin="V_USB"/>
 </segment>
+<segment>
+<wire x1="312.42" y1="48.26" x2="312.42" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="J10" gate="G$1" pin="6"/>
+<wire x1="302.26" y1="48.26" x2="312.42" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="SUPPLY3" gate="G$1" pin="V_USB"/>
+</segment>
+<segment>
+<pinref part="D4" gate="D1" pin="5"/>
+<wire x1="360.68" y1="251.46" x2="363.22" y2="251.46" width="0.1524" layer="91"/>
+<wire x1="363.22" y1="251.46" x2="363.22" y2="261.62" width="0.1524" layer="91"/>
+<pinref part="SUPPLY5" gate="G$1" pin="V_USB"/>
+</segment>
 </net>
 <net name="N$14" class="0">
 <segment>
@@ -24436,18 +24448,6 @@ ZED-F9P</text>
 <wire x1="35.56" y1="53.34" x2="35.56" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="D3" gate="G$1" pin="A"/>
 <wire x1="38.1" y1="53.34" x2="35.56" y2="53.34" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="D4" gate="D1" pin="5"/>
-<wire x1="360.68" y1="251.46" x2="363.22" y2="251.46" width="0.1524" layer="91"/>
-<pinref part="SUPPLY5" gate="G$1" pin="VIN"/>
-<wire x1="363.22" y1="251.46" x2="363.22" y2="261.62" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="SUPPLY12" gate="G$1" pin="VIN"/>
-<wire x1="312.42" y1="48.26" x2="312.42" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="J10" gate="G$1" pin="6"/>
-<wire x1="302.26" y1="48.26" x2="312.42" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VIN/3" class="0">
@@ -24605,6 +24605,11 @@ ZED-F9P</text>
 <label x="312.42" y="38.1" size="1.27" layer="95" font="vector" rot="MR180" xref="yes"/>
 <pinref part="J10" gate="G$1" pin="2"/>
 </segment>
+<segment>
+<pinref part="J6" gate="J1" pin="G0/BUS0"/>
+<wire x1="106.68" y1="144.78" x2="109.22" y2="144.78" width="0.1524" layer="91"/>
+<label x="109.22" y="144.78" size="1.27" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="SDA/!CS!" class="0">
 <segment>
@@ -24665,6 +24670,11 @@ ZED-F9P</text>
 <wire x1="302.26" y1="45.72" x2="312.42" y2="45.72" width="0.1524" layer="91"/>
 <label x="312.42" y="45.72" size="1.27" layer="95" font="vector" rot="MR180" xref="yes"/>
 <pinref part="J10" gate="G$1" pin="5"/>
+</segment>
+<segment>
+<pinref part="J6" gate="J1" pin="G1/BUS1"/>
+<wire x1="106.68" y1="142.24" x2="109.22" y2="142.24" width="0.1524" layer="91"/>
+<label x="109.22" y="142.24" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="!SAFEBOOT!" class="0">
@@ -24848,6 +24858,11 @@ ZED-F9P</text>
 <wire x1="365.76" y1="152.4" x2="368.3" y2="152.4" width="0.1524" layer="91"/>
 <label x="368.3" y="152.4" size="1.27" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="J6" gate="J1" pin="TX2"/>
+<wire x1="106.68" y1="152.4" x2="109.22" y2="152.4" width="0.1524" layer="91"/>
+<label x="109.22" y="152.4" size="1.27" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="RXI2" class="0">
 <segment>
@@ -24859,6 +24874,11 @@ ZED-F9P</text>
 <pinref part="R13" gate="B" pin="2"/>
 <wire x1="365.76" y1="149.86" x2="368.3" y2="149.86" width="0.1524" layer="91"/>
 <label x="368.3" y="149.86" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="J6" gate="J1" pin="RX2"/>
+<wire x1="106.68" y1="149.86" x2="109.22" y2="149.86" width="0.1524" layer="91"/>
+<label x="109.22" y="149.86" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="V_BATT" class="0">

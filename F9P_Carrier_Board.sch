@@ -20363,6 +20363,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pin name="V_BATT" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
 <text x="0" y="2.794" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
 </symbol>
+<symbol name="V_USB_2">
+<description>&lt;h3&gt;USB Voltage Supply&lt;/h3&gt;</description>
+<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
+<pin name="V_USB_2" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
+<text x="0" y="2.794" size="1.778" layer="96" align="bottom-center">&gt;VALUE</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="GND" prefix="GND">
@@ -20425,6 +20432,19 @@ You are welcome to use this library for commercial purposes. For attribution, we
 &lt;p&gt;Generic symbol for the battery input to a system.&lt;/p&gt;</description>
 <gates>
 <gate name="G$1" symbol="V_BATT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="V_USB_2" prefix="SUPPLY">
+<description>&lt;h3&gt;USB Voltage Supply&lt;/h3&gt;</description>
+<gates>
+<gate name="G$1" symbol="V_USB_2" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -24346,9 +24366,74 @@ We've spent an enormous amount of time creating and checking these footprints an
 &lt;br&gt;
 You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
 <packages>
+<package name="SMA-EDGE">
+<description>&lt;b&gt;SMA Antenna Connector&lt;/b&gt;&lt;p&gt;
+This is a footprint for an edge mount RF antenna. Works pretty well with SMA type connectors but may also work with other edge mount RF connectors. Keep in mind, these edge mount connectors assume you are using a 0.062" (1.6mm) PCB thickness.</description>
+<smd name="GND@0" x="-2.54" y="0" dx="1.5" dy="4" layer="1" cream="no"/>
+<smd name="SIG" x="0" y="0" dx="1.5" dy="4" layer="1" cream="no"/>
+<smd name="GND@1" x="2.54" y="0" dx="1.5" dy="4" layer="1" cream="no"/>
+<smd name="GND@2" x="-2.54" y="0" dx="1.5" dy="4" layer="16" cream="no"/>
+<smd name="GND@3" x="2.54" y="0" dx="1.5" dy="4" layer="16" cream="no"/>
+<wire x1="-3.965" y1="3.581" x2="3.965" y2="3.581" width="0.1524" layer="51"/>
+<wire x1="3.965" y1="3.581" x2="3.965" y2="2.381" width="0.1524" layer="51"/>
+<wire x1="3.965" y1="2.381" x2="-3.965" y2="2.381" width="0.1524" layer="51"/>
+<wire x1="-3.965" y1="2.381" x2="-3.965" y2="3.581" width="0.1524" layer="51"/>
+<rectangle x1="-3.05" y1="-1.519" x2="-2.01" y2="2.381" layer="51"/>
+<rectangle x1="-0.635" y1="-1.519" x2="0.635" y2="2.381" layer="51"/>
+<rectangle x1="2.01" y1="-1.519" x2="3.05" y2="2.381" layer="51"/>
+<wire x1="-2.667" y1="3.5814" x2="-2.667" y2="5.588" width="0.0762" layer="51"/>
+<wire x1="-2.667" y1="5.588" x2="-3.175" y2="5.842" width="0.0762" layer="51"/>
+<wire x1="-3.175" y1="5.842" x2="-2.667" y2="6.096" width="0.0762" layer="51"/>
+<wire x1="-2.667" y1="6.096" x2="-3.175" y2="6.35" width="0.0762" layer="51"/>
+<wire x1="-3.175" y1="6.35" x2="-2.667" y2="6.604" width="0.0762" layer="51"/>
+<wire x1="-2.667" y1="6.604" x2="-3.175" y2="6.858" width="0.0762" layer="51"/>
+<wire x1="-3.175" y1="6.858" x2="-2.667" y2="7.112" width="0.0762" layer="51"/>
+<wire x1="-2.667" y1="7.112" x2="-3.175" y2="7.366" width="0.0762" layer="51"/>
+<wire x1="-3.175" y1="7.366" x2="-2.667" y2="7.62" width="0.0762" layer="51"/>
+<wire x1="-3.175" y1="7.874" x2="-2.667" y2="8.128" width="0.0762" layer="51"/>
+<wire x1="-2.667" y1="8.128" x2="-3.175" y2="8.382" width="0.0762" layer="51"/>
+<wire x1="-3.175" y1="8.382" x2="-2.667" y2="8.636" width="0.0762" layer="51"/>
+<wire x1="-2.667" y1="8.636" x2="-3.175" y2="8.89" width="0.0762" layer="51"/>
+<wire x1="-3.175" y1="8.89" x2="-2.667" y2="9.144" width="0.0762" layer="51"/>
+<wire x1="-2.667" y1="9.144" x2="-2.667" y2="9.8806" width="0.0762" layer="51"/>
+<wire x1="-2.667" y1="9.8806" x2="2.667" y2="9.8806" width="0.0762" layer="51"/>
+<wire x1="2.667" y1="9.8806" x2="2.667" y2="9.144" width="0.0762" layer="51"/>
+<wire x1="2.667" y1="9.144" x2="3.175" y2="8.89" width="0.0762" layer="51"/>
+<wire x1="3.175" y1="8.89" x2="2.667" y2="8.636" width="0.0762" layer="51"/>
+<wire x1="2.667" y1="8.636" x2="3.175" y2="8.382" width="0.0762" layer="51"/>
+<wire x1="3.175" y1="8.382" x2="2.667" y2="8.128" width="0.0762" layer="51"/>
+<wire x1="2.667" y1="8.128" x2="3.175" y2="7.874" width="0.0762" layer="51"/>
+<wire x1="3.175" y1="7.874" x2="2.667" y2="7.62" width="0.0762" layer="51"/>
+<wire x1="2.667" y1="7.62" x2="3.175" y2="7.366" width="0.0762" layer="51"/>
+<wire x1="3.175" y1="7.366" x2="2.667" y2="7.112" width="0.0762" layer="51"/>
+<wire x1="2.667" y1="7.112" x2="3.175" y2="6.858" width="0.0762" layer="51"/>
+<wire x1="3.175" y1="6.858" x2="2.667" y2="6.604" width="0.0762" layer="51"/>
+<wire x1="3.175" y1="6.35" x2="2.667" y2="6.096" width="0.0762" layer="51"/>
+<wire x1="2.667" y1="6.096" x2="3.175" y2="5.842" width="0.0762" layer="51"/>
+<wire x1="3.175" y1="5.842" x2="2.667" y2="5.588" width="0.0762" layer="51"/>
+<wire x1="2.667" y1="5.588" x2="2.667" y2="3.556" width="0.0762" layer="51"/>
+<wire x1="-2.667" y1="9.144" x2="2.667" y2="9.144" width="0.0762" layer="51"/>
+<wire x1="-3.175" y1="7.366" x2="2.667" y2="7.62" width="0.0254" layer="51"/>
+<wire x1="-3.175" y1="6.35" x2="2.667" y2="6.604" width="0.0254" layer="51"/>
+<wire x1="-2.667" y1="6.096" x2="3.175" y2="6.35" width="0.0254" layer="51"/>
+<wire x1="-2.667" y1="5.588" x2="2.667" y2="5.588" width="0.0762" layer="51"/>
+<wire x1="-2.667" y1="8.636" x2="3.175" y2="8.89" width="0.0254" layer="51"/>
+<wire x1="3.175" y1="8.89" x2="-3.175" y2="8.89" width="0.0254" layer="51"/>
+<wire x1="-3.175" y1="7.874" x2="2.667" y2="8.128" width="0.0254" layer="51"/>
+<wire x1="-2.667" y1="8.128" x2="3.175" y2="8.382" width="0.0254" layer="51"/>
+<wire x1="-3.175" y1="8.382" x2="2.667" y2="8.636" width="0.0254" layer="51"/>
+<wire x1="-3.175" y1="7.874" x2="-2.667" y2="7.62" width="0.0762" layer="51"/>
+<wire x1="-2.667" y1="7.62" x2="3.175" y2="7.874" width="0.0254" layer="51"/>
+<wire x1="-3.175" y1="6.858" x2="2.667" y2="7.112" width="0.0254" layer="51"/>
+<wire x1="-2.667" y1="6.604" x2="3.175" y2="6.858" width="0.0254" layer="51"/>
+<wire x1="-3.175" y1="5.842" x2="2.667" y2="6.096" width="0.0254" layer="51"/>
+<wire x1="-3.175" y1="5.842" x2="3.175" y2="5.842" width="0.0254" layer="51"/>
+<wire x1="-2.667" y1="7.112" x2="3.175" y2="7.366" width="0.0254" layer="51"/>
+<wire x1="2.667" y1="6.604" x2="3.175" y2="6.35" width="0.0762" layer="51"/>
+</package>
 <package name="SMA-EDGE-SMD">
 <description>&lt;b&gt;SMA Antenna Connector&lt;/b&gt;&lt;p&gt;
-This is a footprint for an edge mount RF antenna. Works pretty well with SMA type connectors but may also work with other edge mount RF connectors. Keep in mind, these edge mount connectors assume you are using a 0.062" PCB thickness.</description>
+This is a footprint for an edge mount SMD SMA connector. Works pretty well with SMA type connectors but may also work with other edge mount RF connectors.</description>
 <smd name="GND@0" x="-4.25" y="-3.5" dx="1.15" dy="7" layer="1" cream="no"/>
 <smd name="SIG" x="0" y="-8.1" dx="0.9" dy="2.2" layer="1" cream="no"/>
 <smd name="GND@1" x="4.25" y="-3.5" dx="1.15" dy="7" layer="1" cream="no"/>
@@ -24414,7 +24499,7 @@ This is a footprint for an edge mount RF antenna. Works pretty well with SMA typ
 <wire x1="4.5" y1="-7" x2="-4.5" y2="-7" width="0.1524" layer="51"/>
 <wire x1="-4.5" y1="-7" x2="-4.5" y2="0" width="0.1524" layer="51"/>
 <rectangle x1="-0.38" y1="-9" x2="0.38" y2="-7" layer="51" rot="R180"/>
-<text x="0" y="-3" size="0.5" layer="46" ratio="15" rot="R180" align="center">Route
+<text x="0" y="-2.492" size="0.5" layer="46" ratio="15" rot="R180" align="center">Route
 Out</text>
 <rectangle x1="-0.55" y1="-9.39" x2="0.55" y2="-6.99" layer="31"/>
 <rectangle x1="-4.93" y1="-7" x2="-3.68" y2="0" layer="31"/>
@@ -24422,217 +24507,97 @@ Out</text>
 <wire x1="3.6" y1="-7.02" x2="2.62" y2="-8" width="0.1524" layer="46" curve="-90"/>
 <wire x1="2.62" y1="-8" x2="2.5" y2="-8" width="0.1524" layer="46"/>
 <wire x1="2.5" y1="-8" x2="1.5" y2="-7" width="0.1524" layer="46" curve="-90"/>
-</package>
-<package name="TRACE_ANTENNA_2.4GHZ_25.7MM">
-<description>&lt;h3&gt;2.4GHz Inverted F PCB Trace Antenna&lt;/h3&gt;
-&lt;p&gt;PCB trace antenna with a 25.7 x 7.5 mm footprint.&lt;/p&gt;
-&lt;p&gt;Based on layout from &lt;a href="http://www.ti.com/lit/an/swru120b/swru120b.pdf"&gt;TI design note DN0007&lt;/a&gt;.&lt;/p&gt;</description>
-<polygon width="0.002540625" layer="1">
-<vertex x="-0.23" y="0"/>
-<vertex x="-0.23" y="2.28"/>
-<vertex x="-0.73" y="2.69"/>
-<vertex x="-3.88" y="2.69"/>
-<vertex x="-3.88" y="3.9"/>
-<vertex x="-2.88" y="3.9"/>
-<vertex x="-2.88" y="4.7"/>
-<vertex x="-8.68" y="4.7"/>
-<vertex x="-8.68" y="2.03"/>
-<vertex x="-0.68" y="2.03"/>
-<vertex x="-0.68" y="0"/>
-<vertex x="-1.68" y="0"/>
-<vertex x="-1.68" y="0.7"/>
-<vertex x="-2.88" y="0.7"/>
-<vertex x="-2.88" y="0"/>
-<vertex x="-3.88" y="0"/>
-<vertex x="-3.88" y="0.74"/>
-<vertex x="-10.86" y="0.74"/>
-<vertex x="-10.86" y="6.91"/>
-<vertex x="14.72" y="6.91"/>
-<vertex x="14.72" y="5.7"/>
-<vertex x="-1.68" y="5.7"/>
-<vertex x="-1.68" y="3.9"/>
-<vertex x="-0.68" y="3.9"/>
-<vertex x="-0.68" y="3.29"/>
-<vertex x="0.23" y="2.53"/>
-<vertex x="0.23" y="0"/>
-</polygon>
-<smd name="ANT" x="0" y="0.23" dx="0.46" dy="0.46" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="GND" x="-1.18" y="0.23" dx="1" dy="0.46" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="GND2" x="-3.38" y="0.23" dx="1" dy="0.46" layer="1" stop="no" thermals="no" cream="no"/>
-<wire x1="-0.68" y1="0" x2="-11" y2="0" width="0.1" layer="51"/>
-<wire x1="-0.68" y1="-2" x2="-0.68" y2="0" width="0.1" layer="51"/>
-<wire x1="0.68" y1="0" x2="0.68" y2="-2" width="0.1" layer="51"/>
-<wire x1="0.68" y1="0" x2="14.75" y2="0" width="0.1" layer="51"/>
-<text x="-11.049" y="-1.397" size="0.889" layer="51" font="vector">Ground Plane</text>
-<text x="2.921" y="-1.397" size="0.889" layer="51" font="vector">Ground Plane</text>
-<wire x1="-11" y1="7.52" x2="14.75" y2="7.52" width="0.1" layer="51"/>
-<text x="-4.449" y="7.703" size="0.889" layer="51" font="vector">Board edge</text>
-<text x="3.81" y="4.445" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
-<text x="3.81" y="3.81" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
-</package>
-<package name="TRACE_ANTENNA_2.4GHZ_15.2MM">
-<description>&lt;h3&gt;2.4GHz Meander PCB Trace Antenna&lt;/h3&gt;
-&lt;p&gt;PCB trace antenna with a 15.2 x 5.7mm footprint.&lt;/p&gt;
-&lt;p&gt;Based on layout from &lt;a href="http://www.ti.com/lit/an/swra117d/swra117d.pdf"&gt;TI app note AN043&lt;/a&gt;.&lt;/p&gt;</description>
-<polygon width="0.002540625" layer="1">
-<vertex x="-0.25" y="-0.5"/>
-<vertex x="-0.25" y="4.4"/>
-<vertex x="-1.65" y="4.4"/>
-<vertex x="-1.65" y="-0.5"/>
-<vertex x="-2.55" y="-0.5"/>
-<vertex x="-2.55" y="4.9"/>
-<vertex x="2.45" y="4.9"/>
-<vertex x="2.45" y="2.26"/>
-<vertex x="4.45" y="2.26"/>
-<vertex x="4.45" y="4.9"/>
-<vertex x="7.15" y="4.9"/>
-<vertex x="7.15" y="2.26"/>
-<vertex x="9.15" y="2.26"/>
-<vertex x="9.15" y="4.9"/>
-<vertex x="11.85" y="4.9"/>
-<vertex x="11.85" y="0.46"/>
-<vertex x="11.35" y="0.46"/>
-<vertex x="11.35" y="4.4"/>
-<vertex x="9.65" y="4.4"/>
-<vertex x="9.65" y="1.76"/>
-<vertex x="6.65" y="1.76"/>
-<vertex x="6.65" y="4.4"/>
-<vertex x="4.95" y="4.4"/>
-<vertex x="4.95" y="1.76"/>
-<vertex x="1.95" y="1.76"/>
-<vertex x="1.95" y="4.4"/>
-<vertex x="0.25" y="4.4"/>
-<vertex x="0.25" y="-0.5"/>
-</polygon>
-<wire x1="-3" y1="0" x2="12" y2="0" width="0.05" layer="51"/>
-<smd name="GND" x="-2.1" y="-0.25" dx="0.9" dy="0.5" layer="1" stop="no" thermals="no" cream="no"/>
-<smd name="ANT" x="0" y="-0.25" dx="0.5" dy="0.5" layer="1" stop="no" thermals="no" cream="no"/>
-<wire x1="-3" y1="5.2" x2="12" y2="5.2" width="0.05" layer="51"/>
-<text x="1" y="-0.8" size="0.64" layer="51" font="vector">Ground Plane</text>
-<text x="1.5" y="5.5" size="0.64" layer="51" font="vector">Board Edge</text>
-<text x="0" y="1.27" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
-<text x="0" y="1.016" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
-</package>
-<package name="SMA-EDGE">
-<description>&lt;b&gt;SMA Antenna Connector&lt;/b&gt;&lt;p&gt;
-This is a footprint for an edge mount RF antenna. Works pretty well with SMA type connectors but may also work with other edge mount RF connectors. Keep in mind, these edge mount connectors assume you are using a 0.062" PCB thickness.</description>
-<smd name="GND@0" x="-2.54" y="0" dx="1.5" dy="4" layer="1" cream="no"/>
-<smd name="SIG" x="0" y="0" dx="1.5" dy="4" layer="1" cream="no"/>
-<smd name="GND@1" x="2.54" y="0" dx="1.5" dy="4" layer="1" cream="no"/>
-<smd name="GND@2" x="-2.54" y="0" dx="1.5" dy="4" layer="16" cream="no"/>
-<smd name="GND@3" x="2.54" y="0" dx="1.5" dy="4" layer="16" cream="no"/>
-<wire x1="-3.965" y1="3.581" x2="3.965" y2="3.581" width="0.1524" layer="51"/>
-<wire x1="3.965" y1="3.581" x2="3.965" y2="2.381" width="0.1524" layer="51"/>
-<wire x1="3.965" y1="2.381" x2="-3.965" y2="2.381" width="0.1524" layer="51"/>
-<wire x1="-3.965" y1="2.381" x2="-3.965" y2="3.581" width="0.1524" layer="51"/>
-<rectangle x1="-3.05" y1="-1.519" x2="-2.01" y2="2.381" layer="51"/>
-<rectangle x1="-0.635" y1="-1.519" x2="0.635" y2="2.381" layer="51"/>
-<rectangle x1="2.01" y1="-1.519" x2="3.05" y2="2.381" layer="51"/>
-<wire x1="-2.667" y1="3.5814" x2="-2.667" y2="5.588" width="0.0762" layer="51"/>
-<wire x1="-2.667" y1="5.588" x2="-3.175" y2="5.842" width="0.0762" layer="51"/>
-<wire x1="-3.175" y1="5.842" x2="-2.667" y2="6.096" width="0.0762" layer="51"/>
-<wire x1="-2.667" y1="6.096" x2="-3.175" y2="6.35" width="0.0762" layer="51"/>
-<wire x1="-3.175" y1="6.35" x2="-2.667" y2="6.604" width="0.0762" layer="51"/>
-<wire x1="-2.667" y1="6.604" x2="-3.175" y2="6.858" width="0.0762" layer="51"/>
-<wire x1="-3.175" y1="6.858" x2="-2.667" y2="7.112" width="0.0762" layer="51"/>
-<wire x1="-2.667" y1="7.112" x2="-3.175" y2="7.366" width="0.0762" layer="51"/>
-<wire x1="-3.175" y1="7.366" x2="-2.667" y2="7.62" width="0.0762" layer="51"/>
-<wire x1="-3.175" y1="7.874" x2="-2.667" y2="8.128" width="0.0762" layer="51"/>
-<wire x1="-2.667" y1="8.128" x2="-3.175" y2="8.382" width="0.0762" layer="51"/>
-<wire x1="-3.175" y1="8.382" x2="-2.667" y2="8.636" width="0.0762" layer="51"/>
-<wire x1="-2.667" y1="8.636" x2="-3.175" y2="8.89" width="0.0762" layer="51"/>
-<wire x1="-3.175" y1="8.89" x2="-2.667" y2="9.144" width="0.0762" layer="51"/>
-<wire x1="-2.667" y1="9.144" x2="-2.667" y2="9.8806" width="0.0762" layer="51"/>
-<wire x1="-2.667" y1="9.8806" x2="2.667" y2="9.8806" width="0.0762" layer="51"/>
-<wire x1="2.667" y1="9.8806" x2="2.667" y2="9.144" width="0.0762" layer="51"/>
-<wire x1="2.667" y1="9.144" x2="3.175" y2="8.89" width="0.0762" layer="51"/>
-<wire x1="3.175" y1="8.89" x2="2.667" y2="8.636" width="0.0762" layer="51"/>
-<wire x1="2.667" y1="8.636" x2="3.175" y2="8.382" width="0.0762" layer="51"/>
-<wire x1="3.175" y1="8.382" x2="2.667" y2="8.128" width="0.0762" layer="51"/>
-<wire x1="2.667" y1="8.128" x2="3.175" y2="7.874" width="0.0762" layer="51"/>
-<wire x1="3.175" y1="7.874" x2="2.667" y2="7.62" width="0.0762" layer="51"/>
-<wire x1="2.667" y1="7.62" x2="3.175" y2="7.366" width="0.0762" layer="51"/>
-<wire x1="3.175" y1="7.366" x2="2.667" y2="7.112" width="0.0762" layer="51"/>
-<wire x1="2.667" y1="7.112" x2="3.175" y2="6.858" width="0.0762" layer="51"/>
-<wire x1="3.175" y1="6.858" x2="2.667" y2="6.604" width="0.0762" layer="51"/>
-<wire x1="3.175" y1="6.35" x2="2.667" y2="6.096" width="0.0762" layer="51"/>
-<wire x1="2.667" y1="6.096" x2="3.175" y2="5.842" width="0.0762" layer="51"/>
-<wire x1="3.175" y1="5.842" x2="2.667" y2="5.588" width="0.0762" layer="51"/>
-<wire x1="2.667" y1="5.588" x2="2.667" y2="3.556" width="0.0762" layer="51"/>
-<wire x1="-2.667" y1="9.144" x2="2.667" y2="9.144" width="0.0762" layer="51"/>
-<wire x1="-3.175" y1="7.366" x2="2.667" y2="7.62" width="0.0254" layer="51"/>
-<wire x1="-3.175" y1="6.35" x2="2.667" y2="6.604" width="0.0254" layer="51"/>
-<wire x1="-2.667" y1="6.096" x2="3.175" y2="6.35" width="0.0254" layer="51"/>
-<wire x1="-2.667" y1="5.588" x2="2.667" y2="5.588" width="0.0762" layer="51"/>
-<wire x1="-2.667" y1="8.636" x2="3.175" y2="8.89" width="0.0254" layer="51"/>
-<wire x1="3.175" y1="8.89" x2="-3.175" y2="8.89" width="0.0254" layer="51"/>
-<wire x1="-3.175" y1="7.874" x2="2.667" y2="8.128" width="0.0254" layer="51"/>
-<wire x1="-2.667" y1="8.128" x2="3.175" y2="8.382" width="0.0254" layer="51"/>
-<wire x1="-3.175" y1="8.382" x2="2.667" y2="8.636" width="0.0254" layer="51"/>
-<wire x1="-3.175" y1="7.874" x2="-2.667" y2="7.62" width="0.0762" layer="51"/>
-<wire x1="-2.667" y1="7.62" x2="3.175" y2="7.874" width="0.0254" layer="51"/>
-<wire x1="-3.175" y1="6.858" x2="2.667" y2="7.112" width="0.0254" layer="51"/>
-<wire x1="-2.667" y1="6.604" x2="3.175" y2="6.858" width="0.0254" layer="51"/>
-<wire x1="-3.175" y1="5.842" x2="2.667" y2="6.096" width="0.0254" layer="51"/>
-<wire x1="-3.175" y1="5.842" x2="3.175" y2="5.842" width="0.0254" layer="51"/>
-<wire x1="-2.667" y1="7.112" x2="3.175" y2="7.366" width="0.0254" layer="51"/>
-<wire x1="2.667" y1="6.604" x2="3.175" y2="6.35" width="0.0762" layer="51"/>
-</package>
-<package name="TRACE_ANTENNA_915MHZ_THINGMAGIC">
-<wire x1="-4.914421875" y1="-0.287740625" x2="30.518578125" y2="-0.287740625" width="0.127" layer="51"/>
-<smd name="ANT" x="-0.006421875" y="-1.315240625" dx="3" dy="0.44" layer="1" rot="R90" stop="no" cream="no"/>
-<smd name="GND@1" x="-3.966421875" y="-0.315240625" dx="1.02" dy="1" layer="1" stop="no" cream="no"/>
-<smd name="GND@2" x="3.908578125" y="-0.315240625" dx="3.677" dy="1" layer="1" stop="no" cream="no"/>
-<smd name="GND@3" x="14" y="-1" dx="30" dy="1" layer="16" stop="no" cream="no"/>
-<text x="16.802578125" y="-0.033740625" size="0.254" layer="51" ratio="15">GND Pour Edge</text>
-<polygon width="0.0254" layer="1">
-<vertex x="12.4693375" y="-3.538940625"/>
-<vertex x="30.08931875" y="-3.538940625"/>
-<vertex x="30.08931875" y="-17.0873"/>
-<vertex x="-4.462303125" y="-17.0873"/>
-<vertex x="-4.462303125" y="-0.45538125"/>
-<vertex x="-3.4691625" y="-0.45538125"/>
-<vertex x="-3.4691625" y="-4.288240625"/>
-<vertex x="-0.449103125" y="-4.288240625"/>
-<vertex x="-0.45" y="-3.8"/>
-<vertex x="-0.21" y="-3.8"/>
-<vertex x="-0.21" y="-2.33"/>
-<vertex x="0.2" y="-2.33"/>
-<vertex x="0.2" y="-3.8"/>
-<vertex x="0.526259375" y="-3.800559375"/>
-<vertex x="0.526259375" y="-4.288240625"/>
-<vertex x="2.337278125" y="-4.288240625"/>
-<vertex x="10.579578125" y="-9.782259375"/>
-<vertex x="10.587196875" y="-9.787340625"/>
-<vertex x="27.3410375" y="-9.787340625"/>
-<vertex x="27.338496875" y="-9.774640625"/>
-<vertex x="27.338496875" y="-6.53868125"/>
-<vertex x="12.4693375" y="-6.53868125"/>
-</polygon>
-<polygon width="0.0254" layer="1">
-<vertex x="2.08" y="-0.23"/>
-<vertex x="2.08" y="-3.26"/>
-<vertex x="5.735" y="-3.26"/>
-<vertex x="5.735" y="-0.23"/>
-</polygon>
-<polygon width="0.0254" layer="51">
-<vertex x="-0.29" y="-2.33"/>
-<vertex x="0.29" y="-2.33"/>
-<vertex x="0.29" y="-3.2"/>
-<vertex x="-0.29" y="-3.2"/>
-</polygon>
-<polygon width="0.0254" layer="51">
-<vertex x="1.31" y="-2.33"/>
-<vertex x="1.89" y="-2.33"/>
-<vertex x="1.89" y="-3.2"/>
-<vertex x="1.31" y="-3.2"/>
-</polygon>
-<polygon width="0.01" layer="16">
-<vertex x="-4.6" y="0"/>
-<vertex x="-4.6" y="-3.15"/>
-<vertex x="30" y="-3.15"/>
-<vertex x="30" y="0"/>
-</polygon>
+<wire x1="-5.08" y1="0" x2="-5.08" y2="-1.27" width="0.1524" layer="48"/>
+<wire x1="-5.08" y1="-1.27" x2="-5.08" y2="-2.54" width="0.1524" layer="48"/>
+<wire x1="-5.08" y1="-2.54" x2="-5.08" y2="-3.81" width="0.1524" layer="48"/>
+<wire x1="-5.08" y1="-3.81" x2="-5.08" y2="-5.08" width="0.1524" layer="48"/>
+<wire x1="-5.08" y1="-5.08" x2="-5.08" y2="-6.35" width="0.1524" layer="48"/>
+<wire x1="-5.08" y1="-6.35" x2="-5.08" y2="-7.62" width="0.1524" layer="48"/>
+<wire x1="-5.08" y1="-7.62" x2="-5.08" y2="-8.89" width="0.1524" layer="48"/>
+<wire x1="-5.08" y1="-8.89" x2="-3.81" y2="-8.89" width="0.1524" layer="48"/>
+<wire x1="-3.81" y1="-8.89" x2="-2.54" y2="-8.89" width="0.1524" layer="48"/>
+<wire x1="-2.54" y1="-8.89" x2="-1.27" y2="-8.89" width="0.1524" layer="48"/>
+<wire x1="-1.27" y1="-8.89" x2="0" y2="-8.89" width="0.1524" layer="48"/>
+<wire x1="0" y1="-8.89" x2="1.27" y2="-8.89" width="0.1524" layer="48"/>
+<wire x1="1.27" y1="-8.89" x2="2.54" y2="-8.89" width="0.1524" layer="48"/>
+<wire x1="2.54" y1="-8.89" x2="3.81" y2="-8.89" width="0.1524" layer="48"/>
+<wire x1="3.81" y1="-8.89" x2="5.08" y2="-8.89" width="0.1524" layer="48"/>
+<wire x1="5.08" y1="-8.89" x2="5.08" y2="-7.62" width="0.1524" layer="48"/>
+<wire x1="5.08" y1="-7.62" x2="5.08" y2="-6.35" width="0.1524" layer="48"/>
+<wire x1="5.08" y1="-6.35" x2="5.08" y2="-5.08" width="0.1524" layer="48"/>
+<wire x1="5.08" y1="-5.08" x2="5.08" y2="-3.81" width="0.1524" layer="48"/>
+<wire x1="5.08" y1="-3.81" x2="5.08" y2="-2.54" width="0.1524" layer="48"/>
+<wire x1="5.08" y1="-2.54" x2="5.08" y2="-1.27" width="0.1524" layer="48"/>
+<wire x1="5.08" y1="-1.27" x2="5.08" y2="0" width="0.1524" layer="48"/>
+<wire x1="5.08" y1="0" x2="3.81" y2="0" width="0.1524" layer="48"/>
+<wire x1="2.54" y1="0" x2="1.27" y2="0" width="0.1524" layer="48"/>
+<wire x1="1.27" y1="0" x2="0" y2="0" width="0.1524" layer="48"/>
+<wire x1="0" y1="0" x2="-1.27" y2="0" width="0.1524" layer="48"/>
+<wire x1="-1.27" y1="0" x2="-2.54" y2="0" width="0.1524" layer="48"/>
+<wire x1="-2.54" y1="0" x2="-3.81" y2="0" width="0.1524" layer="48"/>
+<wire x1="-3.81" y1="0" x2="-5.08" y2="0" width="0.1524" layer="48"/>
+<wire x1="-3.81" y1="0" x2="-5.08" y2="-1.27" width="0.1524" layer="48"/>
+<wire x1="-2.54" y1="0" x2="-5.08" y2="-2.54" width="0.1524" layer="48"/>
+<wire x1="-1.27" y1="0" x2="-5.08" y2="-3.81" width="0.1524" layer="48"/>
+<wire x1="0" y1="0" x2="-1.27" y2="-1.27" width="0.1524" layer="48"/>
+<text x="0" y="-5.08" size="0.3048" layer="48" align="center">Suggested
+Cutout Polygon
+For Any Internal
+Power Layers</text>
+<wire x1="-1.27" y1="-1.27" x2="-5.08" y2="-5.08" width="0.1524" layer="48"/>
+<wire x1="-2.54" y1="-3.81" x2="-5.08" y2="-6.35" width="0.1524" layer="48"/>
+<wire x1="-2.54" y1="-6.35" x2="-5.08" y2="-8.89" width="0.1524" layer="48"/>
+<wire x1="5.08" y1="0" x2="1.27" y2="-3.81" width="0.1524" layer="48"/>
+<wire x1="-1.27" y1="-6.35" x2="-3.81" y2="-8.89" width="0.1524" layer="48"/>
+<wire x1="5.08" y1="-1.27" x2="2.54" y2="-3.81" width="0.1524" layer="48"/>
+<wire x1="0" y1="-6.35" x2="-2.54" y2="-8.89" width="0.1524" layer="48"/>
+<wire x1="5.08" y1="-2.54" x2="2.54" y2="-5.08" width="0.1524" layer="48"/>
+<wire x1="1.27" y1="-6.35" x2="-1.27" y2="-8.89" width="0.1524" layer="48"/>
+<wire x1="5.08" y1="-3.81" x2="2.54" y2="-6.35" width="0.1524" layer="48"/>
+<wire x1="2.54" y1="-6.35" x2="0" y2="-8.89" width="0.1524" layer="48"/>
+<wire x1="5.08" y1="-5.08" x2="1.27" y2="-8.89" width="0.1524" layer="48"/>
+<wire x1="5.08" y1="-6.35" x2="2.54" y2="-8.89" width="0.1524" layer="48"/>
+<wire x1="5.08" y1="-7.62" x2="3.81" y2="-8.89" width="0.1524" layer="48"/>
+<wire x1="-2.54" y1="-5.08" x2="-5.08" y2="-7.62" width="0.1524" layer="48"/>
+<wire x1="-2.54" y1="-3.81" x2="-2.54" y2="-5.08" width="0.1524" layer="48"/>
+<wire x1="-2.54" y1="-5.08" x2="-2.54" y2="-6.35" width="0.1524" layer="48"/>
+<wire x1="-2.54" y1="-6.35" x2="-1.27" y2="-6.35" width="0.1524" layer="48"/>
+<wire x1="-1.27" y1="-6.35" x2="0" y2="-6.35" width="0.1524" layer="48"/>
+<wire x1="0" y1="-6.35" x2="1.27" y2="-6.35" width="0.1524" layer="48"/>
+<wire x1="1.27" y1="-6.35" x2="2.54" y2="-6.35" width="0.1524" layer="48"/>
+<wire x1="2.54" y1="-6.35" x2="2.54" y2="-5.08" width="0.1524" layer="48"/>
+<wire x1="2.54" y1="-5.08" x2="2.54" y2="-3.81" width="0.1524" layer="48"/>
+<wire x1="2.54" y1="-3.81" x2="1.27" y2="-3.81" width="0.1524" layer="48"/>
+<wire x1="1.27" y1="-3.81" x2="-1.27" y2="-3.81" width="0.1524" layer="48"/>
+<wire x1="-1.27" y1="-3.81" x2="-2.54" y2="-3.81" width="0.1524" layer="48"/>
+<wire x1="5.08" y1="-1.27" x2="3.81" y2="0" width="0.1524" layer="48"/>
+<wire x1="3.81" y1="0" x2="2.54" y2="0" width="0.1524" layer="48"/>
+<wire x1="2.54" y1="0" x2="5.08" y2="-2.54" width="0.1524" layer="48"/>
+<wire x1="1.27" y1="0" x2="5.08" y2="-3.81" width="0.1524" layer="48"/>
+<wire x1="0" y1="0" x2="1.27" y2="-1.27" width="0.1524" layer="48"/>
+<wire x1="1.27" y1="-1.27" x2="5.08" y2="-5.08" width="0.1524" layer="48"/>
+<wire x1="2.54" y1="-5.08" x2="5.08" y2="-7.62" width="0.1524" layer="48"/>
+<wire x1="2.54" y1="-6.35" x2="5.08" y2="-8.89" width="0.1524" layer="48"/>
+<wire x1="-5.08" y1="0" x2="-1.27" y2="-3.81" width="0.1524" layer="48"/>
+<wire x1="1.27" y1="-6.35" x2="3.81" y2="-8.89" width="0.1524" layer="48"/>
+<wire x1="-5.08" y1="-1.27" x2="-2.54" y2="-3.81" width="0.1524" layer="48"/>
+<wire x1="0" y1="-6.35" x2="2.54" y2="-8.89" width="0.1524" layer="48"/>
+<wire x1="-5.08" y1="-2.54" x2="-2.54" y2="-5.08" width="0.1524" layer="48"/>
+<wire x1="-1.27" y1="-6.35" x2="1.27" y2="-8.89" width="0.1524" layer="48"/>
+<wire x1="-5.08" y1="-3.81" x2="-2.54" y2="-6.35" width="0.1524" layer="48"/>
+<wire x1="-2.54" y1="-6.35" x2="0" y2="-8.89" width="0.1524" layer="48"/>
+<wire x1="-5.08" y1="-5.08" x2="-1.27" y2="-8.89" width="0.1524" layer="48"/>
+<wire x1="-5.08" y1="-6.35" x2="-2.54" y2="-8.89" width="0.1524" layer="48"/>
+<wire x1="-5.08" y1="-7.62" x2="-3.81" y2="-8.89" width="0.1524" layer="48"/>
+<wire x1="1.27" y1="0" x2="0" y2="-1.27" width="0.1524" layer="48"/>
+<wire x1="-1.27" y1="-2.54" x2="-2.54" y2="-3.81" width="0.1524" layer="48"/>
+<wire x1="2.54" y1="0" x2="1.27" y2="-1.27" width="0.1524" layer="48"/>
+<wire x1="3.81" y1="0" x2="1.27" y2="-2.54" width="0.1524" layer="48"/>
+<wire x1="-1.27" y1="0" x2="0" y2="-1.27" width="0.1524" layer="48"/>
+<wire x1="-2.54" y1="0" x2="-1.27" y2="-1.27" width="0.1524" layer="48"/>
+<wire x1="-3.81" y1="0" x2="-1.27" y2="-2.54" width="0.1524" layer="48"/>
+<wire x1="1.27" y1="-2.54" x2="2.54" y2="-3.81" width="0.1524" layer="48"/>
+<wire x1="2.54" y1="-3.81" x2="5.08" y2="-6.35" width="0.1524" layer="48"/>
 </package>
 </packages>
 <symbols>
@@ -24651,41 +24616,22 @@ This is a footprint for an edge mount RF antenna. Works pretty well with SMA typ
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="ANTENNA-GROUNDED" prefix="E">
-<description>&lt;h3&gt;Antenna w/ Ground Connection&lt;/h3&gt;
-&lt;p&gt;2.4GHz antennae with signal and ground terminals.&lt;/p&gt;
-&lt;p&gt;&lt;ul&gt;
-&lt;li&gt;&lt;b&gt;TRACE_ANTENNA_2.4GHZ_15.2MM&lt;/b&gt; - Meander Trace antenna
-&lt;ul&gt;&lt;li&gt;15.2 x 5.7mm footprint&lt;/li&gt;
-&lt;li&gt;Based on layout from &lt;a href="http://www.ti.com/lit/an/swra117d/swra117d.pdf"&gt;TI app note AN043&lt;/a&gt;.&lt;/li&gt;&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;b&gt;TRACE_ANTENNA_2.4GHZ_25.7MM&lt;/b&gt; - Inverted F trace antenna
-&lt;ul&gt;&lt;li&gt;25.7 x 7.5 mm footprint.&lt;/li&gt;
-&lt;li&gt;Based on layout from &lt;a href="http://www.ti.com/lit/an/swru120b/swru120b.pdf"&gt;TI design note DN0007&lt;/a&gt;.&lt;/li&gt;&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;</description>
+<deviceset name="ANTENNA-SMA-GROUNDED" prefix="E">
+<description>&lt;h3&gt;SMA Antenna Connector w/ Ground&lt;/h3&gt;
+&lt;p&gt;Edge-mount and SMD SMA connectors for RF Antennas.&lt;/p&gt;
+&lt;p&gt;
+&lt;h2&gt;&lt;i&gt;**4-LAYER BOARD WARNING!!**&lt;/i&gt;&lt;/h2&gt;
+&lt;/p&gt;
+&lt;p&gt;
+When designing a 4-layer board using any of the SMD variants, you will need to &lt;strong&gt;manually add a cutout polygon on any internal power layers&lt;/strong&gt; to make sure that you don't end up with exposed copper around the edge of the routed hole for these connectors. Exposed power copper could then short to the connector body - and that would be bad.
+&lt;/p&gt;
+&lt;p&gt;
+Why hasn't anyone added the cutout polygons directly to the connector footprint? Well, your internal layers (usually 2 and 15) may be covered with GND polygons and you might well want the copper to go all the way to the edge, especially under the connector SIGNAL pin. So adding cutouts to the footprint might make matters worse, not better...
+&lt;/p&gt;</description>
 <gates>
 <gate name="G$1" symbol="ANTENNA-GROUNDED" x="0" y="5.08"/>
 </gates>
 <devices>
-<device name="TRACE-25.7MM" package="TRACE_ANTENNA_2.4GHZ_25.7MM">
-<connects>
-<connect gate="G$1" pin="GND" pad="GND GND2"/>
-<connect gate="G$1" pin="SIGNAL" pad="ANT"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="TRACE-15.2MM" package="TRACE_ANTENNA_2.4GHZ_15.2MM">
-<connects>
-<connect gate="G$1" pin="GND" pad="GND"/>
-<connect gate="G$1" pin="SIGNAL" pad="ANT"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
 <device name="EDGE_SMA" package="SMA-EDGE">
 <connects>
 <connect gate="G$1" pin="GND" pad="GND@0 GND@1 GND@2 GND@3"/>
@@ -24706,15 +24652,6 @@ This is a footprint for an edge mount RF antenna. Works pretty well with SMA typ
 <technology name="">
 <attribute name="PROD_ID" value="CONN-00827" constant="no"/>
 </technology>
-</technologies>
-</device>
-<device name="TRACE-915MHZ" package="TRACE_ANTENNA_915MHZ_THINGMAGIC">
-<connects>
-<connect gate="G$1" pin="GND" pad="GND@1 GND@2 GND@3"/>
-<connect gate="G$1" pin="SIGNAL" pad="ANT"/>
-</connects>
-<technologies>
-<technology name=""/>
 </technologies>
 </device>
 <device name="EDGE_SMA_SMD" package="SMA-EDGE-SMD">
@@ -24784,7 +24721,6 @@ This is a footprint for an edge mount RF antenna. Works pretty well with SMA typ
 <part name="C1" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0603-25V-(+80/-20%)" value="0.1uF"/>
 <part name="BYP" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NO" device="_SILK" package3d_urn="urn:adsk.eagle:package:39279/1" value="JUMPER-SMT_2_NO_SILK"/>
 <part name="F2" library="SparkFun-Fuses" deviceset="PPTC" device="_6V2A" value="6V/2A"/>
-<part name="SUPPLY16" library="SparkFun-PowerSymbols" deviceset="V_USB" device=""/>
 <part name="C2" library="SparkFun-Capacitors" deviceset="10UF-POLAR" device="-EIA3216-16V-10%(TANT)" value="10uF"/>
 <part name="R9" library="SparkFun-Resistors" deviceset="10KOHM" device="-0603-1/10W-1%" value="10k"/>
 <part name="R10" library="SparkFun-Resistors" deviceset="20KOHM" device="-0603-1/10W-1%" value="20k"/>
@@ -24835,7 +24771,7 @@ This is a footprint for an edge mount RF antenna. Works pretty well with SMA typ
 <part name="R15" library="SparkFun-Resistors" deviceset="27OHM" device=""/>
 <part name="R16" library="SparkFun-Resistors" deviceset="27OHM" device=""/>
 <part name="D4" library="SparkFun-IC-Power" deviceset="PRTR5V0U2" device="F"/>
-<part name="J4" library="SparkFun-RF" deviceset="ANTENNA-GROUNDED" device="EDGE_SMA_SMD" value="U.FL"/>
+<part name="J4" library="SparkFun-RF" deviceset="ANTENNA-SMA-GROUNDED" device="EDGE_RPSMA_SMD" value="U.FL"/>
 <part name="GND14" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND17" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="C8" library="SparkFun-Capacitors" deviceset="47PF" device="-0603-50V-5%" value="47pF"/>
@@ -24851,14 +24787,14 @@ This is a footprint for an edge mount RF antenna. Works pretty well with SMA typ
 <part name="R21" library="SparkFun-Resistors" deviceset="1KOHM" device="-0603-1/10W-1%" value="1k"/>
 <part name="GEOF" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39281/1" value="JUMPER-SMT_2_NC_TRACE_SILK"/>
 <part name="D10" library="SparkFun-LED" deviceset="LED-BLUE" device="0603" value="BLUE"/>
-<part name="JP5" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NO" device="_SILK" package3d_urn="urn:adsk.eagle:package:39279/1"/>
+<part name="SPI" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NO" device="_SILK" package3d_urn="urn:adsk.eagle:package:39279/1"/>
 <part name="GND25" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="J5" library="SparkFun-Connectors" deviceset="QWIIC_CONNECTOR" device="JS-1MM" value="QWIIC_RIGHT_ANGLE"/>
 <part name="GND27" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="SUPPLY11" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="J9" library="SparkFun-Connectors" deviceset="CONN_06" device="NO_SILK_NO_POP"/>
 <part name="GND30" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="J10" library="SparkFun-Connectors" deviceset="CONN_12" device="1X12_NO_SILK_KIT"/>
+<part name="J10" library="SparkFun-Connectors" deviceset="CONN_12" device="NO_SILK"/>
 <part name="GND31" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="D11" library="SparkFun-DiscreteSemi" deviceset="DIODE-SCHOTTKY" device="-PMEG4005EJ" value="0.5A/40V/420mV"/>
 <part name="R24" library="SparkFun-Resistors" deviceset="3.3KOHM" device="-0603-1/10W-1%" value="3.3k"/>
@@ -24883,9 +24819,15 @@ This is a footprint for an edge mount RF antenna. Works pretty well with SMA typ
 <part name="J8" library="SparkFun-Connectors" deviceset="CORTEX_JTAG_DEBUG_MINIMUM" device="_PTH" value="JTAG"/>
 <part name="SUPPLY9" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="SUPPLY10" library="SparkFun-PowerSymbols" deviceset="V_USB" device=""/>
-<part name="SUPPLY2" library="SparkFun-PowerSymbols" deviceset="V_USB" device=""/>
-<part name="SUPPLY3" library="SparkFun-PowerSymbols" deviceset="V_USB" device=""/>
-<part name="SUPPLY5" library="SparkFun-PowerSymbols" deviceset="V_USB" device=""/>
+<part name="D5" library="SparkFun-DiscreteSemi" deviceset="DIODE-SCHOTTKY" device="-BAT60A" value="3A/10V/280mV"/>
+<part name="D12" library="SparkFun-DiscreteSemi" deviceset="DIODE-SCHOTTKY" device="-BAT60A" value="3A/10V/280mV"/>
+<part name="SUPPLY12" library="SparkFun-PowerSymbols" deviceset="V_USB_2" device=""/>
+<part name="SUPPLY2" library="SparkFun-PowerSymbols" deviceset="V_USB_2" device=""/>
+<part name="SUPPLY14" library="SparkFun-PowerSymbols" deviceset="V_USB" device=""/>
+<part name="SUPPLY5" library="SparkFun-PowerSymbols" deviceset="V_USB_2" device=""/>
+<part name="SUPPLY3" library="SparkFun-PowerSymbols" deviceset="V_USB_2" device=""/>
+<part name="E1" library="SparkFun-RF" deviceset="ANTENNA-SMA-GROUNDED" device="EDGE_SMA"/>
+<part name="GND7" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -24931,7 +24873,7 @@ This is a footprint for an edge mount RF antenna. Works pretty well with SMA typ
 <text x="363.22" y="274.32" size="2.54" layer="94" font="vector" align="center">ZED-F9P USB (u-center)</text>
 <text x="266.7" y="274.32" size="2.54" layer="94" font="vector" align="center">USB Power and Program
 Processor Board</text>
-<text x="424.18" y="7.62" size="2.54" layer="94" font="vector" align="center">v10</text>
+<text x="424.18" y="7.62" size="2.54" layer="94" font="vector" align="center">v01</text>
 <text x="203.2" y="208.28" size="2.54" layer="94" font="vector" align="center">Antenna</text>
 <wire x1="109.22" y1="78.74" x2="0" y2="78.74" width="0.2032" layer="97" style="longdash"/>
 <text x="332.74" y="208.28" size="2.54" layer="94" font="vector" align="center">GPS Module 
@@ -25041,15 +24983,12 @@ ZED-F9P</text>
 <attribute name="NAME" x="29.464" y="256.794" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="29.21" y="251.968" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="BYP" gate="G$1" x="137.16" y="259.08" smashed="yes">
-<attribute name="NAME" x="135.128" y="260.858" size="1.778" layer="95" font="vector"/>
+<instance part="BYP" gate="G$1" x="144.78" y="256.54" smashed="yes">
+<attribute name="NAME" x="142.748" y="258.318" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="F2" gate="F1" x="137.16" y="248.92" smashed="yes">
-<attribute name="NAME" x="137.922" y="250.698" size="1.778" layer="95" font="vector" align="bottom-center"/>
-<attribute name="VALUE" x="137.668" y="246.634" size="1.778" layer="96" font="vector" align="top-center"/>
-</instance>
-<instance part="SUPPLY16" gate="G$1" x="129.54" y="261.62" smashed="yes">
-<attribute name="VALUE" x="129.54" y="264.414" size="1.778" layer="96" align="bottom-center"/>
+<instance part="F2" gate="F1" x="144.78" y="246.38" smashed="yes">
+<attribute name="NAME" x="145.542" y="248.158" size="1.778" layer="95" font="vector" align="bottom-center"/>
+<attribute name="VALUE" x="145.288" y="244.094" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="C2" gate="G$1" x="10.16" y="256.54" smashed="yes">
 <attribute name="NAME" x="11.176" y="257.175" size="1.778" layer="95" font="vector"/>
@@ -25072,8 +25011,8 @@ ZED-F9P</text>
 <instance part="SUPPLY17" gate="G$1" x="10.16" y="264.16" smashed="yes">
 <attribute name="VALUE" x="10.16" y="266.954" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="SUPPLY18" gate="G$1" x="147.32" y="261.62" smashed="yes">
-<attribute name="VALUE" x="147.32" y="264.414" size="1.778" layer="96" align="bottom-center"/>
+<instance part="SUPPLY18" gate="G$1" x="154.94" y="259.08" smashed="yes">
+<attribute name="VALUE" x="154.94" y="261.874" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 <instance part="SUPPLY19" gate="G$1" x="43.18" y="144.78" smashed="yes">
 <attribute name="VALUE" x="43.18" y="147.574" size="1.778" layer="96" align="bottom-center"/>
@@ -25139,13 +25078,13 @@ ZED-F9P</text>
 <attribute name="NAME" x="63.5" y="213.868" size="1.778" layer="95"/>
 <attribute name="VALUE" x="63.5" y="111.76" size="1.778" layer="96"/>
 </instance>
-<instance part="D2" gate="G$1" x="40.64" y="40.64" smashed="yes" rot="R90">
-<attribute name="NAME" x="45.212" y="37.211" size="1.778" layer="95" font="vector" rot="R180"/>
-<attribute name="VALUE" x="45.212" y="42.545" size="1.778" layer="96" font="vector" rot="R180" align="top-left"/>
+<instance part="D2" gate="G$1" x="40.64" y="40.64" smashed="yes" rot="MR270">
+<attribute name="NAME" x="45.212" y="44.069" size="1.778" layer="95" font="vector" rot="MR0"/>
+<attribute name="VALUE" x="45.212" y="38.735" size="1.778" layer="96" font="vector" rot="MR0" align="top-left"/>
 </instance>
-<instance part="D3" gate="G$1" x="40.64" y="53.34" smashed="yes" rot="R90">
-<attribute name="NAME" x="45.212" y="49.911" size="1.778" layer="95" font="vector" rot="R180"/>
-<attribute name="VALUE" x="45.212" y="55.245" size="1.778" layer="96" font="vector" rot="R180" align="top-left"/>
+<instance part="D3" gate="G$1" x="40.64" y="53.34" smashed="yes" rot="MR270">
+<attribute name="NAME" x="45.212" y="56.769" size="1.778" layer="95" font="vector" rot="MR0"/>
+<attribute name="VALUE" x="45.212" y="51.435" size="1.778" layer="96" font="vector" rot="MR0" align="top-left"/>
 </instance>
 <instance part="R1" gate="G$1" x="53.34" y="40.64" smashed="yes" rot="R180">
 <attribute name="NAME" x="53.34" y="39.116" size="1.778" layer="95" font="vector" rot="R180" align="bottom-center"/>
@@ -25169,14 +25108,12 @@ ZED-F9P</text>
 </instance>
 <instance part="TP1" gate="G$1" x="200.66" y="22.86" smashed="yes">
 <attribute name="NAME" x="198.12" y="25.4" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="198.12" y="20.32" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="EN" gate="G$1" x="45.72" y="200.66" smashed="yes">
 <attribute name="NAME" x="44.45" y="202.946" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="TP2" gate="G$1" x="200.66" y="17.78" smashed="yes">
 <attribute name="NAME" x="198.12" y="20.32" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="198.12" y="15.24" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="J3" gate="J1" x="307.34" y="248.92" smashed="yes">
 <attribute name="NAME" x="304.8" y="259.334" size="1.778" layer="95" font="vector"/>
@@ -25257,22 +25194,22 @@ ZED-F9P</text>
 <instance part="J4" gate="G$1" x="195.58" y="193.04" smashed="yes" rot="MR0">
 <attribute name="NAME" x="195.834" y="199.898" size="1.778" layer="95" rot="MR0"/>
 </instance>
-<instance part="GND14" gate="1" x="193.04" y="160.02" smashed="yes">
-<attribute name="VALUE" x="193.04" y="159.766" size="1.778" layer="96" align="top-center"/>
+<instance part="GND14" gate="1" x="193.04" y="157.48" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="193.04" y="157.226" size="1.778" layer="96" rot="MR0" align="top-center"/>
 </instance>
-<instance part="GND17" gate="1" x="200.66" y="160.02" smashed="yes">
-<attribute name="VALUE" x="200.66" y="159.766" size="1.778" layer="96" align="top-center"/>
+<instance part="GND17" gate="1" x="200.66" y="157.48" smashed="yes">
+<attribute name="VALUE" x="200.66" y="157.226" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="C8" gate="G$1" x="200.66" y="167.64" smashed="yes">
-<attribute name="NAME" x="202.184" y="170.561" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="202.184" y="165.481" size="1.778" layer="96" font="vector"/>
+<instance part="C8" gate="G$1" x="200.66" y="165.1" smashed="yes">
+<attribute name="NAME" x="202.184" y="168.021" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="202.184" y="162.941" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="R17" gate="G$1" x="208.28" y="175.26" smashed="yes">
-<attribute name="NAME" x="208.28" y="176.784" size="1.778" layer="95" font="vector" align="bottom-center"/>
-<attribute name="VALUE" x="208.28" y="173.736" size="1.778" layer="96" font="vector" align="top-center"/>
+<instance part="R17" gate="G$1" x="208.28" y="172.72" smashed="yes">
+<attribute name="NAME" x="208.28" y="174.244" size="1.778" layer="95" font="vector" align="bottom-center"/>
+<attribute name="VALUE" x="208.28" y="171.196" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
-<instance part="FB1" gate="G$1" x="200.66" y="182.88" smashed="yes">
-<attribute name="NAME" x="202.438" y="183.388" size="1.778" layer="95" font="vector"/>
+<instance part="FB1" gate="G$1" x="200.66" y="180.34" smashed="yes">
+<attribute name="NAME" x="202.438" y="180.848" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="R19" gate="G$1" x="53.34" y="27.94" smashed="yes" rot="MR0">
 <attribute name="NAME" x="53.34" y="29.464" size="1.778" layer="95" font="vector" rot="MR0" align="bottom-center"/>
@@ -25307,8 +25244,8 @@ ZED-F9P</text>
 <attribute name="NAME" x="47.498" y="13.335" size="1.778" layer="95" font="vector" rot="MR0"/>
 <attribute name="VALUE" x="47.752" y="11.049" size="1.778" layer="96" font="vector" rot="MR0" align="top-left"/>
 </instance>
-<instance part="JP5" gate="G$1" x="396.24" y="157.48" smashed="yes">
-<attribute name="NAME" x="393.7" y="160.02" size="1.778" layer="95" font="vector"/>
+<instance part="SPI" gate="G$1" x="396.24" y="157.48" smashed="yes">
+<attribute name="NAME" x="394.716" y="160.02" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="GND25" gate="1" x="403.86" y="152.4" smashed="yes">
 <attribute name="VALUE" x="403.86" y="152.146" size="1.778" layer="96" align="top-center"/>
@@ -25393,20 +25330,40 @@ ZED-F9P</text>
 <attribute name="NAME" x="129.54" y="63.754" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="129.54" y="48.514" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="SUPPLY9" gate="G$1" x="307.34" y="66.04" smashed="yes">
-<attribute name="VALUE" x="307.34" y="68.834" size="1.778" layer="96" align="bottom-center"/>
+<instance part="SUPPLY9" gate="G$1" x="302.26" y="68.58" smashed="yes">
+<attribute name="VALUE" x="302.26" y="71.374" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 <instance part="SUPPLY10" gate="G$1" x="266.7" y="259.08" smashed="yes">
 <attribute name="VALUE" x="266.7" y="261.874" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="SUPPLY2" gate="G$1" x="325.12" y="259.08" smashed="yes">
+<instance part="D5" gate="G$1" x="139.7" y="205.74" smashed="yes">
+<attribute name="NAME" x="137.16" y="207.772" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="137.16" y="203.708" size="1.778" layer="96" font="vector" align="top-left"/>
+</instance>
+<instance part="D12" gate="G$1" x="139.7" y="193.04" smashed="yes">
+<attribute name="NAME" x="137.16" y="195.072" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="137.16" y="191.008" size="1.778" layer="96" font="vector" align="top-left"/>
+</instance>
+<instance part="SUPPLY12" gate="G$1" x="325.12" y="259.08" smashed="yes">
 <attribute name="VALUE" x="325.12" y="261.874" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="SUPPLY3" gate="G$1" x="312.42" y="66.04" smashed="yes">
-<attribute name="VALUE" x="312.42" y="68.834" size="1.778" layer="96" align="bottom-center"/>
-</instance>
-<instance part="SUPPLY5" gate="G$1" x="363.22" y="261.62" smashed="yes">
+<instance part="SUPPLY2" gate="G$1" x="363.22" y="261.62" smashed="yes">
 <attribute name="VALUE" x="363.22" y="264.414" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="SUPPLY14" gate="G$1" x="134.62" y="210.82" smashed="yes">
+<attribute name="VALUE" x="134.62" y="213.614" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="SUPPLY5" gate="G$1" x="124.46" y="210.82" smashed="yes">
+<attribute name="VALUE" x="124.46" y="213.614" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="SUPPLY3" gate="G$1" x="312.42" y="68.58" smashed="yes">
+<attribute name="VALUE" x="312.42" y="71.374" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="E1" gate="G$1" x="220.98" y="195.58" smashed="yes" rot="MR0">
+<attribute name="NAME" x="220.472" y="200.66" size="1.778" layer="95" font="vector" rot="MR0"/>
+</instance>
+<instance part="GND7" gate="1" x="218.44" y="180.34" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="218.44" y="180.086" size="1.778" layer="96" rot="MR0" align="top-center"/>
 </instance>
 </instances>
 <busses>
@@ -25566,15 +25523,15 @@ ZED-F9P</text>
 <segment>
 <pinref part="GND17" gate="1" pin="GND"/>
 <pinref part="C8" gate="G$1" pin="2"/>
-<wire x1="200.66" y1="162.56" x2="200.66" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="160.02" x2="200.66" y2="162.56" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="J4" gate="G$1" pin="GND"/>
 <pinref part="GND14" gate="1" pin="GND"/>
-<wire x1="193.04" y1="190.5" x2="193.04" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="190.5" x2="193.04" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="JP5" gate="G$1" pin="2"/>
+<pinref part="SPI" gate="G$1" pin="2"/>
 <wire x1="403.86" y1="157.48" x2="401.32" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="403.86" y1="157.48" x2="403.86" y2="154.94" width="0.1524" layer="91"/>
 <pinref part="GND25" gate="1" pin="GND"/>
@@ -25605,6 +25562,11 @@ ZED-F9P</text>
 <wire x1="124.46" y1="53.34" x2="124.46" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="127" y1="53.34" x2="124.46" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="J8" gate="G$1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="E1" gate="G$1" pin="GND"/>
+<pinref part="GND7" gate="1" pin="GND"/>
+<wire x1="218.44" y1="193.04" x2="218.44" y2="182.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="3.3V" class="0">
@@ -25682,6 +25644,8 @@ ZED-F9P</text>
 </segment>
 <segment>
 <wire x1="307.34" y1="55.88" x2="307.34" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="307.34" y1="66.04" x2="302.26" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="302.26" y1="66.04" x2="302.26" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="302.26" y1="55.88" x2="307.34" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="SUPPLY9" gate="G$1" pin="3.3V"/>
 <pinref part="J10" gate="G$1" pin="9"/>
@@ -25733,38 +25697,16 @@ ZED-F9P</text>
 </net>
 <net name="V_USB" class="0">
 <segment>
-<wire x1="129.54" y1="248.92" x2="132.08" y2="248.92" width="0.1524" layer="91"/>
-<pinref part="BYP" gate="G$1" pin="1"/>
-<wire x1="132.08" y1="259.08" x2="129.54" y2="259.08" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="259.08" x2="129.54" y2="248.92" width="0.1524" layer="91"/>
-<pinref part="F2" gate="F1" pin="1"/>
-<pinref part="SUPPLY16" gate="G$1" pin="V_USB"/>
-<wire x1="129.54" y1="261.62" x2="129.54" y2="259.08" width="0.1524" layer="91"/>
-<junction x="129.54" y="259.08"/>
+<pinref part="D5" gate="G$1" pin="A"/>
+<wire x1="137.16" y1="205.74" x2="134.62" y2="205.74" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="205.74" x2="134.62" y2="210.82" width="0.1524" layer="91"/>
+<pinref part="SUPPLY14" gate="G$1" pin="V_USB"/>
 </segment>
 <segment>
 <pinref part="J1" gate="J1" pin="VBUS"/>
 <wire x1="264.16" y1="256.54" x2="266.7" y2="256.54" width="0.1524" layer="91"/>
-<wire x1="266.7" y1="256.54" x2="266.7" y2="259.08" width="0.1524" layer="91"/>
 <pinref part="SUPPLY10" gate="G$1" pin="V_USB"/>
-</segment>
-<segment>
-<pinref part="J3" gate="J1" pin="VBUS"/>
-<wire x1="320.04" y1="256.54" x2="325.12" y2="256.54" width="0.1524" layer="91"/>
-<wire x1="325.12" y1="256.54" x2="325.12" y2="259.08" width="0.1524" layer="91"/>
-<pinref part="SUPPLY2" gate="G$1" pin="V_USB"/>
-</segment>
-<segment>
-<wire x1="312.42" y1="48.26" x2="312.42" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="J10" gate="G$1" pin="6"/>
-<wire x1="302.26" y1="48.26" x2="312.42" y2="48.26" width="0.1524" layer="91"/>
-<pinref part="SUPPLY3" gate="G$1" pin="V_USB"/>
-</segment>
-<segment>
-<pinref part="D4" gate="D1" pin="5"/>
-<wire x1="360.68" y1="251.46" x2="363.22" y2="251.46" width="0.1524" layer="91"/>
-<wire x1="363.22" y1="251.46" x2="363.22" y2="261.62" width="0.1524" layer="91"/>
-<pinref part="SUPPLY5" gate="G$1" pin="V_USB"/>
+<wire x1="266.7" y1="256.54" x2="266.7" y2="259.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$14" class="0">
@@ -25862,14 +25804,14 @@ ZED-F9P</text>
 <junction x="48.26" y="261.62"/>
 </segment>
 <segment>
-<wire x1="144.78" y1="248.92" x2="147.32" y2="248.92" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="246.38" x2="154.94" y2="246.38" width="0.1524" layer="91"/>
 <pinref part="BYP" gate="G$1" pin="2"/>
-<wire x1="142.24" y1="259.08" x2="147.32" y2="259.08" width="0.1524" layer="91"/>
-<wire x1="147.32" y1="259.08" x2="147.32" y2="248.92" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="256.54" x2="154.94" y2="256.54" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="256.54" x2="154.94" y2="246.38" width="0.1524" layer="91"/>
 <pinref part="F2" gate="F1" pin="2"/>
 <pinref part="SUPPLY18" gate="G$1" pin="VIN"/>
-<wire x1="147.32" y1="261.62" x2="147.32" y2="259.08" width="0.1524" layer="91"/>
-<junction x="147.32" y="259.08"/>
+<wire x1="154.94" y1="259.08" x2="154.94" y2="256.54" width="0.1524" layer="91"/>
+<junction x="154.94" y="256.54"/>
 </segment>
 <segment>
 <pinref part="R10" gate="G$1" pin="2"/>
@@ -25952,16 +25894,6 @@ ZED-F9P</text>
 </net>
 <net name="RXI/SDI" class="0">
 <segment>
-<wire x1="106.68" y1="187.96" x2="109.22" y2="187.96" width="0.1524" layer="91"/>
-<label x="109.22" y="187.96" size="1.27" layer="95" xref="yes"/>
-<pinref part="J6" gate="J1" pin="SPI_SDI"/>
-</segment>
-<segment>
-<pinref part="R12" gate="B" pin="2"/>
-<wire x1="365.76" y1="172.72" x2="368.3" y2="172.72" width="0.1524" layer="91"/>
-<label x="368.3" y="172.72" size="1.27" layer="95" xref="yes"/>
-</segment>
-<segment>
 <wire x1="106.68" y1="162.56" x2="109.22" y2="162.56" width="0.1524" layer="91"/>
 <label x="109.22" y="162.56" size="1.27" layer="95" xref="yes"/>
 <pinref part="J6" gate="J1" pin="TX1"/>
@@ -25970,6 +25902,16 @@ ZED-F9P</text>
 <wire x1="302.26" y1="60.96" x2="314.96" y2="60.96" width="0.1524" layer="91"/>
 <label x="314.96" y="60.96" size="1.27" layer="95" font="vector" xref="yes"/>
 <pinref part="J10" gate="G$1" pin="11"/>
+</segment>
+<segment>
+<wire x1="365.76" y1="160.02" x2="368.3" y2="160.02" width="0.1524" layer="91"/>
+<label x="368.3" y="160.02" size="1.27" layer="95" xref="yes"/>
+<pinref part="R12" gate="C" pin="2"/>
+</segment>
+<segment>
+<wire x1="106.68" y1="190.5" x2="109.22" y2="190.5" width="0.1524" layer="91"/>
+<label x="109.22" y="190.5" size="1.27" layer="95" xref="yes"/>
+<pinref part="J6" gate="J1" pin="SPI_SDO"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -26022,39 +25964,34 @@ ZED-F9P</text>
 </net>
 <net name="!ZED_RESET!" class="0">
 <segment>
-<pinref part="R11" gate="B" pin="2"/>
-<wire x1="365.76" y1="132.08" x2="368.3" y2="132.08" width="0.1524" layer="91"/>
-<label x="368.3" y="132.08" size="1.27" layer="95" xref="yes"/>
-</segment>
-<segment>
 <wire x1="302.26" y1="43.18" x2="312.42" y2="43.18" width="0.1524" layer="91"/>
 <label x="312.42" y="43.18" size="1.27" layer="95" font="vector" xref="yes"/>
 <pinref part="J10" gate="G$1" pin="4"/>
 </segment>
+<segment>
+<wire x1="365.76" y1="177.8" x2="368.3" y2="177.8" width="0.1524" layer="91"/>
+<label x="368.3" y="177.8" size="1.27" layer="95" xref="yes"/>
+<pinref part="R11" gate="C" pin="2"/>
+</segment>
 </net>
 <net name="INT" class="0">
-<segment>
-<pinref part="R11" gate="D" pin="2"/>
-<wire x1="365.76" y1="167.64" x2="368.3" y2="167.64" width="0.1524" layer="91"/>
-<label x="368.3" y="167.64" size="1.27" layer="95" xref="yes"/>
-</segment>
 <segment>
 <wire x1="302.26" y1="38.1" x2="312.42" y2="38.1" width="0.1524" layer="91"/>
 <label x="312.42" y="38.1" size="1.27" layer="95" font="vector" rot="MR180" xref="yes"/>
 <pinref part="J10" gate="G$1" pin="2"/>
 </segment>
 <segment>
-<pinref part="J6" gate="J1" pin="G0/BUS0"/>
-<wire x1="106.68" y1="144.78" x2="109.22" y2="144.78" width="0.1524" layer="91"/>
-<label x="109.22" y="144.78" size="1.27" layer="95" xref="yes"/>
+<wire x1="365.76" y1="175.26" x2="368.3" y2="175.26" width="0.1524" layer="91"/>
+<label x="368.3" y="175.26" size="1.27" layer="95" xref="yes"/>
+<pinref part="R11" gate="A" pin="2"/>
+</segment>
+<segment>
+<pinref part="J6" gate="J1" pin="D1/CAM_TRIG"/>
+<wire x1="106.68" y1="167.64" x2="109.22" y2="167.64" width="0.1524" layer="91"/>
+<label x="109.22" y="167.64" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="SDA/!CS!" class="0">
-<segment>
-<pinref part="R12" gate="C" pin="2"/>
-<wire x1="365.76" y1="160.02" x2="368.3" y2="160.02" width="0.1524" layer="91"/>
-<label x="368.3" y="160.02" size="1.27" layer="95" xref="yes"/>
-</segment>
 <segment>
 <pinref part="J5" gate="G$1" pin="3"/>
 <wire x1="271.78" y1="60.96" x2="276.86" y2="60.96" width="0.1524" layer="91"/>
@@ -26075,13 +26012,13 @@ ZED-F9P</text>
 <label x="314.96" y="53.34" size="1.27" layer="95" font="vector" xref="yes"/>
 <pinref part="J10" gate="G$1" pin="8"/>
 </segment>
+<segment>
+<wire x1="365.76" y1="172.72" x2="368.3" y2="172.72" width="0.1524" layer="91"/>
+<label x="368.3" y="172.72" size="1.27" layer="95" xref="yes"/>
+<pinref part="R12" gate="B" pin="2"/>
+</segment>
 </net>
 <net name="SCL/CLK" class="0">
-<segment>
-<pinref part="R12" gate="D" pin="2"/>
-<wire x1="365.76" y1="162.56" x2="368.3" y2="162.56" width="0.1524" layer="91"/>
-<label x="368.3" y="162.56" size="1.27" layer="95" xref="yes"/>
-</segment>
 <segment>
 <pinref part="J5" gate="G$1" pin="4"/>
 <wire x1="276.86" y1="63.5" x2="271.78" y2="63.5" width="0.1524" layer="91"/>
@@ -26097,34 +26034,39 @@ ZED-F9P</text>
 <label x="314.96" y="50.8" size="1.27" layer="95" font="vector" xref="yes"/>
 <pinref part="J10" gate="G$1" pin="7"/>
 </segment>
+<segment>
+<wire x1="365.76" y1="170.18" x2="368.3" y2="170.18" width="0.1524" layer="91"/>
+<label x="368.3" y="170.18" size="1.27" layer="95" xref="yes"/>
+<pinref part="R12" gate="A" pin="2"/>
+</segment>
 </net>
 <net name="TX_READY" class="0">
-<segment>
-<pinref part="R11" gate="A" pin="2"/>
-<wire x1="365.76" y1="175.26" x2="368.3" y2="175.26" width="0.1524" layer="91"/>
-<label x="368.3" y="175.26" size="1.27" layer="95" xref="yes"/>
-</segment>
 <segment>
 <wire x1="302.26" y1="45.72" x2="312.42" y2="45.72" width="0.1524" layer="91"/>
 <label x="312.42" y="45.72" size="1.27" layer="95" font="vector" rot="MR180" xref="yes"/>
 <pinref part="J10" gate="G$1" pin="5"/>
 </segment>
 <segment>
-<pinref part="J6" gate="J1" pin="G1/BUS1"/>
-<wire x1="106.68" y1="142.24" x2="109.22" y2="142.24" width="0.1524" layer="91"/>
-<label x="109.22" y="142.24" size="1.27" layer="95" xref="yes"/>
+<wire x1="365.76" y1="167.64" x2="368.3" y2="167.64" width="0.1524" layer="91"/>
+<label x="368.3" y="167.64" size="1.27" layer="95" xref="yes"/>
+<pinref part="R11" gate="D" pin="2"/>
+</segment>
+<segment>
+<wire x1="106.68" y1="170.18" x2="109.22" y2="170.18" width="0.1524" layer="91"/>
+<label x="109.22" y="170.18" size="1.27" layer="95" xref="yes"/>
+<pinref part="J6" gate="J1" pin="D0"/>
 </segment>
 </net>
 <net name="!SAFEBOOT!" class="0">
 <segment>
-<pinref part="R11" gate="C" pin="2"/>
-<wire x1="365.76" y1="177.8" x2="363.22" y2="177.8" width="0.1524" layer="91"/>
-<label x="365.76" y="177.8" size="1.27" layer="95" xref="yes"/>
-</segment>
-<segment>
 <wire x1="302.26" y1="40.64" x2="312.42" y2="40.64" width="0.1524" layer="91"/>
 <label x="312.42" y="40.64" size="1.27" layer="95" font="vector" rot="MR180" xref="yes"/>
 <pinref part="J10" gate="G$1" pin="3"/>
+</segment>
+<segment>
+<label x="368.3" y="132.08" size="1.27" layer="95" xref="yes"/>
+<wire x1="365.76" y1="132.08" x2="368.3" y2="132.08" width="0.1524" layer="91"/>
+<pinref part="R11" gate="B" pin="2"/>
 </segment>
 </net>
 <net name="ZED_USB_N" class="0">
@@ -26153,12 +26095,13 @@ ZED-F9P</text>
 </net>
 <net name="RF_IN" class="1">
 <segment>
-<label x="205.74" y="190.5" size="1.27" layer="95" xref="yes"/>
-<wire x1="205.74" y1="190.5" x2="200.66" y2="190.5" width="0.1524" layer="91"/>
-<wire x1="200.66" y1="187.96" x2="200.66" y2="190.5" width="0.1524" layer="91"/>
+<label x="205.74" y="187.96" size="1.27" layer="95" xref="yes"/>
+<wire x1="205.74" y1="187.96" x2="200.66" y2="187.96" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="185.42" x2="200.66" y2="187.96" width="0.1524" layer="91"/>
 <pinref part="J4" gate="G$1" pin="SIGNAL"/>
-<wire x1="200.66" y1="190.5" x2="195.58" y2="190.5" width="0.1524" layer="91"/>
-<junction x="200.66" y="190.5"/>
+<wire x1="200.66" y1="187.96" x2="195.58" y2="187.96" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="187.96" x2="195.58" y2="190.5" width="0.1524" layer="91"/>
+<junction x="200.66" y="187.96"/>
 <pinref part="FB1" gate="G$1" pin="1"/>
 </segment>
 <segment>
@@ -26170,10 +26113,10 @@ ZED-F9P</text>
 <net name="N$18" class="0">
 <segment>
 <pinref part="C8" gate="G$1" pin="1"/>
-<wire x1="200.66" y1="177.8" x2="200.66" y2="175.26" width="0.1524" layer="91"/>
 <wire x1="200.66" y1="175.26" x2="200.66" y2="172.72" width="0.1524" layer="91"/>
-<wire x1="203.2" y1="175.26" x2="200.66" y2="175.26" width="0.1524" layer="91"/>
-<junction x="200.66" y="175.26"/>
+<wire x1="200.66" y1="172.72" x2="200.66" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="172.72" x2="200.66" y2="172.72" width="0.1524" layer="91"/>
+<junction x="200.66" y="172.72"/>
 <pinref part="R17" gate="G$1" pin="1"/>
 <pinref part="FB1" gate="G$1" pin="2"/>
 </segment>
@@ -26181,8 +26124,8 @@ ZED-F9P</text>
 <net name="V_RF" class="0">
 <segment>
 <pinref part="R17" gate="G$1" pin="2"/>
-<wire x1="215.9" y1="175.26" x2="213.36" y2="175.26" width="0.1524" layer="91"/>
-<label x="215.9" y="175.26" size="1.27" layer="95" xref="yes"/>
+<wire x1="215.9" y1="172.72" x2="213.36" y2="172.72" width="0.1524" layer="91"/>
+<label x="215.9" y="172.72" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U1" gate="U1" pin="V_RF"/>
@@ -26205,6 +26148,12 @@ ZED-F9P</text>
 <wire x1="302.26" y1="35.56" x2="312.42" y2="35.56" width="0.1524" layer="91"/>
 <label x="312.42" y="35.56" size="1.27" layer="95" font="vector" rot="MR180" xref="yes"/>
 <pinref part="J10" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<wire x1="220.98" y1="190.5" x2="223.52" y2="190.5" width="0.1524" layer="91"/>
+<label x="223.52" y="190.5" size="1.27" layer="95" xref="yes"/>
+<pinref part="E1" gate="G$1" pin="SIGNAL"/>
+<wire x1="220.98" y1="193.04" x2="220.98" y2="190.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -26263,7 +26212,7 @@ ZED-F9P</text>
 </net>
 <net name="D_SEL" class="0">
 <segment>
-<pinref part="JP5" gate="G$1" pin="1"/>
+<pinref part="SPI" gate="G$1" pin="1"/>
 <wire x1="391.16" y1="157.48" x2="388.62" y2="157.48" width="0.1524" layer="91"/>
 <label x="388.62" y="157.48" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
@@ -26297,9 +26246,9 @@ ZED-F9P</text>
 <label x="368.3" y="152.4" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="J6" gate="J1" pin="TX2"/>
-<wire x1="106.68" y1="152.4" x2="109.22" y2="152.4" width="0.1524" layer="91"/>
-<label x="109.22" y="152.4" size="1.27" layer="95" xref="yes"/>
+<pinref part="J6" gate="J1" pin="RX2"/>
+<wire x1="106.68" y1="149.86" x2="109.22" y2="149.86" width="0.1524" layer="91"/>
+<label x="109.22" y="149.86" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="RXI2" class="0">
@@ -26314,9 +26263,9 @@ ZED-F9P</text>
 <label x="368.3" y="149.86" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="J6" gate="J1" pin="RX2"/>
-<wire x1="106.68" y1="149.86" x2="109.22" y2="149.86" width="0.1524" layer="91"/>
-<label x="109.22" y="149.86" size="1.27" layer="95" xref="yes"/>
+<pinref part="J6" gate="J1" pin="TX2"/>
+<wire x1="106.68" y1="152.4" x2="109.22" y2="152.4" width="0.1524" layer="91"/>
+<label x="109.22" y="152.4" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="V_BATT" class="0">
@@ -26374,16 +26323,6 @@ ZED-F9P</text>
 </net>
 <net name="TXO/SDO" class="0">
 <segment>
-<wire x1="106.68" y1="190.5" x2="109.22" y2="190.5" width="0.1524" layer="91"/>
-<label x="109.22" y="190.5" size="1.27" layer="95" xref="yes"/>
-<pinref part="J6" gate="J1" pin="SPI_SDO"/>
-</segment>
-<segment>
-<pinref part="R12" gate="A" pin="2"/>
-<wire x1="365.76" y1="170.18" x2="368.3" y2="170.18" width="0.1524" layer="91"/>
-<label x="368.3" y="170.18" size="1.27" layer="95" xref="yes"/>
-</segment>
-<segment>
 <wire x1="106.68" y1="160.02" x2="109.22" y2="160.02" width="0.1524" layer="91"/>
 <label x="109.22" y="160.02" size="1.27" layer="95" xref="yes"/>
 <pinref part="J6" gate="J1" pin="RX1"/>
@@ -26392,6 +26331,16 @@ ZED-F9P</text>
 <wire x1="302.26" y1="63.5" x2="314.96" y2="63.5" width="0.1524" layer="91"/>
 <label x="314.96" y="63.5" size="1.27" layer="95" font="vector" xref="yes"/>
 <pinref part="J10" gate="G$1" pin="12"/>
+</segment>
+<segment>
+<wire x1="365.76" y1="162.56" x2="368.3" y2="162.56" width="0.1524" layer="91"/>
+<label x="368.3" y="162.56" size="1.27" layer="95" xref="yes"/>
+<pinref part="R12" gate="D" pin="2"/>
+</segment>
+<segment>
+<wire x1="106.68" y1="187.96" x2="109.22" y2="187.96" width="0.1524" layer="91"/>
+<label x="109.22" y="187.96" size="1.27" layer="95" xref="yes"/>
+<pinref part="J6" gate="J1" pin="SPI_SDI"/>
 </segment>
 </net>
 <net name="!RESET!" class="0">
@@ -26480,6 +26429,55 @@ ZED-F9P</text>
 <pinref part="D4" gate="D1" pin="4"/>
 <pinref part="R15" gate="G$1" pin="1"/>
 <wire x1="360.68" y1="246.38" x2="365.76" y2="246.38" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="V_USB_2" class="0">
+<segment>
+<pinref part="D4" gate="D1" pin="5"/>
+<wire x1="360.68" y1="251.46" x2="363.22" y2="251.46" width="0.1524" layer="91"/>
+<pinref part="SUPPLY2" gate="G$1" pin="V_USB_2"/>
+<wire x1="363.22" y1="251.46" x2="363.22" y2="261.62" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="D12" gate="G$1" pin="A"/>
+<wire x1="137.16" y1="193.04" x2="124.46" y2="193.04" width="0.1524" layer="91"/>
+<pinref part="SUPPLY5" gate="G$1" pin="V_USB_2"/>
+<wire x1="124.46" y1="193.04" x2="124.46" y2="210.82" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="J3" gate="J1" pin="VBUS"/>
+<pinref part="SUPPLY12" gate="G$1" pin="V_USB_2"/>
+<wire x1="320.04" y1="256.54" x2="325.12" y2="256.54" width="0.1524" layer="91"/>
+<wire x1="325.12" y1="256.54" x2="325.12" y2="259.08" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<wire x1="312.42" y1="48.26" x2="312.42" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="J10" gate="G$1" pin="6"/>
+<wire x1="302.26" y1="48.26" x2="312.42" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="SUPPLY3" gate="G$1" pin="V_USB_2"/>
+</segment>
+</net>
+<net name="V_FUSE" class="0">
+<segment>
+<pinref part="D12" gate="G$1" pin="C"/>
+<wire x1="142.24" y1="193.04" x2="144.78" y2="193.04" width="0.1524" layer="91"/>
+<pinref part="D5" gate="G$1" pin="C"/>
+<wire x1="142.24" y1="205.74" x2="144.78" y2="205.74" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="193.04" x2="144.78" y2="205.74" width="0.1524" layer="91"/>
+<junction x="144.78" y="205.74"/>
+<wire x1="144.78" y1="205.74" x2="144.78" y2="210.82" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="210.82" x2="147.32" y2="210.82" width="0.1524" layer="91"/>
+<label x="147.32" y="210.82" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<wire x1="137.16" y1="246.38" x2="139.7" y2="246.38" width="0.1524" layer="91"/>
+<pinref part="BYP" gate="G$1" pin="1"/>
+<wire x1="139.7" y1="256.54" x2="137.16" y2="256.54" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="256.54" x2="137.16" y2="246.38" width="0.1524" layer="91"/>
+<pinref part="F2" gate="F1" pin="1"/>
+<wire x1="134.62" y1="256.54" x2="137.16" y2="256.54" width="0.1524" layer="91"/>
+<junction x="137.16" y="256.54"/>
+<label x="134.62" y="256.54" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>

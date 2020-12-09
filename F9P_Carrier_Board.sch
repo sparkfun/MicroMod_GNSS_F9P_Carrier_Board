@@ -25987,11 +25987,6 @@ ZED-F9P</text>
 <label x="368.3" y="175.26" size="1.27" layer="95" xref="yes"/>
 <pinref part="R11" gate="A" pin="2"/>
 </segment>
-<segment>
-<pinref part="J6" gate="J1" pin="D1/CAM_TRIG"/>
-<wire x1="106.68" y1="167.64" x2="109.22" y2="167.64" width="0.1524" layer="91"/>
-<label x="109.22" y="167.64" size="1.27" layer="95" xref="yes"/>
-</segment>
 </net>
 <net name="SDA/!CS!" class="0">
 <segment>

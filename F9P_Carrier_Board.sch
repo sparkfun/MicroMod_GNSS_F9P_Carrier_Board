@@ -24874,7 +24874,7 @@ Why hasn't anyone added the cutout polygons directly to the connector footprint?
 <text x="266.7" y="274.32" size="2.54" layer="94" font="vector" align="center">USB Power and Program
 Processor Board</text>
 <text x="424.18" y="7.62" size="2.54" layer="94" font="vector" align="center">v01</text>
-<text x="203.2" y="208.28" size="2.54" layer="94" font="vector" align="center">Antenna</text>
+<text x="203.454" y="210.312" size="2.54" layer="94" font="vector" align="center">GPS and PPS Antenna</text>
 <wire x1="109.22" y1="78.74" x2="0" y2="78.74" width="0.2032" layer="97" style="longdash"/>
 <text x="332.74" y="208.28" size="2.54" layer="94" font="vector" align="center">GPS Module 
 ZED-F9P</text>
@@ -24898,6 +24898,8 @@ ZED-F9P</text>
 <text x="183.134" y="140.97" size="1.27" layer="97" font="vector">No clean process</text>
 <text x="183.134" y="146.05" size="1.27" layer="97" font="vector">Dielectric thickness: 1.46mm</text>
 <text x="183.134" y="153.67" size="1.524" layer="97" font="vector" ratio="15">Co-planar Calculation:</text>
+<text x="229.362" y="194.564" size="2.032" layer="97" font="vector">DNP</text>
+<wire x1="223.52" y1="195.58" x2="228.6" y2="195.58" width="0.2032" layer="97" style="dashdot"/>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes"/>

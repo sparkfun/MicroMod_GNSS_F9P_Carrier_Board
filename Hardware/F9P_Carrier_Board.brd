@@ -189,8 +189,8 @@
 <wire x1="32.9692" y1="26.4922" x2="50.2302" y2="26.4922" width="0.2032" layer="21"/>
 <wire x1="50.2302" y1="26.4922" x2="50.2048" y2="4.5212" width="0.2032" layer="21"/>
 <wire x1="50.2048" y1="4.5212" x2="32.9692" y2="4.5212" width="0.2032" layer="21"/>
-<text x="43.9928" y="25.3746" size="1.778" layer="21" ratio="15">+</text>
-<text x="48.0822" y="25.8572" size="1.778" layer="21" ratio="15">-</text>
+<text x="42.3418" y="24.6126" size="1.778" layer="21" ratio="15">+</text>
+<text x="47.5742" y="24.9682" size="1.778" layer="21" ratio="15">-</text>
 <text x="29.972" y="-19.558" size="1.778" layer="51" font="vector" ratio="15">Elias Santistevan</text>
 <circle x="24.3078" y="3.0734" radius="0.508" width="0" layer="21"/>
 <circle x="24.3078" y="3.0734" radius="0.508" width="0" layer="22"/>
@@ -16889,6 +16889,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <element name="U$25" library="SparkFun-MicroMod" package="MICROMOD_LOGO_.5" value="" x="40.64" y="36.83" smashed="yes" rot="MR0"/>
 <element name="U$41" library="SparkFun-MicroMod" package="MICROMOD_MI_LOGO_1" value="" x="12.7" y="21.59" smashed="yes"/>
 <element name="U$63" library="SparkFun-Aesthetics" package="SFE_LOGO_FLAME_.3" value="" x="19.05" y="22.86" smashed="yes"/>
+<element name="TP3" library="SparkFun-Connectors" package="PAD.03X.05" value="TEST-POINT3X5" x="10.16" y="48.26" smashed="yes" rot="MR0"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -17140,7 +17141,6 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <via x="7.366" y="49.276" extent="1-16" drill="0.3048"/>
 <via x="4.318" y="44.958" extent="1-16" drill="0.3048"/>
 <via x="4.318" y="42.926" extent="1-16" drill="0.3048"/>
-<via x="9.9822" y="47.7774" extent="1-16" drill="0.3048"/>
 <via x="12.5222" y="47.7774" extent="1-16" drill="0.3048"/>
 <via x="55.7022" y="38.6334" extent="1-16" drill="0.3048"/>
 <via x="53.9242" y="38.6334" extent="1-16" drill="0.3048"/>
@@ -18264,6 +18264,11 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="34.12" y1="51.943" x2="34.12" y2="50.927" width="0.254" layer="1"/>
 <wire x1="15.1384" y1="46.228" x2="23.0124" y2="54.102" width="0.254" layer="1"/>
 <wire x1="23.0124" y1="54.102" x2="25.146" y2="54.102" width="0.254" layer="1"/>
+<contactref element="TP3" pad="P$1"/>
+<wire x1="10.541" y1="44.206" x2="10.16" y2="44.587" width="0.254" layer="1"/>
+<wire x1="10.16" y1="44.587" x2="10.16" y2="45.72" width="0.254" layer="1"/>
+<via x="10.16" y="45.72" extent="1-16" drill="0.381"/>
+<wire x1="10.16" y1="45.72" x2="10.16" y2="48.26" width="0.254" layer="16"/>
 </signal>
 <signal name="N$32">
 <contactref element="R24" pad="2"/>

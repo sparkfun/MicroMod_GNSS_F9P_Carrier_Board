@@ -25739,6 +25739,26 @@ to enable SPI.</text>
 <label x="58.42" y="144.78" size="1.27" layer="95" rot="MR0" xref="yes"/>
 <pinref part="J6" gate="J1" pin="I2C_SCL"/>
 </segment>
+<segment>
+<wire x1="106.68" y1="193.04" x2="109.22" y2="193.04" width="0.1524" layer="91"/>
+<label x="109.22" y="193.04" size="1.27" layer="95" xref="yes"/>
+<pinref part="J6" gate="J1" pin="SPI_SCK"/>
+</segment>
+<segment>
+<pinref part="J5" gate="G$1" pin="4"/>
+<wire x1="276.86" y1="63.5" x2="271.78" y2="63.5" width="0.1524" layer="91"/>
+<label x="276.86" y="63.5" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<wire x1="302.26" y1="50.8" x2="314.96" y2="50.8" width="0.1524" layer="91"/>
+<label x="314.96" y="50.8" size="1.27" layer="95" font="vector" xref="yes"/>
+<pinref part="J10" gate="G$1" pin="7"/>
+</segment>
+<segment>
+<wire x1="365.76" y1="170.18" x2="368.3" y2="170.18" width="0.1524" layer="91"/>
+<label x="368.3" y="170.18" size="1.27" layer="95" xref="yes"/>
+<pinref part="R12" gate="A" pin="2"/>
+</segment>
 </net>
 <net name="RTC_3V" class="0">
 <segment>
@@ -26031,28 +26051,6 @@ to enable SPI.</text>
 <wire x1="365.76" y1="172.72" x2="368.3" y2="172.72" width="0.1524" layer="91"/>
 <label x="368.3" y="172.72" size="1.27" layer="95" xref="yes"/>
 <pinref part="R12" gate="B" pin="2"/>
-</segment>
-</net>
-<net name="SCL/CLK" class="0">
-<segment>
-<pinref part="J5" gate="G$1" pin="4"/>
-<wire x1="276.86" y1="63.5" x2="271.78" y2="63.5" width="0.1524" layer="91"/>
-<label x="276.86" y="63.5" size="1.27" layer="95" xref="yes"/>
-</segment>
-<segment>
-<wire x1="106.68" y1="193.04" x2="109.22" y2="193.04" width="0.1524" layer="91"/>
-<label x="109.22" y="193.04" size="1.27" layer="95" xref="yes"/>
-<pinref part="J6" gate="J1" pin="SPI_SCK"/>
-</segment>
-<segment>
-<wire x1="302.26" y1="50.8" x2="314.96" y2="50.8" width="0.1524" layer="91"/>
-<label x="314.96" y="50.8" size="1.27" layer="95" font="vector" xref="yes"/>
-<pinref part="J10" gate="G$1" pin="7"/>
-</segment>
-<segment>
-<wire x1="365.76" y1="170.18" x2="368.3" y2="170.18" width="0.1524" layer="91"/>
-<label x="368.3" y="170.18" size="1.27" layer="95" xref="yes"/>
-<pinref part="R12" gate="A" pin="2"/>
 </segment>
 </net>
 <net name="TX_READY" class="0">

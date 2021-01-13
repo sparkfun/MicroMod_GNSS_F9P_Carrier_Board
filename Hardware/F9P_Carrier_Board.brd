@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.01" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.001" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.005" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="3" fill="1" visible="yes" active="yes"/>
@@ -220,7 +220,7 @@
 <wire x1="56.896" y1="24.5364" x2="55.0672" y2="24.5364" width="0.254" layer="20"/>
 <wire x1="55.0672" y1="24.5364" x2="55.0418" y2="16.129" width="0.254" layer="20"/>
 <wire x1="55.0418" y1="16.129" x2="56.8706" y2="16.129" width="0.254" layer="20"/>
-<text x="0.6858" y="10.4394" size="1.016" layer="16" font="vector" ratio="15" rot="MR90">v01</text>
+<text x="0.6858" y="10.4394" size="1.016" layer="16" font="vector" ratio="15" rot="MR90">v10</text>
 <wire x1="50.8" y1="63.5" x2="50.8" y2="49.53" width="0.254" layer="22" style="shortdash"/>
 <wire x1="35.56" y1="63.5" x2="35.56" y2="49.53" width="0.254" layer="22" style="shortdash"/>
 <wire x1="50.8" y1="49.53" x2="48.26" y2="49.53" width="0.254" layer="22" style="shortdash"/>
@@ -17146,10 +17146,10 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <via x="53.9242" y="38.6334" extent="1-16" drill="0.3048"/>
 <via x="51.8922" y="38.6334" extent="1-16" drill="0.3048"/>
 <via x="49.8602" y="38.6334" extent="1-16" drill="0.3048"/>
-<via x="49.6062" y="27.4574" extent="1-16" drill="0.3048"/>
-<via x="51.6382" y="27.4574" extent="1-16" drill="0.3048"/>
-<via x="53.4162" y="27.4574" extent="1-16" drill="0.3048"/>
-<via x="55.4482" y="27.4574" extent="1-16" drill="0.3048"/>
+<via x="49.4792" y="27.5844" extent="1-16" drill="0.3048"/>
+<via x="50.8762" y="27.3304" extent="1-16" drill="0.3048"/>
+<via x="53.9242" y="27.3304" extent="1-16" drill="0.3048"/>
+<via x="55.0672" y="27.3304" extent="1-16" drill="0.3048"/>
 <via x="48.3362" y="27.4574" extent="1-16" drill="0.3048"/>
 <via x="48.3362" y="28.9814" extent="1-16" drill="0.3048"/>
 <via x="48.3362" y="30.2514" extent="1-16" drill="0.3048"/>
@@ -17172,7 +17172,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <via x="49.8602" y="43.9674" extent="1-16" drill="0.3048"/>
 <via x="48.3362" y="41.1734" extent="1-16" drill="0.3048"/>
 <via x="51.6382" y="24.6634" extent="1-16" drill="0.3048"/>
-<via x="53.1876" y="16.0782" extent="1-16" drill="0.3048"/>
+<via x="52.9336" y="14.9352" extent="1-16" drill="0.3048"/>
 <via x="49.6062" y="19.8374" extent="1-16" drill="0.3048"/>
 <via x="46.482" y="27.432" extent="1-16" drill="0.3048"/>
 <via x="42.926" y="27.432" extent="1-16" drill="0.3048"/>

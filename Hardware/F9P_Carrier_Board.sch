@@ -24830,6 +24830,8 @@ Why hasn't anyone added the cutout polygons directly to the connector footprint?
 <part name="GND7" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="TP3" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3X5"/>
 <part name="SUPPLY15" library="SparkFun-PowerSymbols" deviceset="V_BATT" device=""/>
+<part name="J7" library="SparkFun-Connectors" deviceset="CONN_06" device="NO_SILK_NO_POP"/>
+<part name="GND26" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -24904,6 +24906,13 @@ ZED-F9P</text>
 <wire x1="215.9" y1="198.12" x2="220.98" y2="198.12" width="0.2032" layer="97" style="dashdot"/>
 <text x="388.62" y="165.1" size="1.778" layer="97" font="vector">Close this jumper 
 to enable SPI.</text>
+<text x="53.34" y="60.96" size="1.778" layer="97" font="vector">Cut jumpers to remove respective LEDs</text>
+<text x="5.08" y="208.28" size="1.778" layer="97" font="vector">Close "EN" jumper to allow processor
+control over 3.3V power.</text>
+<text x="370.84" y="187.96" size="1.778" layer="97" font="vector">Interrupt is not enabled by default.
+Check ublox datasheet for more information.</text>
+<wire x1="393.7" y1="185.42" x2="393.7" y2="175.26" width="0.1524" layer="97" style="dashdot"/>
+<wire x1="393.7" y1="175.26" x2="375.92" y2="175.26" width="0.1524" layer="97" style="dashdot"/>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes"/>
@@ -25377,6 +25386,13 @@ to enable SPI.</text>
 <instance part="SUPPLY15" gate="G$1" x="195.58" y="10.16" smashed="yes">
 <attribute name="VALUE" x="195.58" y="12.954" size="1.778" layer="96" align="bottom-center"/>
 </instance>
+<instance part="J7" gate="G$1" x="264.16" y="17.78" smashed="yes">
+<attribute name="VALUE" x="259.08" y="7.874" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="259.08" y="28.448" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="GND26" gate="1" x="271.78" y="7.62" smashed="yes">
+<attribute name="VALUE" x="271.78" y="7.366" size="1.778" layer="96" align="top-center"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -25579,6 +25595,16 @@ to enable SPI.</text>
 <pinref part="E1" gate="G$1" pin="GND"/>
 <pinref part="GND7" gate="1" pin="GND"/>
 <wire x1="210.82" y1="195.58" x2="210.82" y2="185.42" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="J7" gate="G$1" pin="6"/>
+<wire x1="269.24" y1="25.4" x2="271.78" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="271.78" y1="25.4" x2="271.78" y2="12.7" width="0.1524" layer="91"/>
+<pinref part="J7" gate="G$1" pin="1"/>
+<wire x1="271.78" y1="12.7" x2="271.78" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="269.24" y1="12.7" x2="271.78" y2="12.7" width="0.1524" layer="91"/>
+<junction x="271.78" y="12.7"/>
+<pinref part="GND26" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="3.3V" class="0">
@@ -25918,12 +25944,6 @@ to enable SPI.</text>
 <label x="38.1" y="200.66" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="I2C_!INT" class="0">
-<segment>
-<wire x1="60.96" y1="139.7" x2="58.42" y2="139.7" width="0.1524" layer="91"/>
-<pinref part="J6" gate="J1" pin="I2C_!INT!"/>
-</segment>
-</net>
 <net name="N$5" class="0">
 <segment>
 <pinref part="J6" gate="J1" pin="3.3V_EN"/>
@@ -26023,6 +26043,11 @@ to enable SPI.</text>
 <wire x1="365.76" y1="175.26" x2="368.3" y2="175.26" width="0.1524" layer="91"/>
 <label x="368.3" y="175.26" size="1.27" layer="95" xref="yes"/>
 <pinref part="R11" gate="A" pin="2"/>
+</segment>
+<segment>
+<pinref part="J6" gate="J1" pin="I2C_!INT!"/>
+<wire x1="60.96" y1="139.7" x2="58.42" y2="139.7" width="0.1524" layer="91"/>
+<label x="58.42" y="139.7" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="SDA/!CS!" class="0">
@@ -26496,6 +26521,54 @@ to enable SPI.</text>
 <wire x1="134.62" y1="259.08" x2="137.16" y2="259.08" width="0.1524" layer="91"/>
 <junction x="137.16" y="259.08"/>
 <label x="134.62" y="259.08" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="D1" class="0">
+<segment>
+<pinref part="J6" gate="J1" pin="D1/CAM_TRIG"/>
+<wire x1="106.68" y1="167.64" x2="109.22" y2="167.64" width="0.1524" layer="91"/>
+<label x="109.22" y="167.64" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="J7" gate="G$1" pin="4"/>
+<wire x1="269.24" y1="20.32" x2="274.32" y2="20.32" width="0.1524" layer="91"/>
+<label x="274.32" y="20.32" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="G0/D2" class="0">
+<segment>
+<pinref part="J6" gate="J1" pin="G0/BUS0"/>
+<wire x1="106.68" y1="144.78" x2="109.22" y2="144.78" width="0.1524" layer="91"/>
+<label x="109.22" y="144.78" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="J7" gate="G$1" pin="5"/>
+<wire x1="269.24" y1="22.86" x2="274.32" y2="22.86" width="0.1524" layer="91"/>
+<label x="274.32" y="22.86" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="A1" class="0">
+<segment>
+<pinref part="J6" gate="J1" pin="A1"/>
+<wire x1="106.68" y1="177.8" x2="109.22" y2="177.8" width="0.1524" layer="91"/>
+<label x="109.22" y="177.8" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="J7" gate="G$1" pin="3"/>
+<wire x1="269.24" y1="17.78" x2="274.32" y2="17.78" width="0.1524" layer="91"/>
+<label x="274.32" y="17.78" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="A0" class="0">
+<segment>
+<pinref part="J6" gate="J1" pin="A0"/>
+<wire x1="106.68" y1="180.34" x2="109.22" y2="180.34" width="0.1524" layer="91"/>
+<label x="109.22" y="180.34" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="J7" gate="G$1" pin="2"/>
+<wire x1="269.24" y1="15.24" x2="274.32" y2="15.24" width="0.1524" layer="91"/>
+<label x="274.32" y="15.24" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>

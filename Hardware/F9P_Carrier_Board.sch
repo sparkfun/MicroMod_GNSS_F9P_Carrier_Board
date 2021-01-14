@@ -24771,7 +24771,7 @@ Why hasn't anyone added the cutout polygons directly to the connector footprint?
 <part name="R15" library="SparkFun-Resistors" deviceset="27OHM" device=""/>
 <part name="R16" library="SparkFun-Resistors" deviceset="27OHM" device=""/>
 <part name="D4" library="SparkFun-IC-Power" deviceset="PRTR5V0U2" device="F"/>
-<part name="J4" library="SparkFun-RF" deviceset="ANTENNA-SMA-GROUNDED" device="EDGE_RPSMA_SMD" value="U.FL"/>
+<part name="J4" library="SparkFun-RF" deviceset="ANTENNA-SMA-GROUNDED" device="EDGE_SMA_SMD" value="U.FL"/>
 <part name="GND14" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND17" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="C8" library="SparkFun-Capacitors" deviceset="47PF" device="-0603-50V-5%" value="47pF"/>
@@ -24913,6 +24913,7 @@ control over 3.3V power.</text>
 Check ublox datasheet for more information.</text>
 <wire x1="393.7" y1="185.42" x2="393.7" y2="175.26" width="0.1524" layer="97" style="dashdot"/>
 <wire x1="393.7" y1="175.26" x2="375.92" y2="175.26" width="0.1524" layer="97" style="dashdot"/>
+<text x="312.42" y="116.84" size="1.778" layer="97" font="vector">I2C unshifted 7 bit address: 0x42</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes"/>

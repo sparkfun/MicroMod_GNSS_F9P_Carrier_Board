@@ -64,6 +64,7 @@
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
 <layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="58" name="bCAD" color="7" fill="1" visible="no" active="no"/>
 <layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
@@ -181,6 +182,7 @@
 <layer number="249" name="Edge" color="7" fill="1" visible="no" active="no"/>
 <layer number="250" name="Descript" color="3" fill="1" visible="no" active="no"/>
 <layer number="251" name="SMDround" color="12" fill="11" visible="no" active="no"/>
+<layer number="253" name="Extra" color="7" fill="1" visible="no" active="no"/>
 <layer number="254" name="cooling" color="7" fill="1" visible="no" active="no"/>
 <layer number="255" name="routoute" color="7" fill="1" visible="no" active="no"/>
 </layers>
@@ -21241,6 +21243,23 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="-2.286" y="2.159" size="0.6096" layer="25" ratio="20">&gt;NAME</text>
 <text x="-2.413" y="-2.794" size="0.6096" layer="27" ratio="20">&gt;VALUE</text>
 </package>
+<package name="0402">
+<description>&lt;p&gt;&lt;b&gt;Generic 1005 (0402) package&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;0.2mm courtyard excess rounded to nearest 0.05mm.&lt;/p&gt;</description>
+<wire x1="-0.2704" y1="0.2286" x2="0.2704" y2="0.2286" width="0.1524" layer="51"/>
+<wire x1="0.2704" y1="-0.2286" x2="-0.2704" y2="-0.2286" width="0.1524" layer="51"/>
+<wire x1="-1.2" y1="0.65" x2="1.2" y2="0.65" width="0.0508" layer="39"/>
+<wire x1="1.2" y1="0.65" x2="1.2" y2="-0.65" width="0.0508" layer="39"/>
+<wire x1="1.2" y1="-0.65" x2="-1.2" y2="-0.65" width="0.0508" layer="39"/>
+<wire x1="-1.2" y1="-0.65" x2="-1.2" y2="0.65" width="0.0508" layer="39"/>
+<smd name="1" x="-0.58" y="0" dx="0.85" dy="0.9" layer="1"/>
+<smd name="2" x="0.58" y="0" dx="0.85" dy="0.9" layer="1"/>
+<text x="0" y="0.762" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-0.762" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<rectangle x1="-0.554" y1="-0.3048" x2="-0.254" y2="0.3048" layer="51"/>
+<rectangle x1="0.2588" y1="-0.3048" x2="0.5588" y2="0.3048" layer="51"/>
+<rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
+</package>
 </packages>
 <symbols>
 <symbol name="DIODE-SCHOTTKY">
@@ -21281,6 +21300,27 @@ Allows current flow in one direction, but allows reverse flow when above breakdo
 <vertex x="-1.27" y="1.27"/>
 <vertex x="1.27" y="0"/>
 <vertex x="-1.27" y="-1.27"/>
+</polygon>
+</symbol>
+<symbol name="PESD0402">
+<description>&lt;h3&gt;ESD Protection Diode &lt;/h3&gt;
+Provides ESD protection</description>
+<text x="-2.54" y="2.794" size="1.778" layer="95" font="vector">&gt;Name</text>
+<text x="-2.54" y="-2.794" size="1.778" layer="96" font="vector" align="top-left">&gt;Value</text>
+<wire x1="1.27" y1="-1.27" x2="1.27" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="-1.27" x2="1.905" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="1.27" x2="0.635" y2="1.27" width="0.1524" layer="94"/>
+<pin name="1" x="-2.54" y="0" visible="off" length="short"/>
+<pin name="2" x="5.08" y="0" visible="off" length="short" rot="R180"/>
+<polygon width="0.1524" layer="94">
+<vertex x="2.54" y="1.27"/>
+<vertex x="1.27" y="0"/>
+<vertex x="2.54" y="-1.27"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="0" y="1.27"/>
+<vertex x="1.27" y="0"/>
+<vertex x="0" y="-1.27"/>
 </polygon>
 </symbol>
 </symbols>
@@ -21478,6 +21518,28 @@ Allows current flow in one direction, but allows reverse flow when above breakdo
 <technology name="">
 <attribute name="PROD_ID" value="DIO-15071" constant="no"/>
 <attribute name="VALUE" value="15V" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PESD0402" prefix="D">
+<description>&lt;h3&gt;ESD protection diode&lt;/h3&gt;
+&lt;p&gt;PESD is used to protect a signal line from ESD.&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="PESD0402" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY_PART" value="PESD0402-140CT-ND" constant="no"/>
+<attribute name="MOUSE_PART" value="650-PESD0402-140" constant="no"/>
+<attribute name="PROD_ID" value="DIO-15359" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -24832,6 +24894,7 @@ Why hasn't anyone added the cutout polygons directly to the connector footprint?
 <part name="SUPPLY15" library="SparkFun-PowerSymbols" deviceset="V_BATT" device=""/>
 <part name="J7" library="SparkFun-Connectors" deviceset="CONN_06" device="NO_SILK_NO_POP"/>
 <part name="GND26" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="D13" library="SparkFun-DiscreteSemi" deviceset="PESD0402" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -25207,11 +25270,11 @@ Check ublox datasheet for more information.</text>
 <attribute name="NAME" x="342.9" y="259.334" size="1.778" layer="95"/>
 <attribute name="VALUE" x="342.9" y="243.586" size="1.778" layer="96" align="top-left"/>
 </instance>
-<instance part="J4" gate="G$1" x="187.96" y="195.58" smashed="yes" rot="MR0">
-<attribute name="NAME" x="188.214" y="202.438" size="1.778" layer="95" rot="MR0"/>
+<instance part="J4" gate="G$1" x="185.42" y="195.58" smashed="yes" rot="MR0">
+<attribute name="NAME" x="185.674" y="202.438" size="1.778" layer="95" rot="MR0"/>
 </instance>
-<instance part="GND14" gate="1" x="185.42" y="160.02" smashed="yes" rot="MR0">
-<attribute name="VALUE" x="185.42" y="159.766" size="1.778" layer="96" rot="MR0" align="top-center"/>
+<instance part="GND14" gate="1" x="182.88" y="160.02" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="182.88" y="159.766" size="1.778" layer="96" rot="MR0" align="top-center"/>
 </instance>
 <instance part="GND17" gate="1" x="193.04" y="160.02" smashed="yes">
 <attribute name="VALUE" x="193.04" y="159.766" size="1.778" layer="96" align="top-center"/>
@@ -25394,6 +25457,10 @@ Check ublox datasheet for more information.</text>
 <instance part="GND26" gate="1" x="271.78" y="7.62" smashed="yes">
 <attribute name="VALUE" x="271.78" y="7.366" size="1.778" layer="96" align="top-center"/>
 </instance>
+<instance part="D13" gate="G$1" x="187.96" y="180.34" smashed="yes" rot="R90">
+<attribute name="NAME" x="185.928" y="179.578" size="1.778" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="189.738" y="177.038" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -25557,7 +25624,12 @@ Check ublox datasheet for more information.</text>
 <segment>
 <pinref part="J4" gate="G$1" pin="GND"/>
 <pinref part="GND14" gate="1" pin="GND"/>
-<wire x1="185.42" y1="193.04" x2="185.42" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="193.04" x2="182.88" y2="175.26" width="0.1524" layer="91"/>
+<pinref part="D13" gate="G$1" pin="1"/>
+<wire x1="182.88" y1="175.26" x2="182.88" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="177.8" x2="187.96" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="175.26" x2="182.88" y2="175.26" width="0.1524" layer="91"/>
+<junction x="182.88" y="175.26"/>
 </segment>
 <segment>
 <pinref part="SPI" gate="G$1" pin="2"/>
@@ -26138,9 +26210,13 @@ Check ublox datasheet for more information.</text>
 <wire x1="193.04" y1="187.96" x2="193.04" y2="190.5" width="0.1524" layer="91"/>
 <pinref part="J4" gate="G$1" pin="SIGNAL"/>
 <wire x1="193.04" y1="190.5" x2="187.96" y2="190.5" width="0.1524" layer="91"/>
-<wire x1="187.96" y1="190.5" x2="187.96" y2="193.04" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="190.5" x2="185.42" y2="190.5" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="190.5" x2="185.42" y2="193.04" width="0.1524" layer="91"/>
 <junction x="193.04" y="190.5"/>
 <pinref part="FB1" gate="G$1" pin="1"/>
+<pinref part="D13" gate="G$1" pin="2"/>
+<wire x1="187.96" y1="185.42" x2="187.96" y2="190.5" width="0.1524" layer="91"/>
+<junction x="187.96" y="190.5"/>
 </segment>
 <segment>
 <pinref part="U1" gate="U1" pin="RF_IN"/>

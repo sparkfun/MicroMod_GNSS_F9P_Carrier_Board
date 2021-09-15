@@ -135,6 +135,12 @@
 <layer number="153" name="FabDoc1" color="7" fill="1" visible="no" active="no"/>
 <layer number="154" name="FabDoc2" color="7" fill="1" visible="no" active="no"/>
 <layer number="155" name="FabDoc3" color="7" fill="1" visible="no" active="no"/>
+<layer number="156" name="gesam-Maß" color="1" fill="7" visible="no" active="no"/>
+<layer number="157" name="FaceMchng" color="3" fill="1" visible="no" active="no"/>
+<layer number="158" name="FaceMMeas" color="3" fill="1" visible="no" active="no"/>
+<layer number="159" name="Geh-Bear2" color="1" fill="7" visible="no" active="no"/>
+<layer number="160" name="Topologie" color="9" fill="1" visible="no" active="no"/>
+<layer number="161" name="tomplace2" color="7" fill="1" visible="no" active="no"/>
 <layer number="166" name="AntennaArea" color="7" fill="1" visible="no" active="no"/>
 <layer number="168" name="4mmHeightArea" color="7" fill="1" visible="no" active="no"/>
 <layer number="191" name="mNets" color="7" fill="1" visible="no" active="no"/>
@@ -182,6 +188,7 @@
 <layer number="249" name="Edge" color="7" fill="1" visible="no" active="no"/>
 <layer number="250" name="Descript" color="3" fill="1" visible="no" active="no"/>
 <layer number="251" name="SMDround" color="12" fill="11" visible="no" active="no"/>
+<layer number="252" name="BR-BS" color="7" fill="1" visible="no" active="no"/>
 <layer number="253" name="Extra" color="7" fill="1" visible="no" active="no"/>
 <layer number="254" name="cooling" color="7" fill="1" visible="no" active="no"/>
 <layer number="255" name="routoute" color="7" fill="1" visible="no" active="no"/>
@@ -15048,6 +15055,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </technology>
 </technologies>
 </device>
+<device name="NO_FOOTPRINT" package="DUMMY">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="FIDUCIAL" prefix="FD">
@@ -15923,17 +15935,6 @@ Used as a test point connection for pogo pins or other debugging tools.
 &lt;/ul&gt;&lt;/p&gt;</description>
 <smd name="1" x="0" y="0" dx="0.508" dy="0.508" layer="1" cream="no"/>
 </package>
-<package name="PAD.03X.03">
-<description>&lt;h3&gt;Electrically Conductive Pad 0.03" Circle&lt;/h3&gt;
-Used as a test point connection for pogo pins or other debugging tools. 
-&lt;p&gt;Specifications:
-&lt;li&gt;Area: 0.03" x 0.03"&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;
-&lt;p&gt;Example device(s):
-&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;</description>
-<smd name="P$1" x="0" y="0" dx="0.762" dy="0.762" layer="1" roundness="100" cream="no"/>
-</package>
 <package name="PAD.03X.05">
 <description>&lt;h3&gt;Electrically Conductive Pad 0.05" Circle&lt;/h3&gt;
 Used as a test point connection for pogo pins or other debugging tools. 
@@ -15943,30 +15944,7 @@ Used as a test point connection for pogo pins or other debugging tools.
 &lt;p&gt;Example device(s):
 &lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
 &lt;/ul&gt;&lt;/p&gt;</description>
-<smd name="P$1" x="0" y="0" dx="1.27" dy="1.27" layer="1" roundness="100" cream="no"/>
-</package>
-<package name="PAD.03X.04">
-<description>&lt;h3&gt;Electrically Conductive Pad 0.04" Circle&lt;/h3&gt;
-Used as a test point connection for pogo pins or other debugging tools. 
-&lt;p&gt;Specifications:
-&lt;li&gt;Area: 0.04" x 0.04"&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;
-&lt;p&gt;Example device(s):
-&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;</description>
-<smd name="P$1" x="0" y="0" dx="1.016" dy="1.016" layer="1" roundness="100" cream="no"/>
-</package>
-<package name="TP_15TH">
-<description>&lt;h3&gt;Electrically Conductive Via 0.015" Drill&lt;/h3&gt;
-Used as a test point connection for pogo pins or other debugging tools. 
-&lt;p&gt;Specifications:
-&lt;li&gt;Area:0.015"&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;
-&lt;p&gt;Example device(s):
-&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;</description>
-<pad name="P$1" x="0" y="0" drill="0.381" diameter="0.6096" stop="no"/>
-<circle x="0" y="0" radius="0.381" width="0" layer="30"/>
+<smd name="1" x="0" y="0" dx="1.27" dy="1.27" layer="1" roundness="100" cream="no"/>
 </package>
 <package name="1X01_NO_SILK">
 <description>&lt;h3&gt;Plated Through Hole - No Silk Outline&lt;/h3&gt;
@@ -18340,6 +18318,136 @@ Alternate pin configuration
 <wire x1="23.622" y1="1.25" x2="24.638" y2="1.25" width="0.1778" layer="21"/>
 <wire x1="24.638" y1="-1.25" x2="23.622" y2="-1.25" width="0.1778" layer="21"/>
 </package>
+<package name="2X5-SMD-UNSHROUDED" library_version="95" library_locally_modified="yes">
+<description>&lt;h3&gt;SMD - 2x5 Unshrouded ARM Cortex Debug Connector (10-pin)&lt;/h3&gt;
+&lt;p&gt;Specifications:
+&lt;ul&gt;&lt;li&gt;Pin count:10&lt;/li&gt;
+&lt;li&gt;Pin pitch:1.27mm&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;a href=http://www.4uconnector.com/online/object/4udrawing/21200.pdf&gt;Datasheet referenced for footprint&lt;/a&gt;</description>
+<wire x1="-3.26" y1="1.715" x2="-3.26" y2="-1.715" width="0.2" layer="21"/>
+<wire x1="3.26" y1="-1.715" x2="3.26" y2="1.715" width="0.2" layer="21"/>
+<wire x1="-3.175" y1="-1.715" x2="-3.175" y2="1.715" width="0.1" layer="51"/>
+<wire x1="-3.175" y1="-1.715" x2="3.175" y2="-1.715" width="0.1" layer="51"/>
+<wire x1="3.175" y1="1.715" x2="-3.175" y2="1.715" width="0.1" layer="51"/>
+<wire x1="3.175" y1="-1.715" x2="3.175" y2="1.715" width="0.1" layer="51"/>
+<text x="-4.106" y="4.046" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.81" y="-5.78" size="1.27" layer="27">&gt;VALUE</text>
+<wire x1="-3.425" y1="-3.17" x2="-3.425" y2="3.17" width="0.05" layer="39"/>
+<wire x1="-3.425" y1="3.17" x2="3.425" y2="3.17" width="0.05" layer="39"/>
+<wire x1="3.425" y1="3.17" x2="3.425" y2="-3.17" width="0.05" layer="39"/>
+<wire x1="3.425" y1="-3.17" x2="-3.425" y2="-3.17" width="0.05" layer="39"/>
+<circle x="-3.79" y="-2.035" radius="0.1" width="0.2" layer="21"/>
+<circle x="-3.79" y="-2.035" radius="0.1" width="0.2" layer="51"/>
+<smd name="5" x="0" y="-1.88" dx="0.74" dy="2.38" layer="1"/>
+<smd name="6" x="0" y="1.88" dx="0.74" dy="2.38" layer="1"/>
+<smd name="7" x="1.27" y="-1.88" dx="0.74" dy="2.38" layer="1"/>
+<smd name="8" x="1.27" y="1.88" dx="0.74" dy="2.38" layer="1"/>
+<smd name="9" x="2.54" y="-1.88" dx="0.74" dy="2.38" layer="1"/>
+<smd name="10" x="2.54" y="1.88" dx="0.74" dy="2.38" layer="1"/>
+<smd name="1" x="-2.54" y="-1.88" dx="0.74" dy="2.38" layer="1"/>
+<smd name="2" x="-2.54" y="1.88" dx="0.74" dy="2.38" layer="1"/>
+<smd name="3" x="-1.27" y="-1.88" dx="0.74" dy="2.38" layer="1"/>
+<smd name="4" x="-1.27" y="1.88" dx="0.74" dy="2.38" layer="1"/>
+<wire x1="-0.6" y1="-3.09" x2="-0.6" y2="-3.29" width="0.127" layer="21"/>
+<wire x1="-0.6" y1="-3.29" x2="0.6" y2="-3.29" width="0.127" layer="21"/>
+<wire x1="0.6" y1="-3.29" x2="0.6" y2="-3.09" width="0.127" layer="21"/>
+</package>
+<package name="PAD.03X.03">
+<description>&lt;h3&gt;Electrically Conductive Pad 0.03" Circle&lt;/h3&gt;
+Used as a test point connection for pogo pins or other debugging tools. 
+&lt;p&gt;Specifications:
+&lt;li&gt;Area: 0.03" x 0.03"&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<smd name="1" x="0" y="0" dx="0.762" dy="0.762" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="PAD.03X.04">
+<description>&lt;h3&gt;Electrically Conductive Pad 0.04" Circle&lt;/h3&gt;
+Used as a test point connection for pogo pins or other debugging tools. 
+&lt;p&gt;Specifications:
+&lt;li&gt;Area: 0.04" x 0.04"&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<smd name="1" x="0" y="0" dx="1.016" dy="1.016" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="TP_15TH">
+<description>&lt;h3&gt;Electrically Conductive Via 0.015" Drill&lt;/h3&gt;
+Used as a test point connection for pogo pins or other debugging tools. 
+&lt;p&gt;Specifications:
+&lt;li&gt;Area:0.015"&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<pad name="1" x="0" y="0" drill="0.381" diameter="0.6096" stop="no"/>
+<circle x="0" y="0" radius="0.381" width="0" layer="30"/>
+</package>
+<package name="FPC_12_0.5MM">
+<wire x1="4" y1="1.2" x2="4" y2="-0.75" width="0.01" layer="51"/>
+<wire x1="3.41" y1="-1.75" x2="-3.41" y2="-1.75" width="0.01" layer="51"/>
+<wire x1="-4" y1="1.2" x2="-3.62" y2="1.2" width="0.01" layer="51"/>
+<smd name="1" x="-2.75" y="1.35" dx="0.3" dy="0.8" layer="1" cream="no"/>
+<smd name="2" x="-2.25" y="1.35" dx="0.3" dy="0.8" layer="1" cream="no"/>
+<rectangle x1="-2.825" y1="1.1" x2="-2.675" y2="1.5" layer="51"/>
+<smd name="MP1" x="-3.75" y="-1.15" dx="0.4" dy="0.8" layer="1"/>
+<rectangle x1="-2.325" y1="1.1" x2="-2.175" y2="1.5" layer="51"/>
+<wire x1="-3.62" y1="1.2" x2="3.62" y2="1.2" width="0.01" layer="51"/>
+<wire x1="3.62" y1="1.2" x2="4" y2="1.2" width="0.01" layer="51"/>
+<smd name="MP2" x="3.75" y="-1.15" dx="0.4" dy="0.8" layer="1"/>
+<rectangle x1="-3.775" y1="-1.395" x2="-3.625" y2="-0.905" layer="51"/>
+<rectangle x1="3.625" y1="-1.395" x2="3.775" y2="-0.905" layer="51"/>
+<wire x1="-4" y1="1.2" x2="-4" y2="-0.75" width="0.01" layer="51"/>
+<wire x1="-3.77" y1="2.05" x2="3.77" y2="2.05" width="0.01" layer="51"/>
+<wire x1="-3.62" y1="0.2" x2="3.62" y2="0.2" width="0.01" layer="51"/>
+<wire x1="-3.62" y1="-1.55" x2="-3.62" y2="-0.75" width="0.01" layer="51"/>
+<wire x1="-3.62" y1="-0.75" x2="-4" y2="-0.75" width="0.01" layer="51"/>
+<wire x1="3.62" y1="-1.55" x2="3.62" y2="-0.75" width="0.01" layer="51"/>
+<wire x1="4" y1="-0.75" x2="3.62" y2="-0.75" width="0.01" layer="51"/>
+<wire x1="-3.62" y1="-1.55" x2="-3.41" y2="-1.75" width="0.01" layer="51" curve="88.036076"/>
+<wire x1="3.62" y1="-1.55" x2="3.41" y2="-1.75" width="0.01" layer="51" curve="-88.036076"/>
+<wire x1="3.62" y1="0.2" x2="3.62" y2="1.2" width="0.01" layer="51"/>
+<wire x1="-3.62" y1="0.2" x2="-3.62" y2="1.2" width="0.01" layer="51"/>
+<wire x1="3.77" y1="1.31" x2="3.77" y2="2.05" width="0.01" layer="51"/>
+<wire x1="-3.77" y1="2.05" x2="-3.77" y2="1.31" width="0.01" layer="51"/>
+<wire x1="-3.62" y1="1.2" x2="-3.62" y2="1.31" width="0.01" layer="51"/>
+<wire x1="-3.62" y1="1.31" x2="-3.77" y2="1.31" width="0.01" layer="51"/>
+<wire x1="3.62" y1="1.31" x2="3.77" y2="1.31" width="0.01" layer="51"/>
+<wire x1="3.62" y1="1.2" x2="3.62" y2="1.31" width="0.01" layer="51"/>
+<wire x1="-4" y1="1.15" x2="-3.1" y2="1.15" width="0.1524" layer="21"/>
+<wire x1="-4" y1="1.15" x2="-4" y2="-0.45" width="0.1524" layer="21"/>
+<wire x1="-3.4" y1="-1.75" x2="3.4" y2="-1.75" width="0.1524" layer="21"/>
+<wire x1="4" y1="1.15" x2="4" y2="-0.45" width="0.1524" layer="21"/>
+<wire x1="4" y1="1.15" x2="3.1" y2="1.15" width="0.1524" layer="21"/>
+<text x="0" y="-3.25" size="0.2" layer="51" align="center">Ribbon Insert</text>
+<wire x1="0" y1="-2.95" x2="0" y2="-2.25" width="0.05" layer="51"/>
+<wire x1="0" y1="-2.25" x2="0.2" y2="-2.45" width="0.05" layer="51"/>
+<wire x1="0" y1="-2.25" x2="-0.2" y2="-2.45" width="0.05" layer="51"/>
+<smd name="3" x="-1.75" y="1.35" dx="0.3" dy="0.8" layer="1" cream="no"/>
+<smd name="4" x="-1.25" y="1.35" dx="0.3" dy="0.8" layer="1" cream="no"/>
+<rectangle x1="-1.825" y1="1.1" x2="-1.675" y2="1.5" layer="51"/>
+<rectangle x1="-1.325" y1="1.1" x2="-1.175" y2="1.5" layer="51"/>
+<smd name="5" x="-0.75" y="1.35" dx="0.3" dy="0.8" layer="1" cream="no"/>
+<smd name="6" x="-0.25" y="1.35" dx="0.3" dy="0.8" layer="1" cream="no"/>
+<rectangle x1="-0.825" y1="1.1" x2="-0.675" y2="1.5" layer="51"/>
+<rectangle x1="-0.325" y1="1.1" x2="-0.175" y2="1.5" layer="51"/>
+<smd name="7" x="0.25" y="1.35" dx="0.3" dy="0.8" layer="1" cream="no"/>
+<smd name="8" x="0.75" y="1.35" dx="0.3" dy="0.8" layer="1" cream="no"/>
+<rectangle x1="0.175" y1="1.1" x2="0.325" y2="1.5" layer="51"/>
+<rectangle x1="0.675" y1="1.1" x2="0.825" y2="1.5" layer="51"/>
+<smd name="9" x="1.25" y="1.35" dx="0.3" dy="0.8" layer="1" cream="no"/>
+<smd name="10" x="1.75" y="1.35" dx="0.3" dy="0.8" layer="1" cream="no"/>
+<rectangle x1="1.175" y1="1.1" x2="1.325" y2="1.5" layer="51"/>
+<rectangle x1="1.675" y1="1.1" x2="1.825" y2="1.5" layer="51"/>
+<smd name="11" x="2.25" y="1.35" dx="0.3" dy="0.8" layer="1" cream="no"/>
+<smd name="12" x="2.75" y="1.35" dx="0.3" dy="0.8" layer="1" cream="no"/>
+<rectangle x1="2.175" y1="1.1" x2="2.325" y2="1.5" layer="51"/>
+<rectangle x1="2.675" y1="1.1" x2="2.825" y2="1.5" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="USB-C-MINIMUM">
@@ -18577,6 +18685,21 @@ PTH and SMD connector options available.&lt;/p&gt;
 </technology>
 </technologies>
 </device>
+<device name="_SMD-UNSHROUDED" package="2X5-SMD-UNSHROUDED">
+<connects>
+<connect gate="G$1" pin="!RESET" pad="10"/>
+<connect gate="G$1" pin="GND" pad="3 5 9"/>
+<connect gate="G$1" pin="SWDCLK" pad="4"/>
+<connect gate="G$1" pin="SWDIO" pad="2"/>
+<connect gate="G$1" pin="SWO" pad="6"/>
+<connect gate="G$1" pin="VCC" pad="1"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="CONN-15353"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="TEST-POINT" prefix="TP">
@@ -18601,7 +18724,7 @@ PTH and SMD connector options available.&lt;/p&gt;
 </device>
 <device name="3" package="PAD.03X.03">
 <connects>
-<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="1" pad="1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -18609,7 +18732,7 @@ PTH and SMD connector options available.&lt;/p&gt;
 </device>
 <device name="3X5" package="PAD.03X.05">
 <connects>
-<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="1" pad="1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -18617,7 +18740,7 @@ PTH and SMD connector options available.&lt;/p&gt;
 </device>
 <device name="3X4" package="PAD.03X.04">
 <connects>
-<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="1" pad="1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -18625,7 +18748,7 @@ PTH and SMD connector options available.&lt;/p&gt;
 </device>
 <device name="TP_15TH_THRU" package="TP_15TH">
 <connects>
-<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="1" pad="1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -19389,6 +19512,27 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <technology name=""/>
 </technologies>
 </device>
+<device name="FPC_12_0.5MM" package="FPC_12_0.5MM">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="10" pad="10"/>
+<connect gate="G$1" pin="11" pad="11"/>
+<connect gate="G$1" pin="12" pad="12"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="7" pad="7"/>
+<connect gate="G$1" pin="8" pad="8"/>
+<connect gate="G$1" pin="9" pad="9"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="CONN-15766" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 </devicesets>
@@ -20007,6 +20151,18 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </technology>
 </technologies>
 </device>
+<device name="-0402-1/10W-0.1%" package="0402-TIGHT">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-16147" constant="no"/>
+<attribute name="VALUE" value="10K" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="20KOHM" prefix="R">
@@ -20289,6 +20445,17 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </technology>
 </technologies>
 </device>
+<device name="-0402T-1/10W-1%" package="0402-TIGHT">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-14883" constant="no"/>
+</technology>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="3.3KOHM" prefix="R">
@@ -20307,6 +20474,17 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <technology name="">
 <attribute name="PROD_ID" value="RES-07851"/>
 <attribute name="VALUE" value="3.3k"/>
+</technology>
+</technologies>
+</device>
+<device name="-0402T-1/16W-1%" package="0402-TIGHT">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="RES-15923" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -20685,13 +20863,13 @@ http://www.kemet.com/Lists/ProductCatalog/Attachments/254/KEM_T2005_T491.pdf</de
 <wire x1="-1.6" y1="-0.7" x2="-1.6" y2="0.7" width="0.0508" layer="39"/>
 <wire x1="-0.356" y1="0.432" x2="0.356" y2="0.432" width="0.1016" layer="51"/>
 <wire x1="-0.356" y1="-0.419" x2="0.356" y2="-0.419" width="0.1016" layer="51"/>
-<rectangle x1="-0.8382" y1="-0.4699" x2="-0.3381" y2="0.4801" layer="51"/>
-<rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
-<rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
 <smd name="1" x="-0.85" y="0" dx="1.1" dy="1" layer="1"/>
 <smd name="2" x="0.85" y="0" dx="1.1" dy="1" layer="1"/>
 <text x="0" y="0.762" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-0.762" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
+<rectangle x1="-0.8382" y1="-0.4699" x2="-0.3381" y2="0.4801" layer="51"/>
+<rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
+<rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
 </package>
 </packages>
 <symbols>
@@ -21087,6 +21265,18 @@ http://www.kemet.com/Lists/ProductCatalog/Attachments/254/KEM_T2005_T491.pdf</de
 </technologies>
 </device>
 <device name="-0402-25V-5%-X7R" package="0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="CAP-15063" constant="no"/>
+<attribute name="VALUE" value="47pF" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-0402_TIGHT-25V-5%-X7R" package="0402-TIGHT">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -21617,6 +21807,302 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="0" y="1.651" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-1.651" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
 </package>
+<package name="STAND-OFF-REFLOW-M2.0">
+<description>SMD Reflow Compatible Standoff M2x0.4</description>
+<text x="4.22" y="0.93" size="1.27" layer="25" ratio="15">&gt;NAME</text>
+<text x="4.22" y="-2.1" size="1.27" layer="27" ratio="15">&gt;VALUE</text>
+<smd name="1" x="0" y="0" dx="5.3" dy="5.3" layer="1" roundness="100" cream="no"/>
+<hole x="0" y="0" drill="3"/>
+<circle x="0" y="0" radius="2.175" width="0.1" layer="51"/>
+<polygon width="0.01" layer="31">
+<vertex x="-0.3" y="2.54"/>
+<vertex x="-0.3" y="1.52"/>
+<vertex x="-0.355" y="1.51"/>
+<vertex x="-0.43" y="1.49"/>
+<vertex x="-0.525" y="1.46"/>
+<vertex x="-0.625" y="1.42"/>
+<vertex x="-0.755" y="1.355"/>
+<vertex x="-0.83" y="1.31"/>
+<vertex x="-0.91" y="1.255"/>
+<vertex x="-0.975" y="1.205"/>
+<vertex x="-1.045" y="1.145"/>
+<vertex x="-1.165" y="1.025"/>
+<vertex x="-1.21" y="0.97"/>
+<vertex x="-1.27" y="0.89"/>
+<vertex x="-1.32" y="0.815"/>
+<vertex x="-1.36" y="0.745"/>
+<vertex x="-1.41" y="0.645"/>
+<vertex x="-1.44" y="0.575"/>
+<vertex x="-1.465" y="0.51"/>
+<vertex x="-1.49" y="0.43"/>
+<vertex x="-1.51" y="0.355"/>
+<vertex x="-1.52" y="0.3"/>
+<vertex x="-2.54" y="0.3"/>
+<vertex x="-2.535" y="0.36"/>
+<vertex x="-2.525" y="0.425"/>
+<vertex x="-2.51" y="0.51"/>
+<vertex x="-2.49" y="0.6"/>
+<vertex x="-2.45" y="0.75"/>
+<vertex x="-2.425" y="0.825"/>
+<vertex x="-2.4" y="0.895"/>
+<vertex x="-2.37" y="0.97"/>
+<vertex x="-2.34" y="1.04"/>
+<vertex x="-2.305" y="1.115"/>
+<vertex x="-2.28" y="1.165"/>
+<vertex x="-2.235" y="1.25"/>
+<vertex x="-2.195" y="1.32"/>
+<vertex x="-2.15" y="1.39"/>
+<vertex x="-2.1" y="1.465"/>
+<vertex x="-2.03" y="1.56"/>
+<vertex x="-1.955" y="1.655"/>
+<vertex x="-1.9" y="1.715"/>
+<vertex x="-1.835" y="1.785"/>
+<vertex x="-1.775" y="1.845"/>
+<vertex x="-1.71" y="1.905"/>
+<vertex x="-1.655" y="1.955"/>
+<vertex x="-1.585" y="2.01"/>
+<vertex x="-1.52" y="2.06"/>
+<vertex x="-1.45" y="2.11"/>
+<vertex x="-1.375" y="2.16"/>
+<vertex x="-1.31" y="2.2"/>
+<vertex x="-1.23" y="2.245"/>
+<vertex x="-1.155" y="2.285"/>
+<vertex x="-1.075" y="2.325"/>
+<vertex x="-0.995" y="2.36"/>
+<vertex x="-0.92" y="2.39"/>
+<vertex x="-0.855" y="2.415"/>
+<vertex x="-0.76" y="2.445"/>
+<vertex x="-0.66" y="2.475"/>
+<vertex x="-0.56" y="2.5"/>
+<vertex x="-0.485" y="2.515"/>
+<vertex x="-0.425" y="2.525"/>
+<vertex x="-0.36" y="2.535"/>
+</polygon>
+<polygon width="0.01" layer="31">
+<vertex x="-2.54" y="-0.3"/>
+<vertex x="-1.52" y="-0.3"/>
+<vertex x="-1.51" y="-0.355"/>
+<vertex x="-1.49" y="-0.43"/>
+<vertex x="-1.46" y="-0.525"/>
+<vertex x="-1.42" y="-0.625"/>
+<vertex x="-1.355" y="-0.755"/>
+<vertex x="-1.31" y="-0.83"/>
+<vertex x="-1.255" y="-0.91"/>
+<vertex x="-1.205" y="-0.975"/>
+<vertex x="-1.145" y="-1.045"/>
+<vertex x="-1.025" y="-1.165"/>
+<vertex x="-0.97" y="-1.21"/>
+<vertex x="-0.89" y="-1.27"/>
+<vertex x="-0.815" y="-1.32"/>
+<vertex x="-0.745" y="-1.36"/>
+<vertex x="-0.645" y="-1.41"/>
+<vertex x="-0.575" y="-1.44"/>
+<vertex x="-0.51" y="-1.465"/>
+<vertex x="-0.43" y="-1.49"/>
+<vertex x="-0.355" y="-1.51"/>
+<vertex x="-0.3" y="-1.52"/>
+<vertex x="-0.3" y="-2.54"/>
+<vertex x="-0.36" y="-2.535"/>
+<vertex x="-0.425" y="-2.525"/>
+<vertex x="-0.51" y="-2.51"/>
+<vertex x="-0.6" y="-2.49"/>
+<vertex x="-0.75" y="-2.45"/>
+<vertex x="-0.825" y="-2.425"/>
+<vertex x="-0.895" y="-2.4"/>
+<vertex x="-0.97" y="-2.37"/>
+<vertex x="-1.04" y="-2.34"/>
+<vertex x="-1.115" y="-2.305"/>
+<vertex x="-1.165" y="-2.28"/>
+<vertex x="-1.25" y="-2.235"/>
+<vertex x="-1.32" y="-2.195"/>
+<vertex x="-1.39" y="-2.15"/>
+<vertex x="-1.465" y="-2.1"/>
+<vertex x="-1.56" y="-2.03"/>
+<vertex x="-1.655" y="-1.955"/>
+<vertex x="-1.715" y="-1.9"/>
+<vertex x="-1.785" y="-1.835"/>
+<vertex x="-1.845" y="-1.775"/>
+<vertex x="-1.905" y="-1.71"/>
+<vertex x="-1.955" y="-1.655"/>
+<vertex x="-2.01" y="-1.585"/>
+<vertex x="-2.06" y="-1.52"/>
+<vertex x="-2.11" y="-1.45"/>
+<vertex x="-2.16" y="-1.375"/>
+<vertex x="-2.2" y="-1.31"/>
+<vertex x="-2.245" y="-1.23"/>
+<vertex x="-2.285" y="-1.155"/>
+<vertex x="-2.325" y="-1.075"/>
+<vertex x="-2.36" y="-0.995"/>
+<vertex x="-2.39" y="-0.92"/>
+<vertex x="-2.415" y="-0.855"/>
+<vertex x="-2.445" y="-0.76"/>
+<vertex x="-2.475" y="-0.66"/>
+<vertex x="-2.5" y="-0.56"/>
+<vertex x="-2.515" y="-0.485"/>
+<vertex x="-2.525" y="-0.425"/>
+<vertex x="-2.535" y="-0.36"/>
+</polygon>
+<polygon width="0.01" layer="31">
+<vertex x="0.3" y="-2.54"/>
+<vertex x="0.3" y="-1.52"/>
+<vertex x="0.355" y="-1.51"/>
+<vertex x="0.43" y="-1.49"/>
+<vertex x="0.525" y="-1.46"/>
+<vertex x="0.625" y="-1.42"/>
+<vertex x="0.755" y="-1.355"/>
+<vertex x="0.83" y="-1.31"/>
+<vertex x="0.91" y="-1.255"/>
+<vertex x="0.975" y="-1.205"/>
+<vertex x="1.045" y="-1.145"/>
+<vertex x="1.165" y="-1.025"/>
+<vertex x="1.21" y="-0.97"/>
+<vertex x="1.27" y="-0.89"/>
+<vertex x="1.32" y="-0.815"/>
+<vertex x="1.36" y="-0.745"/>
+<vertex x="1.41" y="-0.645"/>
+<vertex x="1.44" y="-0.575"/>
+<vertex x="1.465" y="-0.51"/>
+<vertex x="1.49" y="-0.43"/>
+<vertex x="1.51" y="-0.355"/>
+<vertex x="1.52" y="-0.3"/>
+<vertex x="2.54" y="-0.3"/>
+<vertex x="2.535" y="-0.36"/>
+<vertex x="2.525" y="-0.425"/>
+<vertex x="2.51" y="-0.51"/>
+<vertex x="2.49" y="-0.6"/>
+<vertex x="2.45" y="-0.75"/>
+<vertex x="2.425" y="-0.825"/>
+<vertex x="2.4" y="-0.895"/>
+<vertex x="2.37" y="-0.97"/>
+<vertex x="2.34" y="-1.04"/>
+<vertex x="2.305" y="-1.115"/>
+<vertex x="2.28" y="-1.165"/>
+<vertex x="2.235" y="-1.25"/>
+<vertex x="2.195" y="-1.32"/>
+<vertex x="2.15" y="-1.39"/>
+<vertex x="2.1" y="-1.465"/>
+<vertex x="2.03" y="-1.56"/>
+<vertex x="1.955" y="-1.655"/>
+<vertex x="1.9" y="-1.715"/>
+<vertex x="1.835" y="-1.785"/>
+<vertex x="1.775" y="-1.845"/>
+<vertex x="1.71" y="-1.905"/>
+<vertex x="1.655" y="-1.955"/>
+<vertex x="1.585" y="-2.01"/>
+<vertex x="1.52" y="-2.06"/>
+<vertex x="1.45" y="-2.11"/>
+<vertex x="1.375" y="-2.16"/>
+<vertex x="1.31" y="-2.2"/>
+<vertex x="1.23" y="-2.245"/>
+<vertex x="1.155" y="-2.285"/>
+<vertex x="1.075" y="-2.325"/>
+<vertex x="0.995" y="-2.36"/>
+<vertex x="0.92" y="-2.39"/>
+<vertex x="0.855" y="-2.415"/>
+<vertex x="0.76" y="-2.445"/>
+<vertex x="0.66" y="-2.475"/>
+<vertex x="0.56" y="-2.5"/>
+<vertex x="0.485" y="-2.515"/>
+<vertex x="0.425" y="-2.525"/>
+<vertex x="0.36" y="-2.535"/>
+</polygon>
+<polygon width="0.01" layer="31">
+<vertex x="2.54" y="0.3"/>
+<vertex x="1.52" y="0.3"/>
+<vertex x="1.51" y="0.355"/>
+<vertex x="1.49" y="0.43"/>
+<vertex x="1.46" y="0.525"/>
+<vertex x="1.42" y="0.625"/>
+<vertex x="1.355" y="0.755"/>
+<vertex x="1.31" y="0.83"/>
+<vertex x="1.255" y="0.91"/>
+<vertex x="1.205" y="0.975"/>
+<vertex x="1.145" y="1.045"/>
+<vertex x="1.025" y="1.165"/>
+<vertex x="0.97" y="1.21"/>
+<vertex x="0.89" y="1.27"/>
+<vertex x="0.815" y="1.32"/>
+<vertex x="0.745" y="1.36"/>
+<vertex x="0.645" y="1.41"/>
+<vertex x="0.575" y="1.44"/>
+<vertex x="0.51" y="1.465"/>
+<vertex x="0.43" y="1.49"/>
+<vertex x="0.355" y="1.51"/>
+<vertex x="0.3" y="1.52"/>
+<vertex x="0.3" y="2.54"/>
+<vertex x="0.36" y="2.535"/>
+<vertex x="0.425" y="2.525"/>
+<vertex x="0.51" y="2.51"/>
+<vertex x="0.6" y="2.49"/>
+<vertex x="0.75" y="2.45"/>
+<vertex x="0.825" y="2.425"/>
+<vertex x="0.895" y="2.4"/>
+<vertex x="0.97" y="2.37"/>
+<vertex x="1.04" y="2.34"/>
+<vertex x="1.115" y="2.305"/>
+<vertex x="1.165" y="2.28"/>
+<vertex x="1.25" y="2.235"/>
+<vertex x="1.32" y="2.195"/>
+<vertex x="1.39" y="2.15"/>
+<vertex x="1.465" y="2.1"/>
+<vertex x="1.56" y="2.03"/>
+<vertex x="1.655" y="1.955"/>
+<vertex x="1.715" y="1.9"/>
+<vertex x="1.785" y="1.835"/>
+<vertex x="1.845" y="1.775"/>
+<vertex x="1.905" y="1.71"/>
+<vertex x="1.955" y="1.655"/>
+<vertex x="2.01" y="1.585"/>
+<vertex x="2.06" y="1.52"/>
+<vertex x="2.11" y="1.45"/>
+<vertex x="2.16" y="1.375"/>
+<vertex x="2.2" y="1.31"/>
+<vertex x="2.245" y="1.23"/>
+<vertex x="2.285" y="1.155"/>
+<vertex x="2.325" y="1.075"/>
+<vertex x="2.36" y="0.995"/>
+<vertex x="2.39" y="0.92"/>
+<vertex x="2.415" y="0.855"/>
+<vertex x="2.445" y="0.76"/>
+<vertex x="2.475" y="0.66"/>
+<vertex x="2.5" y="0.56"/>
+<vertex x="2.515" y="0.485"/>
+<vertex x="2.525" y="0.425"/>
+<vertex x="2.535" y="0.36"/>
+</polygon>
+</package>
+<package name="STAND-OFF-REFLOW-M3.0">
+<description>SMD Reflow Compatible Standoff M3x0.5</description>
+<text x="4.22" y="0.93" size="1.27" layer="25" ratio="15">&gt;NAME</text>
+<text x="4.22" y="-2.1" size="1.27" layer="27" ratio="15">&gt;VALUE</text>
+<smd name="1" x="0" y="0" dx="7.4" dy="7.4" layer="1" roundness="100" cream="no"/>
+<hole x="0" y="0" drill="4.4"/>
+<circle x="0" y="0" radius="3" width="0.1" layer="51"/>
+<polygon width="0.05" layer="31">
+<vertex x="-3.6" y="0.4"/>
+<vertex x="-2.25" y="0.4" curve="-70"/>
+<vertex x="-0.4" y="2.25"/>
+<vertex x="-0.4" y="3.6" curve="77"/>
+</polygon>
+<polygon width="0.05" layer="31">
+<vertex x="3.6" y="-0.4"/>
+<vertex x="2.25" y="-0.4" curve="-70"/>
+<vertex x="0.4" y="-2.25"/>
+<vertex x="0.4" y="-3.6" curve="77"/>
+</polygon>
+<polygon width="0.05" layer="31">
+<vertex x="3.6" y="0.4"/>
+<vertex x="2.25" y="0.4" curve="70"/>
+<vertex x="0.4" y="2.25"/>
+<vertex x="0.4" y="3.6" curve="-77"/>
+</polygon>
+<polygon width="0.05" layer="31">
+<vertex x="-3.6" y="-0.4"/>
+<vertex x="-2.25" y="-0.4" curve="70"/>
+<vertex x="-0.4" y="-2.25"/>
+<vertex x="-0.4" y="-3.6" curve="-77"/>
+</polygon>
+</package>
 </packages>
 <symbols>
 <symbol name="STAND-OFF-REFLOW">
@@ -21637,18 +22123,60 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <devicesets>
 <deviceset name="STAND-OFF-REFLOW" prefix="H">
 <description>&lt;h3&gt;Stand Off Reflow Compatible&lt;/h3&gt;
-&lt;p&gt;A metal standoff that can be placed and reflowed onto a PCB.&lt;/p&gt;</description>
+&lt;p&gt;A metal standoff that can be placed and reflowed onto a PCB.&lt;/p&gt;
+&lt;p&gt;The M2.5 x 2.5mm variant is used on MicroMod.&lt;/p&gt;
+&lt;p&gt;The M2.0 x 6.0mm variant is used to mount the Iridium 9603N modem.&lt;/p&gt;</description>
 <gates>
 <gate name="G$1" symbol="STAND-OFF-REFLOW" x="0" y="0"/>
 </gates>
 <devices>
-<device name="2.5MM_TALL" package="STAND-OFF-REFLOW-M2.5">
+<device name="-M2.5_2.5MM_TALL" package="STAND-OFF-REFLOW-M2.5">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 </connects>
 <technologies>
 <technology name="">
 <attribute name="PROD_ID" value="HW-14899" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-M2.0_6.0MM_TALL" package="STAND-OFF-REFLOW-M2.0">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="HW-14879" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-M3.0_15.0MM_TALL" package="STAND-OFF-REFLOW-M3.0">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="HW-16212" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-M2.0_5.0MM_TALL" package="STAND-OFF-REFLOW-M2.0">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="HW-16211" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-M3.0_5.0MM_TALL" package="STAND-OFF-REFLOW-M3.0">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="HW-16213" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -21842,10 +22370,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="0" y="1.143" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-1.143" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
 <polygon width="0.127" layer="29">
-<vertex x="-0.1905" y="0.2794"/>
-<vertex x="0.1905" y="0.2794"/>
-<vertex x="0.1905" y="-0.2794"/>
-<vertex x="-0.1905" y="-0.2794"/>
+<vertex x="-0.1905" y="0.6604"/>
+<vertex x="0.1905" y="0.6604"/>
+<vertex x="0.1905" y="-0.6604"/>
+<vertex x="-0.1905" y="-0.6604"/>
 </polygon>
 <pad name="3" x="-1.27" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
 <pad name="4" x="1.27" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
@@ -22621,7 +23149,7 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 &lt;h5&gt;SMD-4.5MM - 4.5mm Square Trackball Switch&lt;/h5&gt;
 &lt;ul&gt;&lt;li&gt;Used on &lt;a href="https://www.sparkfun.com/products/13169"&gt;SparkFun Blackberry Trackballer Breakout&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 &lt;h5&gt;SMD-4.6MMX2.8MM -  4.60mm x 2.80mm, surface mount&lt;/h5&gt;
-&lt;ul&gt;&lt;li&gt;Used on &lt;a href="https://www.sparkfun.com/products/13664"&gt;SparkFun SAMD21 Mini Breakout&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;ul&gt;&lt;li&gt;Used on &lt;a href="https://www.sparkfun.com/products/17717"&gt;SparkFun Pro Micro - RP2040&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 &lt;h5&gt;SMD-5.2MM, SMD-5.2-REDUNDANT - 5.2mm square, surface-mount&lt;/h5&gt;
 &lt;ul&gt;&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/8720"&gt;Mini Pushbutton Switch - SMD&lt;/a&gt; (COM-08720)&lt;/li&gt;
 &lt;li&gt;Used on &lt;a href="https://www.sparkfun.com/products/11114"&gt;Arduino Pro Mini&lt;/a&gt;&lt;/li&gt;
@@ -22732,30 +23260,6 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 </technology>
 </technologies>
 </device>
-<device name="-SMD-5.2MM" package="TACTILE_SWITCH_SMD_5.2MM">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="3"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="PROD_ID" value="SWCH-08247"/>
-<attribute name="SF_SKU" value="COM-08720"/>
-</technology>
-</technologies>
-</device>
-<device name="-SMD-5.2-REDUNDANT" package="TACTILE_SWITCH_SMD_5.2MM">
-<connects>
-<connect gate="G$1" pin="1" pad="1 2"/>
-<connect gate="G$1" pin="2" pad="3 4"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="PROD_ID" value="SWCH-08247"/>
-<attribute name="SF_SKU" value="COM-08720"/>
-</technology>
-</technologies>
-</device>
 <device name="-SMD-RIGHT-ANGLE" package="TACTILE_SWITCH_SMD_RIGHT_ANGLE">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
@@ -22774,7 +23278,7 @@ SparkFun BigTime Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 </connects>
 <technologies>
 <technology name="">
-<attribute name="PROD_ID" value="SWCH-13065"/>
+<attribute name="PROD_ID" value="SWCH-15606"/>
 </technology>
 </technologies>
 </device>
@@ -23280,32 +23784,32 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <smd name="73" x="-8.75" y="-5.275" dx="0.3" dy="1.55" layer="1" rot="R180" cream="no"/>
 <smd name="74" x="-9" y="2.275" dx="0.3" dy="1.55" layer="1" rot="R180" cream="no"/>
 <smd name="75" x="-9.25" y="-5.275" dx="0.3" dy="1.55" layer="1" rot="R180" cream="no"/>
-<wire x1="10.95" y1="2.5" x2="-10.95" y2="2.5" width="0.1524" layer="51"/>
-<wire x1="-10.95" y1="2.5" x2="-10.95" y2="-5.25" width="0.1524" layer="51"/>
+<wire x1="9.5" y1="2.5" x2="-9.5" y2="2.5" width="0.1524" layer="51"/>
+<wire x1="-10.95" y1="1.25" x2="-10.95" y2="-5.25" width="0.1524" layer="51"/>
 <wire x1="-10.95" y1="-5.25" x2="10.95" y2="-5.25" width="0.1524" layer="51"/>
-<wire x1="10.95" y1="-5.25" x2="10.95" y2="2.5" width="0.1524" layer="51"/>
-<wire x1="11" y1="-2.5" x2="11" y2="2.5" width="0.1524" layer="21"/>
-<wire x1="11" y1="2.5" x2="9.5" y2="2.5" width="0.1524" layer="21"/>
-<wire x1="-9.5" y1="2.5" x2="-11" y2="2.5" width="0.1524" layer="21"/>
-<wire x1="-11" y1="-2.5" x2="-11" y2="2.5" width="0.1524" layer="21"/>
-<wire x1="9.925" y1="-1" x2="3.225" y2="-1" width="0.0508" layer="51"/>
-<wire x1="2.025" y1="-1" x2="-9.925" y2="-1" width="0.0508" layer="51"/>
-<wire x1="-9.925" y1="-1" x2="-9.925" y2="2.5" width="0.0508" layer="51"/>
-<wire x1="9.925" y1="2.5" x2="9.925" y2="-1" width="0.0508" layer="51"/>
-<wire x1="10.4" y1="3" x2="9.925" y2="2.5" width="0.0508" layer="51" curve="84.949116"/>
-<wire x1="-10.4" y1="3" x2="-9.925" y2="2.5" width="0.0508" layer="51" curve="-83.820277"/>
-<wire x1="10" y1="20" x2="-10" y2="20" width="0.0508" layer="51"/>
-<wire x1="-11" y1="19" x2="-11" y2="3.6" width="0.0508" layer="51"/>
-<wire x1="3.225" y1="1.9" x2="3.225" y2="-1" width="0.0508" layer="51"/>
-<wire x1="2.025" y1="1.9" x2="2.025" y2="-1" width="0.0508" layer="51"/>
-<wire x1="3.225" y1="1.9" x2="2.025" y2="1.9" width="0.0508" layer="51" curve="180"/>
-<wire x1="11" y1="19" x2="11" y2="3.6" width="0.05" layer="51"/>
-<wire x1="10.4" y1="3" x2="11" y2="3.6" width="0.05" layer="51" curve="86.784874"/>
-<wire x1="-11" y1="3.6" x2="-10.4" y2="3" width="0.05" layer="51" curve="86.784874"/>
-<wire x1="10" y1="20" x2="11" y2="19" width="0.05" layer="51" curve="-87.205638"/>
-<wire x1="-11" y1="19" x2="-10" y2="20" width="0.05" layer="51" curve="-87.205638"/>
+<wire x1="10.95" y1="-5.25" x2="10.95" y2="1.25" width="0.1524" layer="51"/>
+<wire x1="11" y1="-2.5" x2="11" y2="1.25" width="0.1524" layer="21"/>
+<wire x1="11" y1="1.25" x2="9.5" y2="1.25" width="0.1524" layer="21"/>
+<wire x1="-9.5" y1="1.25" x2="-11" y2="1.25" width="0.1524" layer="21"/>
+<wire x1="-11" y1="-2.5" x2="-11" y2="1.25" width="0.1524" layer="21"/>
+<wire x1="9.925" y1="-1.75" x2="3.225" y2="-1.75" width="0.0508" layer="51"/>
+<wire x1="2.025" y1="-1.75" x2="-9.925" y2="-1.75" width="0.0508" layer="51"/>
+<wire x1="-9.925" y1="-1.75" x2="-9.925" y2="1.75" width="0.0508" layer="51"/>
+<wire x1="9.925" y1="1.75" x2="9.925" y2="-1.75" width="0.0508" layer="51"/>
+<wire x1="10.4" y1="2.25" x2="9.925" y2="1.75" width="0.0508" layer="51" curve="84.949116"/>
+<wire x1="-10.4" y1="2.25" x2="-9.925" y2="1.75" width="0.0508" layer="51" curve="-83.820277"/>
+<wire x1="10" y1="20.25" x2="-10" y2="20.25" width="0.0508" layer="51"/>
+<wire x1="-11" y1="19.25" x2="-11" y2="2.85" width="0.0508" layer="51"/>
+<wire x1="3.225" y1="1.15" x2="3.225" y2="-1.75" width="0.0508" layer="51"/>
+<wire x1="2.025" y1="1.15" x2="2.025" y2="-1.75" width="0.0508" layer="51"/>
+<wire x1="3.225" y1="1.15" x2="2.025" y2="1.15" width="0.0508" layer="51" curve="180"/>
+<wire x1="11" y1="19.25" x2="11" y2="2.85" width="0.05" layer="51"/>
+<wire x1="10.4" y1="2.25" x2="11" y2="2.85" width="0.05" layer="51" curve="86.784874"/>
+<wire x1="-11" y1="2.85" x2="-10.4" y2="2.25" width="0.05" layer="51" curve="86.784874"/>
+<wire x1="10" y1="20.25" x2="11" y2="19.25" width="0.05" layer="51" curve="-87.205638"/>
+<wire x1="-11" y1="19.25" x2="-10" y2="20.25" width="0.05" layer="51" curve="-87.205638"/>
 <rectangle x1="-9.15" y1="1.4" x2="-8.85" y2="3.15" layer="31"/>
-<circle x="4" y="20" radius="3" width="0.05" layer="51"/>
+<circle x="4" y="20.25" radius="3" width="0.05" layer="51"/>
 <text x="0" y="0.635" size="0.762" layer="25" align="center">&gt;Name</text>
 <text x="0" y="-0.635" size="0.762" layer="27" align="center">&gt;Value</text>
 <rectangle x1="-8.15" y1="1.4" x2="-7.85" y2="3.15" layer="31"/>
@@ -23374,6 +23878,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <rectangle x1="7.1" y1="-6.15" x2="7.4" y2="-4.4" layer="31"/>
 <rectangle x1="8.6" y1="-6.15" x2="8.9" y2="-4.4" layer="31"/>
 <rectangle x1="9.1" y1="-6.15" x2="9.4" y2="-4.4" layer="31"/>
+<wire x1="10.95" y1="1.25" x2="9.5" y2="1.25" width="0.1524" layer="51"/>
+<wire x1="9.5" y1="1.25" x2="-9.5" y2="1.25" width="0.1524" layer="51"/>
+<wire x1="-9.5" y1="1.25" x2="-10.95" y2="1.25" width="0.1524" layer="51"/>
+<wire x1="-9.5" y1="2.5" x2="-9.5" y2="1.25" width="0.1524" layer="51"/>
+<wire x1="9.5" y1="2.5" x2="9.5" y2="1.25" width="0.1524" layer="51"/>
 </package>
 <package name="M.2-CARD-E-22">
 <wire x1="9.925" y1="0" x2="3.225" y2="0" width="0.0508" layer="47"/>
@@ -24395,6 +24904,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <technology name="">
 <attribute name="MFG_PART" value="BLM15HB121SN1D" constant="no"/>
 <attribute name="PROD_ID" value="NDUC-14206" constant="no"/>
+<attribute name="VALUE" value="120Ω" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -24791,13 +25301,13 @@ Why hasn't anyone added the cutout polygons directly to the connector footprint?
 <part name="SUPPLY17" library="SparkFun-PowerSymbols" deviceset="VIN" device=""/>
 <part name="SUPPLY18" library="SparkFun-PowerSymbols" deviceset="VIN" device=""/>
 <part name="SUPPLY19" library="SparkFun-PowerSymbols" deviceset="VIN" device=""/>
-<part name="MEAS" library="SparkFun-Jumpers" deviceset="JUMPER-COMBO_2_NC_TRACE" device="" value=""/>
+<part name="MEAS" library="SparkFun-Jumpers" deviceset="JUMPER-COMBO_2_NC_TRACE" device="" value="JUMPER-COMBO_2_NC_TRACE"/>
 <part name="GND6" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="S2" library="SparkFun-Switches" deviceset="MOMENTARY-SWITCH-SPST" device="-SMD-5.2-TALL-REDUNDANT" value="BOOT"/>
 <part name="GND15" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="LOGO3" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="MINI"/>
 <part name="GND19" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="H5" library="SparkFun-Hardware" deviceset="STAND-OFF-REFLOW" device="2.5MM_TALL"/>
+<part name="H5" library="SparkFun-Hardware" deviceset="STAND-OFF-REFLOW" device="-M2.5_2.5MM_TALL"/>
 <part name="R5" library="SparkFun-Resistors" deviceset="100KOHM" device="-0603-1/10W-1%" value="100k"/>
 <part name="D1" library="SparkFun-DiscreteSemi" deviceset="DIODE-ZENER" device="-MM3Z3V3T1G" value="3.3V"/>
 <part name="GND23" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
@@ -24918,7 +25428,7 @@ Why hasn't anyone added the cutout polygons directly to the connector footprint?
 <wire x1="167.64" y1="215.9" x2="238.76" y2="215.9" width="0.2032" layer="97" style="longdash"/>
 <text x="89.154" y="228.346" size="2.54" layer="94" font="vector" align="center">MicroMod Connector</text>
 <wire x1="0" y1="233.68" x2="167.64" y2="233.68" width="0.2032" layer="97" style="longdash"/>
-<text x="349.504" y="11.176" size="2.54" layer="94">Elias Santistevan</text>
+<text x="349.504" y="11.176" size="2.54" layer="94" font="vector">Elias Santistevan</text>
 <text x="53.34" y="73.66" size="2.54" layer="94" font="vector" align="center">LEDs</text>
 <text x="139.7" y="35.56" size="2.54" layer="94" font="vector" align="center">Buttons</text>
 <wire x1="109.22" y1="78.74" x2="109.22" y2="40.64" width="0.2032" layer="97" style="longdash"/>
@@ -24999,30 +25509,30 @@ Check ublox datasheet for more information.</text>
 <attribute name="VALUE" x="273.304" y="238.76" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
 <instance part="GND8" gate="1" x="279.4" y="228.6" smashed="yes">
-<attribute name="VALUE" x="279.4" y="228.346" size="1.778" layer="96" align="top-center"/>
+<attribute name="VALUE" x="279.4" y="228.346" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="GND9" gate="1" x="271.78" y="228.6" smashed="yes">
-<attribute name="VALUE" x="271.78" y="228.346" size="1.778" layer="96" align="top-center"/>
+<attribute name="VALUE" x="271.78" y="228.346" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="GND10" gate="1" x="266.7" y="228.6" smashed="yes">
-<attribute name="VALUE" x="266.7" y="228.346" size="1.778" layer="96" align="top-center"/>
+<attribute name="VALUE" x="266.7" y="228.346" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="U5" gate="G$1" x="71.12" y="259.08" smashed="yes">
-<attribute name="NAME" x="63.5" y="266.954" size="1.778" layer="95"/>
-<attribute name="VALUE" x="63.5" y="249.174" size="1.778" layer="96"/>
+<attribute name="NAME" x="63.5" y="266.954" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="63.5" y="249.174" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="GND20" gate="1" x="55.88" y="246.38" smashed="yes">
-<attribute name="VALUE" x="55.88" y="246.126" size="1.778" layer="96" align="top-center"/>
+<attribute name="VALUE" x="55.88" y="246.126" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="C13" gate="G$1" x="20.32" y="259.08" smashed="yes">
 <attribute name="NAME" x="21.844" y="262.001" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="21.844" y="256.921" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="GND21" gate="1" x="12.7" y="251.46" smashed="yes">
-<attribute name="VALUE" x="12.7" y="251.206" size="1.778" layer="96" align="top-center"/>
+<attribute name="VALUE" x="12.7" y="251.206" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="GND22" gate="1" x="20.32" y="251.46" smashed="yes">
-<attribute name="VALUE" x="20.32" y="251.206" size="1.778" layer="96" align="top-center"/>
+<attribute name="VALUE" x="20.32" y="251.206" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="FD1" gate="G$1" x="411.48" y="27.94" smashed="yes"/>
 <instance part="FD3" gate="G$1" x="414.02" y="25.4" smashed="yes"/>
@@ -25039,20 +25549,20 @@ Check ublox datasheet for more information.</text>
 <attribute name="VALUE" x="196.596" y="248.92" size="1.778" layer="96" font="vector" rot="MR90" align="top-center"/>
 </instance>
 <instance part="GND51" gate="1" x="198.12" y="223.52" smashed="yes">
-<attribute name="VALUE" x="198.12" y="223.266" size="1.778" layer="96" align="top-center"/>
+<attribute name="VALUE" x="198.12" y="223.266" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="SUPPLY26" gate="G$1" x="198.12" y="266.7" smashed="yes">
-<attribute name="VALUE" x="198.12" y="269.494" size="1.778" layer="96" align="bottom-center"/>
+<attribute name="VALUE" x="198.12" y="269.494" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
 <instance part="D7" gate="G$1" x="198.12" y="261.62" smashed="yes" rot="R270">
 <attribute name="NAME" x="194.31" y="263.144" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="172.72" y="264.16" size="1.778" layer="96" font="vector" rot="MR180" align="top-left"/>
 </instance>
 <instance part="SUPPLY1" gate="G$1" x="58.42" y="213.36" smashed="yes">
-<attribute name="VALUE" x="58.42" y="216.154" size="1.778" layer="96" align="bottom-center"/>
+<attribute name="VALUE" x="58.42" y="216.154" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
 <instance part="GND1" gate="1" x="58.42" y="111.76" smashed="yes">
-<attribute name="VALUE" x="58.42" y="111.506" size="1.778" layer="96" align="top-center"/>
+<attribute name="VALUE" x="58.42" y="111.506" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="S1" gate="G$1" x="129.54" y="17.78" smashed="yes" rot="R90">
 <attribute name="NAME" x="128.016" y="17.78" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
@@ -25082,41 +25592,41 @@ Check ublox datasheet for more information.</text>
 <attribute name="VALUE" x="44.704" y="137.16" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
 <instance part="GND11" gate="1" x="43.18" y="111.76" smashed="yes">
-<attribute name="VALUE" x="43.18" y="111.506" size="1.778" layer="96" align="top-center"/>
+<attribute name="VALUE" x="43.18" y="111.506" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="GND5" gate="1" x="129.54" y="7.62" smashed="yes">
-<attribute name="VALUE" x="129.54" y="7.366" size="1.778" layer="96" align="top-center"/>
+<attribute name="VALUE" x="129.54" y="7.366" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="SUPPLY17" gate="G$1" x="12.7" y="269.24" smashed="yes">
-<attribute name="VALUE" x="12.7" y="272.034" size="1.778" layer="96" align="bottom-center"/>
+<attribute name="VALUE" x="12.7" y="272.034" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
 <instance part="SUPPLY18" gate="G$1" x="154.94" y="261.62" smashed="yes">
-<attribute name="VALUE" x="154.94" y="264.414" size="1.778" layer="96" align="bottom-center"/>
+<attribute name="VALUE" x="154.94" y="264.414" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
 <instance part="SUPPLY19" gate="G$1" x="43.18" y="144.78" smashed="yes">
-<attribute name="VALUE" x="43.18" y="147.574" size="1.778" layer="96" align="bottom-center"/>
+<attribute name="VALUE" x="43.18" y="147.574" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
 <instance part="MEAS" gate="JP1" x="86.36" y="264.16" smashed="yes">
 <attribute name="NAME" x="83.566" y="265.938" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="83.82" y="261.62" size="1.778" layer="96" font="vector" align="top-left"/>
 </instance>
 <instance part="GND6" gate="1" x="30.48" y="251.46" smashed="yes">
-<attribute name="VALUE" x="30.48" y="251.206" size="1.778" layer="96" align="top-center"/>
+<attribute name="VALUE" x="30.48" y="251.206" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="S2" gate="G$1" x="142.24" y="17.78" smashed="yes" rot="R90">
 <attribute name="NAME" x="140.716" y="17.78" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="142.748" y="17.78" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
 <instance part="GND15" gate="1" x="142.24" y="7.62" smashed="yes" rot="MR0">
-<attribute name="VALUE" x="142.24" y="7.366" size="1.778" layer="96" rot="MR0" align="top-center"/>
+<attribute name="VALUE" x="142.24" y="7.366" size="1.778" layer="96" font="vector" rot="MR0" align="top-center"/>
 </instance>
 <instance part="LOGO3" gate="G$1" x="416.052" y="47.498" smashed="yes"/>
 <instance part="GND19" gate="1" x="83.82" y="86.36" smashed="yes">
-<attribute name="VALUE" x="83.82" y="86.106" size="1.778" layer="96" align="top-center"/>
+<attribute name="VALUE" x="83.82" y="86.106" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="H5" gate="G$1" x="83.82" y="93.98" smashed="yes">
-<attribute name="NAME" x="82.296" y="98.552" size="1.778" layer="95"/>
-<attribute name="VALUE" x="66.802" y="96.266" size="1.778" layer="96"/>
+<attribute name="NAME" x="82.296" y="98.552" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="66.802" y="96.266" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="R5" gate="G$1" x="48.26" y="259.08" smashed="yes" rot="R90">
 <attribute name="NAME" x="46.736" y="259.08" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
@@ -25127,10 +25637,10 @@ Check ublox datasheet for more information.</text>
 <attribute name="VALUE" x="50.292" y="241.3" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
 </instance>
 <instance part="GND23" gate="1" x="48.26" y="236.22" smashed="yes">
-<attribute name="VALUE" x="48.26" y="235.966" size="1.778" layer="96" align="top-center"/>
+<attribute name="VALUE" x="48.26" y="235.966" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="SUPPLY6" gate="G$1" x="114.3" y="266.7" smashed="yes">
-<attribute name="VALUE" x="114.3" y="269.494" size="1.778" layer="96" align="bottom-center"/>
+<attribute name="VALUE" x="114.3" y="269.494" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
 <instance part="C5" gate="G$1" x="93.98" y="256.54" smashed="yes">
 <attribute name="NAME" x="95.504" y="259.461" size="1.778" layer="95" font="vector"/>
@@ -25145,17 +25655,17 @@ Check ublox datasheet for more information.</text>
 <attribute name="VALUE" x="105.664" y="254.381" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="GND12" gate="1" x="93.98" y="248.92" smashed="yes">
-<attribute name="VALUE" x="93.98" y="248.666" size="1.778" layer="96" align="top-center"/>
+<attribute name="VALUE" x="93.98" y="248.666" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="GND16" gate="1" x="104.14" y="248.92" smashed="yes">
-<attribute name="VALUE" x="104.14" y="248.666" size="1.778" layer="96" align="top-center"/>
+<attribute name="VALUE" x="104.14" y="248.666" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="GND24" gate="1" x="114.3" y="248.92" smashed="yes">
-<attribute name="VALUE" x="114.3" y="248.666" size="1.778" layer="96" align="top-center"/>
+<attribute name="VALUE" x="114.3" y="248.666" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="J6" gate="J1" x="83.82" y="160.02" smashed="yes">
-<attribute name="NAME" x="63.5" y="213.868" size="1.778" layer="95"/>
-<attribute name="VALUE" x="63.5" y="111.76" size="1.778" layer="96"/>
+<attribute name="NAME" x="63.5" y="213.868" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="63.5" y="111.76" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="D2" gate="G$1" x="40.64" y="40.64" smashed="yes" rot="MR270">
 <attribute name="NAME" x="45.212" y="44.069" size="1.778" layer="95" font="vector" rot="MR0"/>
@@ -25174,10 +25684,10 @@ Check ublox datasheet for more information.</text>
 <attribute name="VALUE" x="53.34" y="54.864" size="1.778" layer="96" font="vector" rot="R180" align="top-center"/>
 </instance>
 <instance part="SUPPLY4" gate="G$1" x="35.56" y="55.88" smashed="yes">
-<attribute name="VALUE" x="35.56" y="58.674" size="1.778" layer="96" align="bottom-center"/>
+<attribute name="VALUE" x="35.56" y="58.674" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
 <instance part="SUPPLY7" gate="G$1" x="30.48" y="55.88" smashed="yes">
-<attribute name="VALUE" x="30.48" y="58.674" size="1.778" layer="96" align="bottom-center"/>
+<attribute name="VALUE" x="30.48" y="58.674" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
 <instance part="3V3" gate="G$1" x="66.04" y="40.64" smashed="yes">
 <attribute name="NAME" x="63.5" y="43.18" size="1.778" layer="95" font="vector"/>
@@ -25206,17 +25716,17 @@ Check ublox datasheet for more information.</text>
 <attribute name="VALUE" x="324.104" y="240.538" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
 <instance part="GND2" gate="1" x="335.28" y="226.06" smashed="yes">
-<attribute name="VALUE" x="335.28" y="225.806" size="1.778" layer="96" align="top-center"/>
+<attribute name="VALUE" x="335.28" y="225.806" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="GND3" gate="1" x="327.66" y="226.06" smashed="yes">
-<attribute name="VALUE" x="327.66" y="225.806" size="1.778" layer="96" align="top-center"/>
+<attribute name="VALUE" x="327.66" y="225.806" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="GND4" gate="1" x="322.58" y="226.06" smashed="yes">
-<attribute name="VALUE" x="322.58" y="225.806" size="1.778" layer="96" align="top-center"/>
+<attribute name="VALUE" x="322.58" y="225.806" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="U1" gate="U1" x="330.2" y="154.94" smashed="yes">
-<attribute name="NAME" x="314.96" y="180.848" size="1.778" layer="95"/>
-<attribute name="VALUE" x="314.96" y="127" size="1.778" layer="96"/>
+<attribute name="NAME" x="314.96" y="180.848" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="314.96" y="127" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="R11" gate="A" x="360.68" y="175.26" smashed="yes">
 <attribute name="NAME" x="354.584" y="175.514" size="1.778" layer="95" font="vector" align="bottom-center"/>
@@ -25267,17 +25777,17 @@ Check ublox datasheet for more information.</text>
 <attribute name="VALUE" x="370.84" y="255.016" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="D4" gate="D1" x="350.52" y="251.46" smashed="yes">
-<attribute name="NAME" x="342.9" y="259.334" size="1.778" layer="95"/>
-<attribute name="VALUE" x="342.9" y="243.586" size="1.778" layer="96" align="top-left"/>
+<attribute name="NAME" x="342.9" y="259.334" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="342.9" y="243.586" size="1.778" layer="96" font="vector" align="top-left"/>
 </instance>
 <instance part="J4" gate="G$1" x="185.42" y="195.58" smashed="yes" rot="MR0">
-<attribute name="NAME" x="185.674" y="202.438" size="1.778" layer="95" rot="MR0"/>
+<attribute name="NAME" x="185.674" y="202.438" size="1.778" layer="95" font="vector" rot="MR0"/>
 </instance>
 <instance part="GND14" gate="1" x="182.88" y="160.02" smashed="yes" rot="MR0">
-<attribute name="VALUE" x="182.88" y="159.766" size="1.778" layer="96" rot="MR0" align="top-center"/>
+<attribute name="VALUE" x="182.88" y="159.766" size="1.778" layer="96" font="vector" rot="MR0" align="top-center"/>
 </instance>
 <instance part="GND17" gate="1" x="193.04" y="160.02" smashed="yes">
-<attribute name="VALUE" x="193.04" y="159.766" size="1.778" layer="96" align="top-center"/>
+<attribute name="VALUE" x="193.04" y="159.766" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="C8" gate="G$1" x="193.04" y="167.64" smashed="yes">
 <attribute name="NAME" x="194.564" y="170.561" size="1.778" layer="95" font="vector"/>
@@ -25303,7 +25813,7 @@ Check ublox datasheet for more information.</text>
 <attribute name="NAME" x="63.754" y="31.75" size="1.778" layer="95" font="vector" rot="MR180"/>
 </instance>
 <instance part="GND18" gate="1" x="73.66" y="7.62" smashed="yes" rot="MR0">
-<attribute name="VALUE" x="73.66" y="7.366" size="1.778" layer="96" rot="MR0" align="top-center"/>
+<attribute name="VALUE" x="73.66" y="7.366" size="1.778" layer="96" font="vector" rot="MR0" align="top-center"/>
 </instance>
 <instance part="D8" gate="G$1" x="40.64" y="27.94" smashed="yes" rot="MR270">
 <attribute name="NAME" x="45.212" y="31.369" size="1.778" layer="95" font="vector" rot="MR0"/>
@@ -25327,31 +25837,31 @@ Check ublox datasheet for more information.</text>
 <attribute name="NAME" x="394.716" y="160.02" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="GND25" gate="1" x="403.86" y="152.4" smashed="yes">
-<attribute name="VALUE" x="403.86" y="152.146" size="1.778" layer="96" align="top-center"/>
+<attribute name="VALUE" x="403.86" y="152.146" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="J5" gate="G$1" x="264.16" y="58.42" smashed="yes">
 <attribute name="VALUE" x="259.08" y="53.086" size="1.778" layer="96" font="vector" align="top-left"/>
 <attribute name="NAME" x="259.08" y="66.294" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="GND27" gate="1" x="274.32" y="48.26" smashed="yes">
-<attribute name="VALUE" x="274.32" y="48.006" size="1.778" layer="96" align="top-center"/>
+<attribute name="VALUE" x="274.32" y="48.006" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="SUPPLY11" gate="G$1" x="274.32" y="68.58" smashed="yes">
-<attribute name="VALUE" x="274.32" y="71.374" size="1.778" layer="96" align="bottom-center"/>
+<attribute name="VALUE" x="274.32" y="71.374" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
 <instance part="J9" gate="G$1" x="297.18" y="20.32" smashed="yes" rot="MR180">
 <attribute name="VALUE" x="294.64" y="30.226" size="1.778" layer="96" font="vector" rot="MR180"/>
 <attribute name="NAME" x="292.1" y="9.652" size="1.778" layer="95" font="vector" rot="MR180"/>
 </instance>
 <instance part="GND30" gate="1" x="304.8" y="5.08" smashed="yes">
-<attribute name="VALUE" x="304.8" y="4.826" size="1.778" layer="96" align="top-center"/>
+<attribute name="VALUE" x="304.8" y="4.826" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="J10" gate="G$1" x="292.1" y="50.8" smashed="yes">
 <attribute name="VALUE" x="292.1" y="35.814" size="1.778" layer="96" font="vector"/>
 <attribute name="NAME" x="292.1" y="64.008" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="GND31" gate="1" x="190.5" y="63.5" smashed="yes">
-<attribute name="VALUE" x="190.5" y="63.246" size="1.778" layer="96" align="top-center"/>
+<attribute name="VALUE" x="190.5" y="63.246" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="D11" gate="G$1" x="190.5" y="101.6" smashed="yes" rot="R270">
 <attribute name="NAME" x="187.198" y="103.378" size="1.778" layer="95" font="vector"/>
@@ -25362,10 +25872,10 @@ Check ublox datasheet for more information.</text>
 <attribute name="VALUE" x="192.024" y="88.9" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
 <instance part="SUPPLY20" gate="G$1" x="200.66" y="106.68" smashed="yes">
-<attribute name="VALUE" x="200.66" y="109.474" size="1.778" layer="96" align="bottom-center"/>
+<attribute name="VALUE" x="200.66" y="109.474" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
 <instance part="SUPPLY21" gate="G$1" x="190.5" y="106.68" smashed="yes">
-<attribute name="VALUE" x="190.5" y="109.474" size="1.778" layer="96" align="bottom-center"/>
+<attribute name="VALUE" x="190.5" y="109.474" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
 <instance part="BT2" gate="G$1" x="190.5" y="73.66" smashed="yes" rot="R270">
 <attribute name="NAME" x="193.04" y="75.438" size="1.778" layer="95" font="vector" align="bottom-center"/>
@@ -25376,13 +25886,13 @@ Check ublox datasheet for more information.</text>
 <attribute name="VALUE" x="278.892" y="136.144" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
 <instance part="GND29" gate="1" x="297.18" y="124.46" smashed="yes">
-<attribute name="VALUE" x="297.18" y="124.206" size="1.778" layer="96" align="top-center"/>
+<attribute name="VALUE" x="297.18" y="124.206" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="SUPPLY13" gate="G$1" x="281.94" y="180.34" smashed="yes">
-<attribute name="VALUE" x="281.94" y="183.134" size="1.778" layer="96" align="bottom-center"/>
+<attribute name="VALUE" x="281.94" y="183.134" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
 <instance part="SUPPLY22" gate="G$1" x="302.26" y="180.34" smashed="yes">
-<attribute name="VALUE" x="302.26" y="183.134" size="1.778" layer="96" align="bottom-center"/>
+<attribute name="VALUE" x="302.26" y="183.134" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
 <instance part="C3" gate="G$1" x="294.64" y="142.24" smashed="yes">
 <attribute name="NAME" x="297.053" y="144.78" size="1.778" layer="95" font="vector" rot="R90"/>
@@ -25400,20 +25910,20 @@ Check ublox datasheet for more information.</text>
 <instance part="H3" gate="G$1" x="424.18" y="25.4" smashed="yes"/>
 <instance part="H4" gate="G$1" x="421.64" y="25.4" smashed="yes"/>
 <instance part="GND13" gate="1" x="124.46" y="48.26" smashed="yes">
-<attribute name="VALUE" x="124.46" y="48.006" size="1.778" layer="96" align="top-center"/>
+<attribute name="VALUE" x="124.46" y="48.006" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="SUPPLY8" gate="G$1" x="124.46" y="63.5" smashed="yes">
-<attribute name="VALUE" x="124.46" y="66.294" size="1.778" layer="96" align="bottom-center"/>
+<attribute name="VALUE" x="124.46" y="66.294" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
 <instance part="J8" gate="G$1" x="139.7" y="55.88" smashed="yes">
 <attribute name="NAME" x="129.54" y="63.754" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="129.54" y="48.514" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="SUPPLY9" gate="G$1" x="302.26" y="68.58" smashed="yes">
-<attribute name="VALUE" x="302.26" y="71.374" size="1.778" layer="96" align="bottom-center"/>
+<attribute name="VALUE" x="302.26" y="71.374" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
 <instance part="SUPPLY10" gate="G$1" x="266.7" y="259.08" smashed="yes">
-<attribute name="VALUE" x="266.7" y="261.874" size="1.778" layer="96" align="bottom-center"/>
+<attribute name="VALUE" x="266.7" y="261.874" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
 <instance part="D5" gate="G$1" x="139.7" y="205.74" smashed="yes">
 <attribute name="NAME" x="137.16" y="207.772" size="1.778" layer="95" font="vector"/>
@@ -25424,38 +25934,38 @@ Check ublox datasheet for more information.</text>
 <attribute name="VALUE" x="137.16" y="191.008" size="1.778" layer="96" font="vector" align="top-left"/>
 </instance>
 <instance part="SUPPLY12" gate="G$1" x="325.12" y="259.08" smashed="yes">
-<attribute name="VALUE" x="325.12" y="261.874" size="1.778" layer="96" align="bottom-center"/>
+<attribute name="VALUE" x="325.12" y="261.874" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
 <instance part="SUPPLY2" gate="G$1" x="363.22" y="261.62" smashed="yes">
-<attribute name="VALUE" x="363.22" y="264.414" size="1.778" layer="96" align="bottom-center"/>
+<attribute name="VALUE" x="363.22" y="264.414" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
 <instance part="SUPPLY14" gate="G$1" x="134.62" y="210.82" smashed="yes">
-<attribute name="VALUE" x="134.62" y="213.614" size="1.778" layer="96" align="bottom-center"/>
+<attribute name="VALUE" x="134.62" y="213.614" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
 <instance part="SUPPLY5" gate="G$1" x="124.46" y="210.82" smashed="yes">
-<attribute name="VALUE" x="124.46" y="213.614" size="1.778" layer="96" align="bottom-center"/>
+<attribute name="VALUE" x="124.46" y="213.614" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
 <instance part="SUPPLY3" gate="G$1" x="312.42" y="68.58" smashed="yes">
-<attribute name="VALUE" x="312.42" y="71.374" size="1.778" layer="96" align="bottom-center"/>
+<attribute name="VALUE" x="312.42" y="71.374" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
 <instance part="E1" gate="G$1" x="213.36" y="198.12" smashed="yes" rot="MR0">
 <attribute name="NAME" x="212.852" y="203.2" size="1.778" layer="95" font="vector" rot="MR0"/>
 </instance>
 <instance part="GND7" gate="1" x="210.82" y="182.88" smashed="yes" rot="MR0">
-<attribute name="VALUE" x="210.82" y="182.626" size="1.778" layer="96" rot="MR0" align="top-center"/>
+<attribute name="VALUE" x="210.82" y="182.626" size="1.778" layer="96" font="vector" rot="MR0" align="top-center"/>
 </instance>
 <instance part="TP3" gate="G$1" x="200.66" y="7.62" smashed="yes">
 <attribute name="NAME" x="200.66" y="10.16" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="SUPPLY15" gate="G$1" x="195.58" y="10.16" smashed="yes">
-<attribute name="VALUE" x="195.58" y="12.954" size="1.778" layer="96" align="bottom-center"/>
+<attribute name="VALUE" x="195.58" y="12.954" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
 <instance part="J7" gate="G$1" x="264.16" y="17.78" smashed="yes">
 <attribute name="VALUE" x="259.08" y="7.874" size="1.778" layer="96" font="vector"/>
 <attribute name="NAME" x="259.08" y="28.448" size="1.778" layer="95" font="vector"/>
 </instance>
 <instance part="GND26" gate="1" x="271.78" y="7.62" smashed="yes">
-<attribute name="VALUE" x="271.78" y="7.366" size="1.778" layer="96" align="top-center"/>
+<attribute name="VALUE" x="271.78" y="7.366" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="D13" gate="G$1" x="187.96" y="180.34" smashed="yes" rot="R90">
 <attribute name="NAME" x="185.928" y="179.578" size="1.778" layer="95" font="vector" rot="R90"/>
@@ -25770,11 +26280,11 @@ Check ublox datasheet for more information.</text>
 <segment>
 <pinref part="J1" gate="J1" pin="D-"/>
 <wire x1="264.16" y1="251.46" x2="266.7" y2="251.46" width="0.1524" layer="91"/>
-<label x="266.7" y="251.46" size="1.27" layer="95" xref="yes"/>
+<label x="266.7" y="251.46" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
 <wire x1="60.96" y1="190.5" x2="58.42" y2="190.5" width="0.1524" layer="91"/>
-<label x="58.42" y="190.5" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="58.42" y="190.5" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 <pinref part="J6" gate="J1" pin="USB_D-"/>
 </segment>
 </net>
@@ -25782,11 +26292,11 @@ Check ublox datasheet for more information.</text>
 <segment>
 <pinref part="J1" gate="J1" pin="D+"/>
 <wire x1="264.16" y1="254" x2="266.7" y2="254" width="0.1524" layer="91"/>
-<label x="266.7" y="254" size="1.27" layer="95" xref="yes"/>
+<label x="266.7" y="254" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
 <wire x1="60.96" y1="187.96" x2="58.42" y2="187.96" width="0.1524" layer="91"/>
-<label x="58.42" y="187.96" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="58.42" y="187.96" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 <pinref part="J6" gate="J1" pin="USB_D+"/>
 </segment>
 </net>
@@ -25835,18 +26345,18 @@ Check ublox datasheet for more information.</text>
 <net name="SCL/SCK" class="0">
 <segment>
 <wire x1="60.96" y1="144.78" x2="58.42" y2="144.78" width="0.1524" layer="91"/>
-<label x="58.42" y="144.78" size="1.27" layer="95" rot="MR0" xref="yes"/>
+<label x="58.42" y="144.78" size="1.27" layer="95" font="vector" rot="MR0" xref="yes"/>
 <pinref part="J6" gate="J1" pin="I2C_SCL"/>
 </segment>
 <segment>
 <wire x1="106.68" y1="193.04" x2="109.22" y2="193.04" width="0.1524" layer="91"/>
-<label x="109.22" y="193.04" size="1.27" layer="95" xref="yes"/>
+<label x="109.22" y="193.04" size="1.27" layer="95" font="vector" xref="yes"/>
 <pinref part="J6" gate="J1" pin="SPI_SCK"/>
 </segment>
 <segment>
 <pinref part="J5" gate="G$1" pin="4"/>
 <wire x1="276.86" y1="63.5" x2="271.78" y2="63.5" width="0.1524" layer="91"/>
-<label x="276.86" y="63.5" size="1.27" layer="95" xref="yes"/>
+<label x="276.86" y="63.5" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
 <wire x1="302.26" y1="50.8" x2="314.96" y2="50.8" width="0.1524" layer="91"/>
@@ -25855,14 +26365,14 @@ Check ublox datasheet for more information.</text>
 </segment>
 <segment>
 <wire x1="365.76" y1="170.18" x2="368.3" y2="170.18" width="0.1524" layer="91"/>
-<label x="368.3" y="170.18" size="1.27" layer="95" xref="yes"/>
+<label x="368.3" y="170.18" size="1.27" layer="95" font="vector" xref="yes"/>
 <pinref part="R12" gate="A" pin="2"/>
 </segment>
 </net>
 <net name="RTC_3V" class="0">
 <segment>
 <wire x1="60.96" y1="198.12" x2="58.42" y2="198.12" width="0.1524" layer="91"/>
-<label x="58.42" y="198.12" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="58.42" y="198.12" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 <pinref part="J6" gate="J1" pin="RTC_3V"/>
 </segment>
 <segment>
@@ -25876,7 +26386,7 @@ Check ublox datasheet for more information.</text>
 <junction x="198.12" y="256.54"/>
 <junction x="205.74" y="256.54"/>
 <pinref part="D7" gate="G$1" pin="C"/>
-<label x="205.74" y="259.08" size="1.27" layer="95" rot="R90" xref="yes"/>
+<label x="205.74" y="259.08" size="1.27" layer="95" font="vector" rot="R90" xref="yes"/>
 </segment>
 <segment>
 <pinref part="TP1" gate="G$1" pin="1"/>
@@ -25887,16 +26397,16 @@ Check ublox datasheet for more information.</text>
 <net name="SWDIO" class="0">
 <segment>
 <wire x1="60.96" y1="167.64" x2="58.42" y2="167.64" width="0.1524" layer="91"/>
-<label x="58.42" y="167.64" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="58.42" y="167.64" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 <pinref part="J6" gate="J1" pin="SWDIO"/>
 </segment>
 <segment>
 <pinref part="TP2" gate="G$1" pin="1"/>
 <wire x1="198.12" y1="17.78" x2="200.66" y2="17.78" width="0.1524" layer="91"/>
-<label x="198.12" y="17.78" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="198.12" y="17.78" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<label x="152.4" y="58.42" size="1.27" layer="95" xref="yes"/>
+<label x="152.4" y="58.42" size="1.27" layer="95" font="vector" xref="yes"/>
 <wire x1="149.86" y1="58.42" x2="152.4" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="J8" gate="G$1" pin="SWDIO"/>
 </segment>
@@ -25904,11 +26414,11 @@ Check ublox datasheet for more information.</text>
 <net name="SWDCK" class="0">
 <segment>
 <wire x1="60.96" y1="165.1" x2="58.42" y2="165.1" width="0.1524" layer="91"/>
-<label x="58.42" y="165.1" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="58.42" y="165.1" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 <pinref part="J6" gate="J1" pin="SWDCK"/>
 </segment>
 <segment>
-<label x="152.4" y="55.88" size="1.27" layer="95" xref="yes"/>
+<label x="152.4" y="55.88" size="1.27" layer="95" font="vector" xref="yes"/>
 <wire x1="149.86" y1="55.88" x2="152.4" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="J8" gate="G$1" pin="SWDCLK"/>
 </segment>
@@ -25954,7 +26464,7 @@ Check ublox datasheet for more information.</text>
 </segment>
 <segment>
 <wire x1="60.96" y1="193.04" x2="58.42" y2="193.04" width="0.1524" layer="91"/>
-<label x="58.42" y="193.04" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="58.42" y="193.04" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 <pinref part="J6" gate="J1" pin="USB_VIN"/>
 </segment>
 <segment>
@@ -25985,14 +26495,14 @@ Check ublox datasheet for more information.</text>
 <net name="!BOOT!" class="0">
 <segment>
 <wire x1="60.96" y1="205.74" x2="58.42" y2="205.74" width="0.1524" layer="91"/>
-<label x="58.42" y="205.74" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="58.42" y="205.74" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 <pinref part="J6" gate="J1" pin="!BOOT!"/>
 </segment>
 <segment>
 <pinref part="S2" gate="G$1" pin="2"/>
 <wire x1="142.24" y1="22.86" x2="142.24" y2="25.4" width="0.1524" layer="91"/>
 <wire x1="142.24" y1="25.4" x2="144.78" y2="25.4" width="0.1524" layer="91"/>
-<label x="144.78" y="25.4" size="1.27" layer="95" xref="yes"/>
+<label x="144.78" y="25.4" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
 <net name="3.3V_EN" class="0">
@@ -26009,12 +26519,12 @@ Check ublox datasheet for more information.</text>
 <wire x1="50.8" y1="251.46" x2="50.8" y2="254" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="248.92" x2="48.26" y2="248.92" width="0.1524" layer="91"/>
 <junction x="48.26" y="248.92"/>
-<label x="45.72" y="248.92" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="45.72" y="248.92" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="EN" gate="G$1" pin="1"/>
 <wire x1="40.64" y1="200.66" x2="38.1" y2="200.66" width="0.1524" layer="91"/>
-<label x="38.1" y="200.66" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="38.1" y="200.66" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -26027,7 +26537,7 @@ Check ublox datasheet for more information.</text>
 <net name="RXI/SDI" class="0">
 <segment>
 <wire x1="106.68" y1="162.56" x2="109.22" y2="162.56" width="0.1524" layer="91"/>
-<label x="109.22" y="162.56" size="1.27" layer="95" xref="yes"/>
+<label x="109.22" y="162.56" size="1.27" layer="95" font="vector" xref="yes"/>
 <pinref part="J6" gate="J1" pin="TX1"/>
 </segment>
 <segment>
@@ -26037,12 +26547,12 @@ Check ublox datasheet for more information.</text>
 </segment>
 <segment>
 <wire x1="365.76" y1="160.02" x2="368.3" y2="160.02" width="0.1524" layer="91"/>
-<label x="368.3" y="160.02" size="1.27" layer="95" xref="yes"/>
+<label x="368.3" y="160.02" size="1.27" layer="95" font="vector" xref="yes"/>
 <pinref part="R12" gate="C" pin="2"/>
 </segment>
 <segment>
 <wire x1="106.68" y1="190.5" x2="109.22" y2="190.5" width="0.1524" layer="91"/>
-<label x="109.22" y="190.5" size="1.27" layer="95" xref="yes"/>
+<label x="109.22" y="190.5" size="1.27" layer="95" font="vector" xref="yes"/>
 <pinref part="J6" gate="J1" pin="SPI_SDO"/>
 </segment>
 </net>
@@ -26102,7 +26612,7 @@ Check ublox datasheet for more information.</text>
 </segment>
 <segment>
 <wire x1="365.76" y1="177.8" x2="368.3" y2="177.8" width="0.1524" layer="91"/>
-<label x="368.3" y="177.8" size="1.27" layer="95" xref="yes"/>
+<label x="368.3" y="177.8" size="1.27" layer="95" font="vector" xref="yes"/>
 <pinref part="R11" gate="C" pin="2"/>
 </segment>
 </net>
@@ -26114,29 +26624,29 @@ Check ublox datasheet for more information.</text>
 </segment>
 <segment>
 <wire x1="365.76" y1="175.26" x2="368.3" y2="175.26" width="0.1524" layer="91"/>
-<label x="368.3" y="175.26" size="1.27" layer="95" xref="yes"/>
+<label x="368.3" y="175.26" size="1.27" layer="95" font="vector" xref="yes"/>
 <pinref part="R11" gate="A" pin="2"/>
 </segment>
 <segment>
 <pinref part="J6" gate="J1" pin="I2C_!INT!"/>
 <wire x1="60.96" y1="139.7" x2="58.42" y2="139.7" width="0.1524" layer="91"/>
-<label x="58.42" y="139.7" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="58.42" y="139.7" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="SDA/!CS!" class="0">
 <segment>
 <pinref part="J5" gate="G$1" pin="3"/>
 <wire x1="271.78" y1="60.96" x2="276.86" y2="60.96" width="0.1524" layer="91"/>
-<label x="276.86" y="60.96" size="1.27" layer="95" xref="yes"/>
+<label x="276.86" y="60.96" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
 <wire x1="60.96" y1="142.24" x2="58.42" y2="142.24" width="0.1524" layer="91"/>
-<label x="58.42" y="142.24" size="1.27" layer="95" rot="MR0" xref="yes"/>
+<label x="58.42" y="142.24" size="1.27" layer="95" font="vector" rot="MR0" xref="yes"/>
 <pinref part="J6" gate="J1" pin="I2C_SDA"/>
 </segment>
 <segment>
 <wire x1="106.68" y1="185.42" x2="109.22" y2="185.42" width="0.1524" layer="91"/>
-<label x="109.22" y="185.42" size="1.27" layer="95" xref="yes"/>
+<label x="109.22" y="185.42" size="1.27" layer="95" font="vector" xref="yes"/>
 <pinref part="J6" gate="J1" pin="SPI_!CS!"/>
 </segment>
 <segment>
@@ -26146,7 +26656,7 @@ Check ublox datasheet for more information.</text>
 </segment>
 <segment>
 <wire x1="365.76" y1="172.72" x2="368.3" y2="172.72" width="0.1524" layer="91"/>
-<label x="368.3" y="172.72" size="1.27" layer="95" xref="yes"/>
+<label x="368.3" y="172.72" size="1.27" layer="95" font="vector" xref="yes"/>
 <pinref part="R12" gate="B" pin="2"/>
 </segment>
 </net>
@@ -26158,12 +26668,12 @@ Check ublox datasheet for more information.</text>
 </segment>
 <segment>
 <wire x1="365.76" y1="167.64" x2="368.3" y2="167.64" width="0.1524" layer="91"/>
-<label x="368.3" y="167.64" size="1.27" layer="95" xref="yes"/>
+<label x="368.3" y="167.64" size="1.27" layer="95" font="vector" xref="yes"/>
 <pinref part="R11" gate="D" pin="2"/>
 </segment>
 <segment>
 <wire x1="106.68" y1="170.18" x2="109.22" y2="170.18" width="0.1524" layer="91"/>
-<label x="109.22" y="170.18" size="1.27" layer="95" xref="yes"/>
+<label x="109.22" y="170.18" size="1.27" layer="95" font="vector" xref="yes"/>
 <pinref part="J6" gate="J1" pin="D0"/>
 </segment>
 </net>
@@ -26174,7 +26684,7 @@ Check ublox datasheet for more information.</text>
 <pinref part="J10" gate="G$1" pin="3"/>
 </segment>
 <segment>
-<label x="368.3" y="132.08" size="1.27" layer="95" xref="yes"/>
+<label x="368.3" y="132.08" size="1.27" layer="95" font="vector" xref="yes"/>
 <wire x1="365.76" y1="132.08" x2="368.3" y2="132.08" width="0.1524" layer="91"/>
 <pinref part="R11" gate="B" pin="2"/>
 </segment>
@@ -26183,29 +26693,29 @@ Check ublox datasheet for more information.</text>
 <segment>
 <pinref part="R16" gate="G$1" pin="2"/>
 <wire x1="375.92" y1="256.54" x2="378.46" y2="256.54" width="0.1524" layer="91"/>
-<label x="378.46" y="256.54" size="1.27" layer="95" xref="yes"/>
+<label x="378.46" y="256.54" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U1" gate="U1" pin="USB_D-"/>
 <wire x1="312.42" y1="149.86" x2="309.88" y2="149.86" width="0.1524" layer="91"/>
-<label x="309.88" y="149.86" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="309.88" y="149.86" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="ZED_USB_P" class="0">
 <segment>
 <pinref part="R15" gate="G$1" pin="2"/>
 <wire x1="375.92" y1="246.38" x2="378.46" y2="246.38" width="0.1524" layer="91"/>
-<label x="378.46" y="246.38" size="1.27" layer="95" xref="yes"/>
+<label x="378.46" y="246.38" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U1" gate="U1" pin="USB_D+"/>
 <wire x1="312.42" y1="152.4" x2="309.88" y2="152.4" width="0.1524" layer="91"/>
-<label x="309.88" y="152.4" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="309.88" y="152.4" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="RF_IN" class="1">
 <segment>
-<label x="198.12" y="190.5" size="1.27" layer="95" xref="yes"/>
+<label x="198.12" y="190.5" size="1.27" layer="95" font="vector" xref="yes"/>
 <wire x1="198.12" y1="190.5" x2="193.04" y2="190.5" width="0.1524" layer="91"/>
 <wire x1="193.04" y1="187.96" x2="193.04" y2="190.5" width="0.1524" layer="91"/>
 <pinref part="J4" gate="G$1" pin="SIGNAL"/>
@@ -26221,7 +26731,7 @@ Check ublox datasheet for more information.</text>
 <segment>
 <pinref part="U1" gate="U1" pin="RF_IN"/>
 <wire x1="312.42" y1="170.18" x2="309.88" y2="170.18" width="0.1524" layer="91"/>
-<label x="309.88" y="170.18" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="309.88" y="170.18" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$18" class="0">
@@ -26239,12 +26749,12 @@ Check ublox datasheet for more information.</text>
 <segment>
 <pinref part="R17" gate="G$1" pin="2"/>
 <wire x1="208.28" y1="175.26" x2="205.74" y2="175.26" width="0.1524" layer="91"/>
-<label x="208.28" y="175.26" size="1.27" layer="95" xref="yes"/>
+<label x="208.28" y="175.26" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U1" gate="U1" pin="V_RF"/>
 <wire x1="312.42" y1="167.64" x2="309.88" y2="167.64" width="0.1524" layer="91"/>
-<label x="309.88" y="167.64" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="309.88" y="167.64" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="PPS" class="0">
@@ -26256,7 +26766,7 @@ Check ublox datasheet for more information.</text>
 <segment>
 <pinref part="U1" gate="U1" pin="TIMEPULSE"/>
 <wire x1="347.98" y1="137.16" x2="350.52" y2="137.16" width="0.1524" layer="91"/>
-<label x="350.52" y="137.16" size="1.27" layer="95" xref="yes"/>
+<label x="350.52" y="137.16" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
 <wire x1="302.26" y1="35.56" x2="312.42" y2="35.56" width="0.1524" layer="91"/>
@@ -26265,7 +26775,7 @@ Check ublox datasheet for more information.</text>
 </segment>
 <segment>
 <wire x1="213.36" y1="193.04" x2="215.9" y2="193.04" width="0.1524" layer="91"/>
-<label x="215.9" y="193.04" size="1.27" layer="95" xref="yes"/>
+<label x="215.9" y="193.04" size="1.27" layer="95" font="vector" xref="yes"/>
 <pinref part="E1" gate="G$1" pin="SIGNAL"/>
 <wire x1="213.36" y1="195.58" x2="213.36" y2="193.04" width="0.1524" layer="91"/>
 </segment>
@@ -26306,7 +26816,7 @@ Check ublox datasheet for more information.</text>
 </segment>
 <segment>
 <wire x1="347.98" y1="142.24" x2="350.52" y2="142.24" width="0.1524" layer="91"/>
-<label x="350.52" y="142.24" size="1.27" layer="95" xref="yes"/>
+<label x="350.52" y="142.24" size="1.27" layer="95" font="vector" xref="yes"/>
 <pinref part="U1" gate="U1" pin="RTK_STAT"/>
 </segment>
 </net>
@@ -26333,14 +26843,14 @@ Check ublox datasheet for more information.</text>
 <segment>
 <pinref part="U1" gate="U1" pin="D_SEL"/>
 <wire x1="347.98" y1="157.48" x2="368.3" y2="157.48" width="0.1524" layer="91"/>
-<label x="368.3" y="157.48" size="1.27" layer="95" xref="yes"/>
+<label x="368.3" y="157.48" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
 <net name="GEO_STAT" class="0">
 <segment>
 <pinref part="U1" gate="U1" pin="GEO_STAT"/>
 <wire x1="347.98" y1="139.7" x2="350.52" y2="139.7" width="0.1524" layer="91"/>
-<label x="350.52" y="139.7" size="1.27" layer="95" xref="yes"/>
+<label x="350.52" y="139.7" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
 <pinref part="D10" gate="G$1" pin="A"/>
@@ -26357,12 +26867,12 @@ Check ublox datasheet for more information.</text>
 <segment>
 <pinref part="R13" gate="A" pin="2"/>
 <wire x1="365.76" y1="152.4" x2="368.3" y2="152.4" width="0.1524" layer="91"/>
-<label x="368.3" y="152.4" size="1.27" layer="95" xref="yes"/>
+<label x="368.3" y="152.4" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
 <pinref part="J6" gate="J1" pin="RX2"/>
 <wire x1="106.68" y1="149.86" x2="109.22" y2="149.86" width="0.1524" layer="91"/>
-<label x="109.22" y="149.86" size="1.27" layer="95" xref="yes"/>
+<label x="109.22" y="149.86" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
 <net name="RXI2" class="0">
@@ -26374,12 +26884,12 @@ Check ublox datasheet for more information.</text>
 <segment>
 <pinref part="R13" gate="B" pin="2"/>
 <wire x1="365.76" y1="149.86" x2="368.3" y2="149.86" width="0.1524" layer="91"/>
-<label x="368.3" y="149.86" size="1.27" layer="95" xref="yes"/>
+<label x="368.3" y="149.86" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
 <pinref part="J6" gate="J1" pin="TX2"/>
 <wire x1="106.68" y1="152.4" x2="109.22" y2="152.4" width="0.1524" layer="91"/>
-<label x="109.22" y="152.4" size="1.27" layer="95" xref="yes"/>
+<label x="109.22" y="152.4" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
 <net name="V_BATT" class="0">
@@ -26444,7 +26954,7 @@ Check ublox datasheet for more information.</text>
 <net name="TXO/SDO" class="0">
 <segment>
 <wire x1="106.68" y1="160.02" x2="109.22" y2="160.02" width="0.1524" layer="91"/>
-<label x="109.22" y="160.02" size="1.27" layer="95" xref="yes"/>
+<label x="109.22" y="160.02" size="1.27" layer="95" font="vector" xref="yes"/>
 <pinref part="J6" gate="J1" pin="RX1"/>
 </segment>
 <segment>
@@ -26454,30 +26964,30 @@ Check ublox datasheet for more information.</text>
 </segment>
 <segment>
 <wire x1="365.76" y1="162.56" x2="368.3" y2="162.56" width="0.1524" layer="91"/>
-<label x="368.3" y="162.56" size="1.27" layer="95" xref="yes"/>
+<label x="368.3" y="162.56" size="1.27" layer="95" font="vector" xref="yes"/>
 <pinref part="R12" gate="D" pin="2"/>
 </segment>
 <segment>
 <wire x1="106.68" y1="187.96" x2="109.22" y2="187.96" width="0.1524" layer="91"/>
-<label x="109.22" y="187.96" size="1.27" layer="95" xref="yes"/>
+<label x="109.22" y="187.96" size="1.27" layer="95" font="vector" xref="yes"/>
 <pinref part="J6" gate="J1" pin="SPI_SDI"/>
 </segment>
 </net>
 <net name="!RESET!" class="0">
 <segment>
 <wire x1="60.96" y1="208.28" x2="58.42" y2="208.28" width="0.1524" layer="91"/>
-<label x="58.42" y="208.28" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="58.42" y="208.28" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 <pinref part="J6" gate="J1" pin="!RESET!"/>
 </segment>
 <segment>
 <wire x1="132.08" y1="25.4" x2="129.54" y2="25.4" width="0.1524" layer="91"/>
 <wire x1="129.54" y1="22.86" x2="129.54" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="S1" gate="G$1" pin="2"/>
-<label x="132.08" y="25.4" size="1.27" layer="95" xref="yes"/>
+<label x="132.08" y="25.4" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
 <wire x1="149.86" y1="60.96" x2="152.4" y2="60.96" width="0.1524" layer="91"/>
-<label x="152.4" y="60.96" size="1.27" layer="95" xref="yes"/>
+<label x="152.4" y="60.96" size="1.27" layer="95" font="vector" xref="yes"/>
 <pinref part="J8" gate="G$1" pin="!RESET"/>
 </segment>
 </net>
@@ -26587,7 +27097,7 @@ Check ublox datasheet for more information.</text>
 <junction x="144.78" y="205.74"/>
 <wire x1="144.78" y1="205.74" x2="144.78" y2="210.82" width="0.1524" layer="91"/>
 <wire x1="144.78" y1="210.82" x2="147.32" y2="210.82" width="0.1524" layer="91"/>
-<label x="147.32" y="210.82" size="1.27" layer="95" xref="yes"/>
+<label x="147.32" y="210.82" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
 <wire x1="137.16" y1="248.92" x2="139.7" y2="248.92" width="0.1524" layer="91"/>
@@ -26597,55 +27107,55 @@ Check ublox datasheet for more information.</text>
 <pinref part="F2" gate="F1" pin="1"/>
 <wire x1="134.62" y1="259.08" x2="137.16" y2="259.08" width="0.1524" layer="91"/>
 <junction x="137.16" y="259.08"/>
-<label x="134.62" y="259.08" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="134.62" y="259.08" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="D1" class="0">
 <segment>
 <pinref part="J6" gate="J1" pin="D1/CAM_TRIG"/>
 <wire x1="106.68" y1="167.64" x2="109.22" y2="167.64" width="0.1524" layer="91"/>
-<label x="109.22" y="167.64" size="1.27" layer="95" xref="yes"/>
+<label x="109.22" y="167.64" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
 <pinref part="J7" gate="G$1" pin="4"/>
 <wire x1="269.24" y1="20.32" x2="274.32" y2="20.32" width="0.1524" layer="91"/>
-<label x="274.32" y="20.32" size="1.27" layer="95" xref="yes"/>
+<label x="274.32" y="20.32" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
 <net name="G0/D2" class="0">
 <segment>
 <pinref part="J6" gate="J1" pin="G0/BUS0"/>
 <wire x1="106.68" y1="144.78" x2="109.22" y2="144.78" width="0.1524" layer="91"/>
-<label x="109.22" y="144.78" size="1.27" layer="95" xref="yes"/>
+<label x="109.22" y="144.78" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
 <pinref part="J7" gate="G$1" pin="5"/>
 <wire x1="269.24" y1="22.86" x2="274.32" y2="22.86" width="0.1524" layer="91"/>
-<label x="274.32" y="22.86" size="1.27" layer="95" xref="yes"/>
+<label x="274.32" y="22.86" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
 <net name="A1" class="0">
 <segment>
 <pinref part="J6" gate="J1" pin="A1"/>
 <wire x1="106.68" y1="177.8" x2="109.22" y2="177.8" width="0.1524" layer="91"/>
-<label x="109.22" y="177.8" size="1.27" layer="95" xref="yes"/>
+<label x="109.22" y="177.8" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
 <pinref part="J7" gate="G$1" pin="3"/>
 <wire x1="269.24" y1="17.78" x2="274.32" y2="17.78" width="0.1524" layer="91"/>
-<label x="274.32" y="17.78" size="1.27" layer="95" xref="yes"/>
+<label x="274.32" y="17.78" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
 <net name="A0" class="0">
 <segment>
 <pinref part="J6" gate="J1" pin="A0"/>
 <wire x1="106.68" y1="180.34" x2="109.22" y2="180.34" width="0.1524" layer="91"/>
-<label x="109.22" y="180.34" size="1.27" layer="95" xref="yes"/>
+<label x="109.22" y="180.34" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
 <pinref part="J7" gate="G$1" pin="2"/>
 <wire x1="269.24" y1="15.24" x2="274.32" y2="15.24" width="0.1524" layer="91"/>
-<label x="274.32" y="15.24" size="1.27" layer="95" xref="yes"/>
+<label x="274.32" y="15.24" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
 </nets>

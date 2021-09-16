@@ -25343,7 +25343,7 @@ Why hasn't anyone added the cutout polygons directly to the connector footprint?
 <part name="R15" library="SparkFun-Resistors" deviceset="27OHM" device=""/>
 <part name="R16" library="SparkFun-Resistors" deviceset="27OHM" device=""/>
 <part name="D4" library="SparkFun-IC-Power" deviceset="PRTR5V0U2" device="F"/>
-<part name="J4" library="SparkFun-RF" deviceset="ANTENNA-SMA-GROUNDED" device="EDGE_SMA_SMD" value="U.FL"/>
+<part name="J4" library="SparkFun-RF" deviceset="ANTENNA-SMA-GROUNDED" device="EDGE_SMA" value="U.FL"/>
 <part name="GND14" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND17" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="C8" library="SparkFun-Capacitors" deviceset="47PF" device="-0603-50V-5%" value="47pF"/>

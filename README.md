@@ -24,7 +24,7 @@ Product Versions
 
 Version History
 ---------------
-* [v1.0](URL for tag specific to this version) - Initial release
+* v1.0 - initial release
 
 
 License Information

@@ -1,7 +1,7 @@
 SparkFun MicroMod GNSS Carrier Board (ZED-F9P)
 ========================================
 
-![SparkFun MicroMod GNSS Carrier Board (ZED-F9P)](URL for picture of part)
+[![SparkFun MicroMod GNSS Carrier Board (ZED-F9P)](https://cdn.sparkfun.com/assets/parts/1/6/8/3/0/17722-SparkFun_MicroMod_GNSS_Carrier_Board__ZED-F9P_-01.jpg)](https://www.sparkfun.com/products/17722)
 
 [*SparkFun MicroMod GNSS Carrier Board (ZED-F9P) (GPS-17722)*](https://www.sparkfun.com/products/17722)
 
@@ -16,7 +16,7 @@ Repository Contents
 Documentation
 --------------
 * **[Library](https://github.com/sparkfun/SparkFun_u-blox_GNSS_Arduino_Library)** - Arduino library for the u-blox modules (e.g. ZED-F9P)
-* **[Hookup Guide](https://learn.sparkfun.com/tutorials/gps-rtk2-hookup-guide)** - Basic hookup guide for the ZED-F9P Carrier Board
+* **[Hookup Guide](https://learn.sparkfun.com/tutorials/2187)** - Basic hookup guide for the ZED-F9P Carrier Board
 
 Product Versions
 ----------------
